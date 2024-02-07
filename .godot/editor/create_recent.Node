@@ -1,0 +1,7 @@
+RichTextLabel
+NinePatchRect
+CanvasLayer
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
+Area2D
