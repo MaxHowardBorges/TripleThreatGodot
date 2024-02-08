@@ -16,7 +16,6 @@ var punctuation_time = 0.2
 signal finished_displaying()
 
 func display_text(text_to_display: String):
-	print("12")
 	text = text_to_display
 	label.text = text_to_display
 	
@@ -29,14 +28,13 @@ func display_text(text_to_display: String):
 		await resized
 		custom_minimum_size.y = size.y
 		
-	global_position.x -= size.x/2
-	global_position.y -= size.y + 24
+	#global_position.x -= size.x/2
+	#global_position.y -= size.y + 24
 	
 	label.text = ""
 	_display_letter()
 	
 func _display_letter():
-	print("test!")
 	label.text += text[letter_index]
 	
 	letter_index += 1
@@ -47,7 +45,6 @@ func _display_letter():
 	match text[letter_index]:
 		"!", ".", ",", "?":
 			timer.start(punctuation_time)
-			print("test")
 		" ":
 			timer.start(space_time)
 		_:

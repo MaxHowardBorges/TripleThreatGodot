@@ -10,3 +10,4 @@ script = ExtResource("1_ypmfn")
 [node name="Player" parent="." instance=ExtResource("2_copkh")]
 
 [node name="npc1" parent="." instance=ExtResource("3_amblk")]
+position = Vector2(472, 312)

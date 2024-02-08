@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://script/text_box.gd" id="1_vws38"]
 
 [node name="MarginContainer" type="MarginContainer"]
+anchors_preset = -1
 offset_left = 373.0
 offset_top = 530.0
 offset_right = 841.0
