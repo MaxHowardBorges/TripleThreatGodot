@@ -1,6 +1,9 @@
+Timer
+Label
+MarginContainer
+NinePatchRect
 Node
 RichTextLabel
-NinePatchRect
 CanvasLayer
 CollisionShape2D
 AnimatedSprite2D

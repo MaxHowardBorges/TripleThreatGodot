@@ -3,3 +3,7 @@ res://scene/player.tscn
 res://scene/main.tscn
 res://scene/main.gd
 res://script/player.gd
+res://scene/text_box.tscn
+res://script/text_box.gd
+res://script/DialogManager.gd
+res://script/npc1.gd
