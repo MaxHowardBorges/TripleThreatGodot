@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Timer
 Label
 MarginContainer
@@ -5,7 +7,5 @@ NinePatchRect
 Node
 RichTextLabel
 CanvasLayer
-CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
-Area2D

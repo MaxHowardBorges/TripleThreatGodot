@@ -7,3 +7,4 @@ res://scene/text_box.tscn
 res://script/text_box.gd
 res://script/DialogManager.gd
 res://script/npc1.gd
+res://script/main.gd

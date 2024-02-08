@@ -207,6 +207,8 @@ radius = 15.0
 height = 50.0
 
 [node name="Player" type="CharacterBody2D"]
+show_behind_parent = true
+top_level = true
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
 script = ExtResource("1_hwe8o")
@@ -214,8 +216,9 @@ script = ExtResource("1_hwe8o")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0v6b7")
 animation = &"left"
-frame_progress = 0.608536
+frame_progress = 0.0530224
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 512
 position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_rodfw")

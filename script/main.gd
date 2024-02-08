@@ -1,5 +1,6 @@
 extends Node
 
+signal new_team_mate()
 var team: int
 # Called when the node enters the scene tree for the first time.
 func _ready():

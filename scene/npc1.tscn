@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwxmgmpdrl75q"]
+[gd_scene load_steps=6 format=3 uid="uid://cwxmgmpdrl75q"]
 
 [ext_resource type="Script" path="res://script/npc1.gd" id="1_61p78"]
 [ext_resource type="Texture2D" uid="uid://bh45u4jrbwrsn" path="res://icon.svg" id="2_5uwef"]
@@ -17,6 +17,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbm0e"]
 size = Vector2(128, 127)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4vvr"]
+size = Vector2(94, 90)
+
 [node name="npc1" type="CharacterBody2D"]
 position = Vector2(390, 392)
 script = ExtResource("1_61p78")
@@ -30,3 +33,13 @@ sprite_frames = SubResource("SpriteFrames_5fm80")
 position = Vector2(0, 0.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_kbm0e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_u4vvr")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[connection signal="body_shape_exited" from="Area2D" to="." method="_on_area_2d_body_shape_exited"]
