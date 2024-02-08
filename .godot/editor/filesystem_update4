@@ -1,3 +1,5 @@
-res://script/player.gd
 res://scene/npc1.tscn
 res://scene/player.tscn
+res://scene/main.tscn
+res://scene/main.gd
+res://script/player.gd

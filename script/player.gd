@@ -38,3 +38,8 @@ func update_animation(velocity):
 			$AnimatedSprite2D.animation = "down"
 	else:
 		stop_moving_and_reset_animation()
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
