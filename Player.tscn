@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b618ta06gjx2f"]
+[gd_scene load_steps=12 format=3 uid="uid://b618ta06gjx2f"]
 
 [ext_resource type="Texture2D" uid="uid://copf8n7dxiwg4" path="res://CUTsprite/tile001.png" id="1"]
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://m2i0mnjlmchw" path="res://bballsprite/Basketball Court Tile Sets/png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png" id="3"]
+[ext_resource type="Script" path="res://RayCast2DPlayer.gd" id="3_2ure0"]
 [ext_resource type="Texture2D" uid="uid://dtk6haesf2a2u" path="res://icon.svg" id="4"]
 [ext_resource type="Script" path="res://RayCast2D.gd" id="4_4hnhr"]
 [ext_resource type="Script" path="res://Enemy.gd" id="4_def7q"]
@@ -41,6 +42,10 @@ shape = SubResource("1")
 position = Vector2(3, -6)
 shape = SubResource("CircleShape2D_qbnoh")
 
+[node name="RayCast2D" type="RayCast2D" parent="Player1"]
+target_position = Vector2(1390, 1)
+script = ExtResource("3_2ure0")
+
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(590, 289)
 script = ExtResource("4_def7q")
@@ -58,8 +63,8 @@ shape = SubResource("RectangleShape2D_3qhkb")
 position = Vector2(586, 11)
 
 [node name="RayCast2D" type="RayCast2D" parent="basketPoint"]
-position = Vector2(2, -1)
-target_position = Vector2(375, 1)
+position = Vector2(1, -1)
+target_position = Vector2(1148, 1)
 script = ExtResource("4_4hnhr")
 
 [node name="Sprite" type="Sprite2D" parent="basketPoint"]
@@ -70,5 +75,22 @@ texture = ExtResource("3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="basketPoint"]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_7jgqe")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(877, 382)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, 0)
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("4")
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
+target_position = Vector2(1078, 0)
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]

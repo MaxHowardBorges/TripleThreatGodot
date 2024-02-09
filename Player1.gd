@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 class_name Player1
 
+var hasBall = false
+
+var attack = true
+
 @export var speed = 5
 
 var screen_size
