@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player1
 
-var hasBall = false
+var hasBall = true
 
 var attack = true
 
