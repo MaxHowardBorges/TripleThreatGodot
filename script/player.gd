@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-#@onready var npc1 = preload("res://script/npc1.gd")
-#@onready npc1.connect("new_team_mate", self, "_on_new_team_mate")
 @export var speed = 400
 
 var target = position
 var team = 1
+var talking = false
 
 	
 func _input(event):
@@ -14,9 +13,7 @@ func _input(event):
 
 func _physics_process(delta):
 	print(team)
-	#player.new_team_mate().connect(add_new_team_mate)
 	velocity = position.direction_to(target) * speed
-	#print(velocity)
 	if position.distance_to(target) > 10:
 		move_and_slide()
 	else:
