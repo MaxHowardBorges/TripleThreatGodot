@@ -212,6 +212,7 @@ top_level = true
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
 script = ExtResource("1_hwe8o")
+speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0v6b7")
