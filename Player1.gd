@@ -29,6 +29,8 @@ func _process(delta):
 		velocity.y -=speed
 	if Input.is_action_pressed('move_down'):
 		velocity.y +=speed
+	if Input.is_action_pressed("espace"):
+		print("pass")
 
 		
 	position += velocity * 1
