@@ -15,7 +15,7 @@ func _ready():
 func _process(delta):
 	look_at(teammate.global_position)
 	if is_colliding():
-		print("Colliding")
+		print("green")
 		print(nbr)
 		nbr=nbr+1
 

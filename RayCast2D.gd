@@ -15,8 +15,8 @@ func _ready():
 func _process(delta):
 	look_at(basket_node.global_position)
 	if is_colliding():
-		print("Colliding")
-		print(nbr)
+		#print("Colliding")
+		#print(nbr)
 		nbr=nbr+1
 
 func _draw():
