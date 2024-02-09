@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://b618ta06gjx2f"]
+
+[ext_resource type="Texture2D" uid="uid://copf8n7dxiwg4" path="res://CUTsprite/tile001.png" id="1"]
+[ext_resource type="Script" path="res://Player1.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://m2i0mnjlmchw" path="res://bballsprite/Basketball Court Tile Sets/png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dtk6haesf2a2u" path="res://icon.svg" id="4"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="5_ow8bp"]
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 54.9999
+height = 118.803
+
+[node name="IDK" type="Area2D"]
+
+[node name="Player1" type="Area2D" parent="."]
+position = Vector2(1, 0)
+script = ExtResource("2")
+
+[node name="Sprite" type="Sprite2D" parent="Player1"]
+position = Vector2(576, 473)
+scale = Vector2(4.04167, 4.04167)
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
+position = Vector2(579, 472)
+shape = SubResource("1")
+
+[node name="basketPoint" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="basketPoint"]
+position = Vector2(529, 25)
+scale = Vector2(0.320513, 0.320513)
+texture = ExtResource("3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(1, 0)
+script = ExtResource("5_ow8bp")
+speed = null
+
+[node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(585, 336.599)
+scale = Vector2(0.796878, 0.790603)
+texture = ExtResource("4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(584, 337.599)
+shape = SubResource("1")
