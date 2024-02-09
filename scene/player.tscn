@@ -1,6 +1,5 @@
-[gd_scene load_steps=47 format=3 uid="uid://ba7uqa183b3ir"]
+[gd_scene load_steps=47 format=3 uid="uid://nguder7micf"]
 
-[ext_resource type="Script" path="res://script/player.gd" id="1_hwe8o"]
 [ext_resource type="Texture2D" uid="uid://dkmsgi2dop1t2" path="res://art/spriteDown/down1.png" id="2_tn1bw"]
 [ext_resource type="Texture2D" uid="uid://byablm2fip735" path="res://art/spriteDown/down2.png" id="3_velys"]
 [ext_resource type="Texture2D" uid="uid://dph2b11bxhj6" path="res://art/spriteDown/down3.png" id="4_sh1lp"]
@@ -44,6 +43,64 @@
 [ext_resource type="Texture2D" uid="uid://beukwe7r1uqis" path="res://art/spriteUp/up7.png" id="42_qlatv"]
 [ext_resource type="Texture2D" uid="uid://cxblo0ws7a8a1" path="res://art/spriteUp/up8.png" id="43_md2dl"]
 [ext_resource type="Texture2D" uid="uid://cj77bbnue017s" path="res://art/spriteUp/up9.png" id="44_a7bop"]
+
+[sub_resource type="GDScript" id="GDScript_ifn3w"]
+script/source = "extends CharacterBody2D
+
+#@onready var npc1 = preload(\"res://script/npc1.gd\")
+#@onready npc1.connect(\"new_team_mate\", self, \"_on_new_team_mate\")
+@export var speed = 400
+
+var target = position
+var team = 1
+
+	
+func _input(event):
+	if event.is_action_pressed(\"click\"):
+		target = get_global_mouse_position()
+
+func _physics_process(delta):
+	print(team)
+	#player.new_team_mate().connect(_add_new_team_mate)
+	velocity = position.direction_to(target) * speed
+	#print(velocity)
+	if position.distance_to(target) > 10:
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
+		stop_moving_and_reset_animation()
+
+	update_animation(velocity)
+
+func stop_moving_and_reset_animation():
+	velocity = Vector2.ZERO
+	$AnimatedSprite2D.stop()
+
+func update_animation(velocity):
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+		$AnimatedSprite2D.play()
+
+		if velocity.x > 0 and velocity.x > abs(velocity.y):
+			$AnimatedSprite2D.animation = \"right\"
+		elif velocity.x < 0 and abs(velocity.x) > abs(velocity.y):
+			$AnimatedSprite2D.animation = \"left\"
+		elif velocity.y < 0:
+			$AnimatedSprite2D.animation = \"up\"
+		elif velocity.y > 0:
+			$AnimatedSprite2D.animation = \"down\"
+	else:
+		stop_moving_and_reset_animation()
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+
+func add_new_team_mate():
+	team = team + 1
+	print(team)
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0v6b7"]
 animations = [{
@@ -211,7 +268,7 @@ show_behind_parent = true
 top_level = true
 position = Vector2(960, 540)
 scale = Vector2(2, 2)
-script = ExtResource("1_hwe8o")
+script = SubResource("GDScript_ifn3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0v6b7")

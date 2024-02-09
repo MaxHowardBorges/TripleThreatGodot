@@ -14,7 +14,7 @@ func _input(event):
 
 func _physics_process(delta):
 	print(team)
-	#player.new_team_mate().connect(_add_new_team_mate)
+	#player.new_team_mate().connect(add_new_team_mate)
 	velocity = position.direction_to(target) * speed
 	#print(velocity)
 	if position.distance_to(target) > 10:

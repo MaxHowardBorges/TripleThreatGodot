@@ -1,7 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwxmgmpdrl75q"]
+[gd_scene load_steps=6 format=3 uid="uid://uh2qpah8ni8u"]
 
-[ext_resource type="Script" path="res://script/npc1.gd" id="1_61p78"]
 [ext_resource type="Texture2D" uid="uid://bh45u4jrbwrsn" path="res://icon.svg" id="2_5uwef"]
+
+[sub_resource type="GDScript" id="GDScript_wholh"]
+script/source = "extends CharacterBody2D
+
+var talking = false
+
+signal new_team_mate()
+
+const lines: Array[String] = [
+	\"Bob : Yo !\",
+	\"Ca joue ?\",
+	\"Attend moi j'arrive\"
+]
+
+func _on_area_2d_body_entered(body):
+	if !talking:
+		DialogManager.start_dialog(global_position, lines)
+		talking = true
+		new_team_mate.emit()
+
+
+func _on_area_2d_body_exited(body):
+	talking = false
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5fm80"]
 animations = [{
@@ -22,7 +45,7 @@ size = Vector2(94, 90)
 
 [node name="npc1" type="CharacterBody2D"]
 position = Vector2(390, 392)
-script = ExtResource("1_61p78")
+script = SubResource("GDScript_wholh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)

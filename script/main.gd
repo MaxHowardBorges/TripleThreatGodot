@@ -1,7 +1,5 @@
 extends Node
 
-var team = 1
-
 func _ready():
 	pass
 	

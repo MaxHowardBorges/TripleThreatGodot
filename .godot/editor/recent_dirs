@@ -1,9 +1,9 @@
-res://scene
-res://script
 res://
-res://art/idle
-res://art
-res://art/spriteUp
-res://art/spriteRight
 res://art/spriteDown
 res://art/spriteLeft
+res://art/spriteRight
+res://art/spriteUp
+res://scene
+res://script
+res://art/idle
+res://art
