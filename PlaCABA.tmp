@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b618ta06gjx2f"]
+[gd_scene load_steps=10 format=3 uid="uid://b618ta06gjx2f"]
 
 [ext_resource type="Texture2D" uid="uid://copf8n7dxiwg4" path="res://CUTsprite/tile001.png" id="1"]
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
@@ -7,20 +7,29 @@
 [ext_resource type="Script" path="res://RayCast2D.gd" id="4_4hnhr"]
 [ext_resource type="Script" path="res://Enemy.gd" id="4_def7q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
+size = Vector2(116.5, 89)
+
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 36.0
 height = 102.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qbnoh"]
-radius = 62.0725
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qhkb"]
 size = Vector2(75.5, 76.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
-size = Vector2(116.5, 89)
+[node name="IDK" type="Area2D"]
 
-[node name="IDK" type="Node2D"]
+[node name="basketPoint" type="Area2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="Sprite" type="Sprite2D" parent="basketPoint"]
+position = Vector2(587.692, 26.75)
+scale = Vector2(0.320513, 0.320513)
+texture = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basketPoint"]
+position = Vector2(587.442, 27.25)
+shape = SubResource("RectangleShape2D_7jgqe")
 
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
 position = Vector2(590, 463)
@@ -32,43 +41,23 @@ scale = Vector2(4.04167, 4.04167)
 texture = ExtResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
-position = Vector2(1, -16)
+position = Vector2(0, 1)
 shape = SubResource("1")
 
-[node name="Area2D" type="Area2D" parent="Player1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/Area2D"]
-position = Vector2(3, -6)
-shape = SubResource("CircleShape2D_qbnoh")
+[node name="RayCast2D" type="RayCast2D" parent="Player1"]
+position = Vector2(1, 0)
+target_position = Vector2(-3, -437)
+script = ExtResource("4_4hnhr")
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
-position = Vector2(590, 289)
+position = Vector2(10, 10)
 script = ExtResource("4_def7q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
-position = Vector2(0, 1)
+position = Vector2(589, 281)
 scale = Vector2(0.609375, 0.609375)
 texture = ExtResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(0.25, 0.75)
+position = Vector2(589.25, 280.75)
 shape = SubResource("RectangleShape2D_3qhkb")
-
-[node name="basketPoint" type="CharacterBody2D" parent="."]
-position = Vector2(586, 11)
-
-[node name="RayCast2D" type="RayCast2D" parent="basketPoint"]
-position = Vector2(2, -1)
-target_position = Vector2(375, 1)
-script = ExtResource("4_4hnhr")
-
-[node name="Sprite" type="Sprite2D" parent="basketPoint"]
-position = Vector2(-0.307678, 0.750027)
-scale = Vector2(0.320513, 0.320513)
-texture = ExtResource("3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="basketPoint"]
-position = Vector2(1, -1)
-shape = SubResource("RectangleShape2D_7jgqe")
-
-[connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]

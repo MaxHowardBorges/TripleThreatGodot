@@ -2,12 +2,15 @@ extends CharacterBody2D
 
 class_name Player1
 
-@export var speed = 100
+@export var speed = 5
 
 var screen_size
 
-func player():
-	pass
+@onready var target = $"../basketPoint"
+
+@onready var ray = $"RayCast2D"
+
+@onready var hasLineOfSight	= true;
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -15,13 +18,13 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed('move_right'):
-		velocity.x +=1
+		velocity.x +=speed
 	if Input.is_action_pressed('move_left'):
-		velocity.x -=1
+		velocity.x -=speed
 	if Input.is_action_pressed('move_up'):
-		velocity.y -=1
+		velocity.y -=speed
 	if Input.is_action_pressed('move_down'):
-		velocity.y +=1
+		velocity.y +=speed
 
 		
-	position += velocity * 0.06
+	position += velocity * 1
