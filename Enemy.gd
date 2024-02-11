@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 class_name Enemy
-var speed: float = 100.0
+var speed: float = 0
 
 @onready var main_node = get_parent()
 @onready var player_node = main_node.get_node("Player1")

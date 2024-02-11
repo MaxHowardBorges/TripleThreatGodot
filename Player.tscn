@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b618ta06gjx2f"]
+[gd_scene load_steps=14 format=3 uid="uid://b618ta06gjx2f"]
 
 [ext_resource type="Texture2D" uid="uid://copf8n7dxiwg4" path="res://CUTsprite/tile001.png" id="1"]
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
@@ -24,10 +24,11 @@ size = Vector2(116.5, 89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7e2d"]
 size = Vector2(60, 60)
 
+[sub_resource type="Curve2D" id="Curve2D_gsaoj"]
+
 [node name="IDK" type="Node2D"]
 
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(590, 463)
 script = ExtResource("2")
 
 [node name="Sprite" type="Sprite2D" parent="Player1"]
@@ -98,5 +99,13 @@ target_position = Vector2(1078, 0)
 position = Vector2(2, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_gsaoj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+loop = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
 
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]
