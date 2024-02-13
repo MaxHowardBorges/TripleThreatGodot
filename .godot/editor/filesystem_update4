@@ -1,5 +1,7 @@
 res://Player.tscn
 res://Player1.gd
 res://Enemy.gd
-res://RayCast2D.gd
-res://RayCast2DPlayer.gd
+res://script/npc1.gd
+res://scene/player.tscn
+res://Ball.gd
+res://Player2.gd
