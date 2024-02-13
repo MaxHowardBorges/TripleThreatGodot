@@ -6,7 +6,7 @@ var hasBall = false
 
 var attack = true
 
-@export var speed =200
+@export var speed = 200
 
 var screen_size
 
@@ -39,8 +39,8 @@ func _physics_process(delta):
 	update_animation(velocity)
 	if hasBall:
 		if Input.is_action_pressed("espace"):
-			print("passe")
 			passe.emit(position,ray.get_collider().position)
+			hasBall = false
 			
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO

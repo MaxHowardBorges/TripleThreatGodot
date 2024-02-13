@@ -1,7 +1,3 @@
 res://Player.tscn
-res://Player1.gd
-res://Enemy.gd
-res://script/npc1.gd
-res://scene/player.tscn
 res://Ball.gd
-res://Player2.gd
+res://Player1.gd
