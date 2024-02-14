@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://bu1r34uwg5kkv"]
+[gd_scene load_steps=100 format=3 uid="uid://bu1r34uwg5kkv"]
 
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://hjdpylr3wx4h" path="res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png" id="2_2s243"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://cm3dg3n68malj" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png" id="21_qju8k"]
 [ext_resource type="Texture2D" uid="uid://bogik8uy15fki" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png" id="22_lianw"]
 [ext_resource type="Texture2D" uid="uid://dgmh5fmwnyuen" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png" id="23_qwbx0"]
+[ext_resource type="Texture2D" uid="uid://d0cjf2bhnfgk4" path="res://image.jpg" id="26_qvv6e"]
+[ext_resource type="Texture2D" uid="uid://cvlvm3bb1esal" path="res://Level-5_Inc._logo.svg" id="27_upvr5"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 36.0
@@ -668,6 +670,40 @@ shape = SubResource("CircleShape2D_5xk37")
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
 scale = Vector2(8, 8)
 texture = ExtResource("16_fgy2n")
+
+[node name="Score" type="Sprite2D" parent="."]
+position = Vector2(1011.36, 575.5)
+scale = Vector2(0.268182, 0.268182)
+texture = ExtResource("26_qvv6e")
+
+[node name="Level5" type="Sprite2D" parent="."]
+position = Vector2(1105, 576)
+scale = Vector2(0.215802, 0.215802)
+texture = ExtResource("27_upvr5")
+
+[node name="scoreHome" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 975.359
+offset_top = 549.5
+offset_right = 1015.36
+offset_bottom = 575.5
+text = "89
+"
+
+[node name="scoreAway" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 975.359
+offset_top = 575.5
+offset_right = 1015.36
+offset_bottom = 601.5
+text = "89"
+
+[node name="shotClock" type="Label" parent="."]
+offset_left = 1035.0
+offset_top = 564.0
+offset_right = 1075.0
+offset_bottom = 590.0
+text = ":19"
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]

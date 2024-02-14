@@ -1,4 +1,6 @@
 Sprite2D
+Label
+CanvasLayer
 AnimatedSprite2D
 CollisionShape2D
 Area2D
