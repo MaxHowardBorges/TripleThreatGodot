@@ -31,7 +31,7 @@
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 36.0
-height = 90.0
+height = 102.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q82w5"]
 atlas = ExtResource("2_2s243")
@@ -679,10 +679,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ShootBar" type="TextureProgressBar" parent="Control"]
-offset_left = 78.0
-offset_top = 35.0
-offset_right = 206.0
-offset_bottom = 163.0
+offset_left = 187.0
+offset_top = 95.0
+offset_right = 315.0
+offset_bottom = 223.0
 value = 50.0
 fill_mode = 4
 texture_under = ExtResource("26_fg556")

@@ -1,5 +1,2 @@
 res://Player.tscn
-res://Ball.gd
-res://Player1.gd
-res://RayCast2DPlayer.gd
-res://Player2.gd
+res://ShootBar.gd
