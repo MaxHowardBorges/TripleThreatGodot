@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 var isFree = true
 @export var speed = 500
-var free_time = 1.0
+var free_time = 3
 var elapsed_time = 0.0
+var lastOwner
 signal hasBall
 
 func _physics_process(delta): 
@@ -13,14 +14,15 @@ func _physics_process(delta):
 		hasBall.emit()
 	else:
 		$Sprite2D.set_visible(true)
-		#$Area2D/CollisionShape2D.set_disabled(false)
+		$Area2D/CollisionShape2D.set_disabled(false)
 	move_and_slide()
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if !body.hasBall:
+	if 	body != lastOwner:
 		isFree = false
+		lastOwner = body
 	else:
-		print("glabal")
+		pass
 
 func _on_player_1_passe(debut, fin):
 	position = debut

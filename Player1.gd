@@ -28,6 +28,7 @@ func _input(event):
 		target_clicked = get_global_mouse_position()
 
 func _physics_process(delta):
+	print(hasBall)
 	velocity = position.direction_to(target_clicked) * speed
 	if position.distance_to(target_clicked) > 10:
 		move_and_slide()
@@ -41,7 +42,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("espace"):
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
-			
+
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.stop()

@@ -634,23 +634,23 @@ texture = ExtResource("3")
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_7jgqe")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player2" type="CharacterBody2D" parent="."]
 position = Vector2(873, 381)
 script = ExtResource("15_elbnq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_11n4o")
 
-[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D"]
+[node name="RayCast2D" type="RayCast2D" parent="Player2"]
 target_position = Vector2(1078, 0)
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+[node name="Area2D" type="Area2D" parent="Player2"]
 position = Vector2(2, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/Area2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_k1ddh")
 animation = &"down"
@@ -672,4 +672,5 @@ texture = ExtResource("16_fgy2n")
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]
 [connection signal="hasBall" from="Ball" to="Player1" method="_on_ball_has_ball"]
+[connection signal="hasBall" from="Ball" to="Player2" method="_on_ball_has_ball"]
 [connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
