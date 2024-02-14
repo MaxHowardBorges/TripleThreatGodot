@@ -28,7 +28,6 @@ func _input(event):
 		target_clicked = get_global_mouse_position()
 
 func _physics_process(delta):
-	print(hasBall)
 	velocity = position.direction_to(target_clicked) * speed
 	if position.distance_to(target_clicked) > 10:
 		move_and_slide()
@@ -42,6 +41,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("espace"):
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
+			print("Player 1 n'a plus la balle")
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO
@@ -76,5 +76,6 @@ func update_animation(velocity):
 		stop_moving_and_reset_animation()
 
 
-func _on_ball_has_ball():
+func _on_ball_has_ball_player_1():
 	hasBall = true
+	print("Player 1 a la balle")

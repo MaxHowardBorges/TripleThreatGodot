@@ -5,13 +5,13 @@ var isFree = true
 var free_time = 3
 var elapsed_time = 0.0
 var lastOwner
-signal hasBall
+signal hasBallPlayer1
+signal hasBallPlayer2
 
 func _physics_process(delta): 
 	if !isFree:
 		$Sprite2D.set_visible(false)
 		$Area2D/CollisionShape2D.set_disabled(true)
-		hasBall.emit()
 	else:
 		$Sprite2D.set_visible(true)
 		$Area2D/CollisionShape2D.set_disabled(false)
@@ -21,6 +21,10 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 	if 	body != lastOwner:
 		isFree = false
 		lastOwner = body
+		if body.name == "Player1":
+			hasBallPlayer1.emit()
+		elif body.name == "Player2":
+			hasBallPlayer2.emit()
 	else:
 		pass
 

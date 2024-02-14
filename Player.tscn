@@ -671,6 +671,6 @@ texture = ExtResource("16_fgy2n")
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]
-[connection signal="hasBall" from="Ball" to="Player1" method="_on_ball_has_ball"]
-[connection signal="hasBall" from="Ball" to="Player2" method="_on_ball_has_ball"]
+[connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
+[connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
 [connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]

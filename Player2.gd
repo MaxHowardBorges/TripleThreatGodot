@@ -21,6 +21,7 @@ var target_clicked = position
 func _ready():
 	screen_size = get_viewport_rect().size
 
-func _on_ball_has_ball():
+
+func _on_ball_has_ball_player_2():
 	hasBall = true
-	print("ZZZZZZZZZZ")
+	print("Player 2 a la balle")
