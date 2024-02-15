@@ -3,17 +3,15 @@ extends CharacterBody2D
 class_name Player1
 
 var hasBall = false
-
 var attack = true
-
+var shooting = false
 @export var speed = 200
-
 var screen_size
-
 var target_clicked = position
 
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
+@onready var shootBar = $"../Control/ShootBar"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
@@ -41,13 +39,14 @@ func _physics_process(delta):
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
 			print("Player 1 n'a plus la balle")
+		if Input.is_action_pressed("shoot"):
+			shootBar.show()
+			shoot.emit()
+			print("Player 1 shoot")
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO
 	$AnimatedSprite2D.stop()
-
-func vector_to_screen_position(vector):
-	return Vector2(vector.x * screen_size.x, vector.y * screen_size.y)
 
 func update_animation(velocity):
 	if velocity.length() > 0:

@@ -15,6 +15,10 @@ var clr7 = "#C9F852"
 var clr8 = "#B2F951"
 var clr9 = "#9DFA51"
 var clr10 = "#86FB50"
+
+func _ready():
+		ShootBar.hide()
+
 func _process(delta):
 	if increasing:
 		ShootBar.value += delta * progressSpeed

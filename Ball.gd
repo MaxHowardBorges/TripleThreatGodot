@@ -25,8 +25,6 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 			hasBallPlayer1.emit()
 		elif body.name == "Player2":
 			hasBallPlayer2.emit()
-	else:
-		pass
 
 func _on_player_1_passe(debut, fin):
 	position = debut
