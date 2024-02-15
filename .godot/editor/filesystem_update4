@@ -1,2 +1,4 @@
 res://Player.tscn
 res://ShootBar.gd
+res://Control.gd
+res://Player1.gd

@@ -13,12 +13,11 @@ var screen_size
 var target_clicked = position
 
 @onready var target = $"../basketPoint"
-
 @onready var ray = $"RayCast2D"
-
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
+signal shoot
 
 func _ready():
 	screen_size = get_viewport_rect().size

@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://bu1r34uwg5kkv"]
+[gd_scene load_steps=102 format=3 uid="uid://bu1r34uwg5kkv"]
 
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://hjdpylr3wx4h" path="res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png" id="2_2s243"]
@@ -26,8 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://bogik8uy15fki" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png" id="22_lianw"]
 [ext_resource type="Texture2D" uid="uid://dgmh5fmwnyuen" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png" id="23_qwbx0"]
 [ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="26_fg556"]
+[ext_resource type="Script" path="res://Control.gd" id="26_gwe1c"]
 [ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="27_m6e05"]
-[ext_resource type="Script" path="res://ShootBar.gd" id="28_74u2x"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 36.0
@@ -582,6 +582,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
 radius = 97.3242
 
+[sub_resource type="GDScript" id="GDScript_wibu8"]
+script/source = "extends TextureProgressBar
+
+@onready var shootBar = $\"Control/ShootBar\"
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="IDK" type="Node2D"]
 
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
@@ -677,20 +686,20 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("26_gwe1c")
 
 [node name="ShootBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
 offset_left = 78.0
 offset_top = 35.0
 offset_right = 206.0
 offset_bottom = 163.0
-value = 50.0
 fill_mode = 4
 texture_under = ExtResource("26_fg556")
 texture_over = ExtResource("27_m6e05")
 texture_progress = ExtResource("26_fg556")
 tint_under = Color(0, 0, 0, 0.278431)
-tint_progress = Color(0.352941, 0.784314, 0.0862745, 1)
-script = ExtResource("28_74u2x")
+script = SubResource("GDScript_wibu8")
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="body_entered" from="Player1/Area2D" to="Player1" method="_on_area_2d_body_entered"]
