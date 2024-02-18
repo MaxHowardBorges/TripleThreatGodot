@@ -8,14 +8,15 @@ var shooting = false
 @export var speed = 200
 var screen_size
 var target_clicked = position
-
+var key_states = {}
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
 @onready var shootBar = $"../Control/ShootBar"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
-signal shoot
+signal shootPressed
+signal shootReleased
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -40,9 +41,12 @@ func _physics_process(delta):
 			hasBall = false
 			print("Player 1 n'a plus la balle")
 		if Input.is_action_pressed("shoot"):
-			shootBar.show()
-			shoot.emit()
-			print("Player 1 shoot")
+			if not key_states.has("shoot") or not key_states["shoot"]:
+				key_states["shoot"] = true
+				shootPressed.emit()
+		elif key_states.has("shoot") and key_states["shoot"]:
+			key_states["shoot"] = false
+			shootReleased.emit()
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO

@@ -51,3 +51,12 @@ func _process(delta):
 		ShootBar.set_tint_progress(clr2)
 	elif ShootBar.value >= 0.0 and ShootBar.value < 10.0:
 		ShootBar.set_tint_progress(clr1)
+
+
+
+func _on_player_1_shoot_pressed():
+	print("pressed")
+
+
+func _on_player_1_shoot_released():
+	print("released")

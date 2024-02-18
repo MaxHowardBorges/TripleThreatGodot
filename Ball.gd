@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 var isFree = true
 @export var speed = 500
-var free_time = 3
-var elapsed_time = 0.0
 var lastOwner
 signal hasBallPlayer1
 signal hasBallPlayer2
