@@ -36,7 +36,7 @@ func _physics_process(delta):
 
 	update_animation(velocity)
 	if hasBall:
-		if Input.is_action_pressed("espace"):
+		if Input.is_action_pressed("espace") && !shooting:
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
 			print("Player 1 n'a plus la balle")
@@ -44,9 +44,11 @@ func _physics_process(delta):
 			if not key_states.has("shoot") or not key_states["shoot"]:
 				key_states["shoot"] = true
 				shootPressed.emit()
+				shooting = true
 		elif key_states.has("shoot") and key_states["shoot"]:
 			key_states["shoot"] = false
 			shootReleased.emit()
+			shooting = false
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO
