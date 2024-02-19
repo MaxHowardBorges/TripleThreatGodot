@@ -1,1 +1,4 @@
 res://Player.tscn
+res://Court.gd
+res://TimeUp.gd
+res://shotClock.gd
