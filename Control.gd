@@ -4,7 +4,7 @@ extends Control
 @onready var ShootBar = $ShootBar
 var shoot = false
 var increasing: bool = true
-var progressSpeed: float = 50.0
+var progressSpeed: float = 100.0
 var clr1 = "#FE0802"
 var clr2 = "#F93F15"
 var clr3 = "#F57628"
@@ -53,15 +53,11 @@ func _process(delta):
 		elif ShootBar.value >= 0.0 and ShootBar.value < 10.0:
 			ShootBar.set_tint_progress(clr1)
 
-
-
 func _on_player_1_shoot_pressed():
 	print("pressed")
 	ShootBar.show()
 	shoot = true
 	
-
-
 func _on_player_1_shoot_released():
 	print("released")
 	print("shoot value : ", ShootBar.value)
