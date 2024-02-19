@@ -21,6 +21,7 @@ signal shootReleased(debut)
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	$AnimatedSprite2D.animation = "idle_down"
 	
 func _input(event):
 	if event.is_action_pressed("click"):
@@ -46,6 +47,7 @@ func _physics_process(delta):
 				key_states["shoot"] = true
 				shootPressed.emit()
 				shooting = true
+				velocity = Vector2.ZERO
 		elif key_states.has("shoot") and key_states["shoot"]:
 			velocity = Vector2.ZERO
 			key_states["shoot"] = false
@@ -101,7 +103,14 @@ func update_animation(velocity):
 			elif lastPlayedAnimation == "down_b":
 				$AnimatedSprite2D.animation = "idle_b_down"
 		else:
-			$AnimatedSprite2D.animation = "idle_up"
+			if lastPlayedAnimation == "up":
+				$AnimatedSprite2D.animation = "idle_up"
+			elif lastPlayedAnimation == "right":
+				$AnimatedSprite2D.animation = "idle_right"
+			elif lastPlayedAnimation == "left":
+				$AnimatedSprite2D.animation = "idle_left"
+			elif lastPlayedAnimation == "down":
+				$AnimatedSprite2D.animation = "idle_down"
 
 func _on_ball_has_ball_player_1():
 	hasBall = true
