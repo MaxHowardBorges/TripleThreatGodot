@@ -31,7 +31,7 @@ func _on_player_1_passe(debut, fin):
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
 
-func _on_control_shoot_basket():
+func _on_control_shoot_basket(debut):
+	position = debut
 	isFree = true
-	var ici = ray.get_collider().position
-	velocity = position.direction_to(ici).normalized() * speed
+	velocity = position.direction_to(ray.global_position).normalized() * speed

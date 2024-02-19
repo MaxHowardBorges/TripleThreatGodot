@@ -16,7 +16,7 @@ var clr8 = "#B2F951"
 var clr9 = "#9DFA51"
 var clr10 = "#86FB50"
 
-signal  shootBasket
+signal  shootBasket(debut)
 
 func _ready():
 		ShootBar.hide()
@@ -60,10 +60,10 @@ func _on_player_1_shoot_pressed():
 	ShootBar.show()
 	shoot = true
 	
-func _on_player_1_shoot_released():
+func _on_player_1_shoot_released(debut):
 	print("released")
 	print("shoot value : ", ShootBar.value)
 	ShootBar.hide()
 	shoot = false
 	ShootBar.value = 0.0
-	shootBasket.emit()
+	shootBasket.emit(debut)

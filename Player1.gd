@@ -16,7 +16,7 @@ var key_states = {}
 
 signal passe(debut,fin)
 signal shootPressed
-signal shootReleased
+signal shootReleased(debut)
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -47,7 +47,7 @@ func _physics_process(delta):
 				shooting = true
 		elif key_states.has("shoot") and key_states["shoot"]:
 			key_states["shoot"] = false
-			shootReleased.emit()
+			shootReleased.emit(position)
 			shooting = false
 			hasBall = false
 
