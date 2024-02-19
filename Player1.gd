@@ -49,6 +49,7 @@ func _physics_process(delta):
 			key_states["shoot"] = false
 			shootReleased.emit()
 			shooting = false
+			hasBall = false
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO

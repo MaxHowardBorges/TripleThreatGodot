@@ -4,7 +4,7 @@ extends Control
 @onready var ShootBar = $ShootBar
 var shoot = false
 var increasing: bool = true
-var progressSpeed: float = 100.0
+var progressSpeed: float = 400.0
 var clr1 = "#FE0802"
 var clr2 = "#F93F15"
 var clr3 = "#F57628"
@@ -15,6 +15,8 @@ var clr7 = "#C9F852"
 var clr8 = "#B2F951"
 var clr9 = "#9DFA51"
 var clr10 = "#86FB50"
+
+signal  shootBasket
 
 func _ready():
 		ShootBar.hide()
@@ -64,3 +66,4 @@ func _on_player_1_shoot_released():
 	ShootBar.hide()
 	shoot = false
 	ShootBar.value = 0.0
+	shootBasket.emit()

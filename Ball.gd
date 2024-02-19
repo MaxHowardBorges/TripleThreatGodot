@@ -3,6 +3,8 @@ extends CharacterBody2D
 var isFree = true
 @export var speed = 500
 var lastOwner
+
+@onready var ray = $"../basketPoint/RayCast2D"
 signal hasBallPlayer1
 signal hasBallPlayer2
 
@@ -28,3 +30,8 @@ func _on_player_1_passe(debut, fin):
 	position = debut
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
+
+func _on_control_shoot_basket():
+	isFree = true
+	var ici = ray.get_collider().position
+	velocity = position.direction_to(ici).normalized() * speed

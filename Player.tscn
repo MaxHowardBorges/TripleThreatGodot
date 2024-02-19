@@ -708,3 +708,4 @@ script = SubResource("GDScript_wibu8")
 [connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
 [connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
 [connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
+[connection signal="shootBasket" from="Control" to="Ball" method="_on_control_shoot_basket"]
