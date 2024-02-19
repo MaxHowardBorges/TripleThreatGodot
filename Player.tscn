@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=3 uid="uid://bu1r34uwg5kkv"]
+[gd_scene load_steps=163 format=3 uid="uid://bu1r34uwg5kkv"]
 
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://hjdpylr3wx4h" path="res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png" id="2_2s243"]
@@ -25,7 +25,6 @@
 [ext_resource type="Script" path="res://Player2.gd" id="15_elbnq"]
 [ext_resource type="Script" path="res://Ball.gd" id="15_qr1bw"]
 [ext_resource type="Texture2D" uid="uid://bnsc2ig3fdbkc" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_South_WITHBALL_strip3.png" id="16_bcnrp"]
-[ext_resource type="Texture2D" uid="uid://qfo1xrdfidl2" path="res://bballsprite/ballCroped.png" id="16_fgy2n"]
 [ext_resource type="Texture2D" uid="uid://b2h5qnc7wstds" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_SOUTH_NO_BALL_strip4.png" id="16_ys0wq"]
 [ext_resource type="Texture2D" uid="uid://d2y0ti7lduj2" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_West_WITHBALL_strip3.png" id="17_84crd"]
 [ext_resource type="Texture2D" uid="uid://llg5btwq0nf5" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_SOUTH_WITH_BALL_strip4.png" id="17_x2e78"]
@@ -40,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="26_fg556"]
 [ext_resource type="Script" path="res://Control.gd" id="26_gwe1c"]
 [ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="27_m6e05"]
+[ext_resource type="Texture2D" uid="uid://dstgyme06ewi" path="res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png" id="38_pvehm"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 36.0
@@ -962,6 +962,42 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
 radius = 97.3242
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bsr7"]
+atlas = ExtResource("38_pvehm")
+region = Rect2(16, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydddn"]
+atlas = ExtResource("38_pvehm")
+region = Rect2(24, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5ep3"]
+atlas = ExtResource("38_pvehm")
+region = Rect2(32, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn23t"]
+atlas = ExtResource("38_pvehm")
+region = Rect2(40, 0, 8, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m36qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bsr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydddn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5ep3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn23t")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
 [sub_resource type="GDScript" id="GDScript_wibu8"]
 script/source = "extends TextureProgressBar
 
@@ -1057,9 +1093,11 @@ script = ExtResource("15_qr1bw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D"]
 shape = SubResource("CircleShape2D_5xk37")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ball"]
-scale = Vector2(8, 8)
-texture = ExtResource("16_fgy2n")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ball"]
+scale = Vector2(9, 9)
+sprite_frames = SubResource("SpriteFrames_m36qi")
+animation = &"move"
+frame_progress = 0.229791
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

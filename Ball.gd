@@ -10,13 +10,13 @@ signal hasBallPlayer2
 
 func _physics_process(delta): 
 	if !isFree:
-		$Sprite2D.set_visible(false)
+		$AnimatedSprite2D.set_visible(false)
 		$Area2D/CollisionShape2D.set_disabled(true)
 	else:
-		$Sprite2D.set_visible(true)
+		$AnimatedSprite2D.set_visible(true)
 		$Area2D/CollisionShape2D.set_disabled(false)
 	move_and_slide()
-
+	$AnimatedSprite2D.play("move")
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if 	body != lastOwner:
 		isFree = false
@@ -27,6 +27,7 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 			hasBallPlayer2.emit()
 
 func _on_player_1_passe(debut, fin):
+	
 	position = debut
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
