@@ -3,7 +3,7 @@ extends CharacterBody2D
 var isFree = true
 @export var speed = 500
 var lastOwner
-
+var shooting = false
 @onready var ray = $"../basketPoint/RayCast2D"
 @onready var rebound = $"../Rebound"
 @onready var Success = $"../Success"
@@ -21,7 +21,7 @@ func _physics_process(delta):
 	$AnimatedSprite2D.play("move")
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if 	body != lastOwner:
+	if 	body != lastOwner and !shooting:
 		isFree = false
 		lastOwner = body
 		if body.name == "Player1":
@@ -39,6 +39,8 @@ func _on_control_shoot_basket(debut, value):
 	var time_to_destination = distance_x / speed
 	print("temsp",time_to_destination)
 	position = debut
+	
+	shooting = true
 	isFree = true
 	velocity = position.direction_to(ray.global_position).normalized() * speed
 	await get_tree().create_timer(time_to_destination).timeout
@@ -60,4 +62,4 @@ func _on_control_shoot_basket(debut, value):
 		print("temsp",time_to_destination)
 		print(rebound.position)
 		lastOwner = null
-	
+	shooting = false
