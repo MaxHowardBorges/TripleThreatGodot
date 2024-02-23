@@ -1,9 +1,9 @@
+Control
 Node2D
 CollisionPolygon2D
 Area2D
 AnimatedSprite2D
 Timer
-Control
 TextureProgressBar
 Sprite2D
 CollisionShape2D
