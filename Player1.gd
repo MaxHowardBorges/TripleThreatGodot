@@ -35,7 +35,7 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 		#stop_moving_and_reset_animation()
-		
+	print(hasBall)
 	update_animation(velocity)
 	if hasBall:
 		if Input.is_action_pressed("espace") && !shooting:

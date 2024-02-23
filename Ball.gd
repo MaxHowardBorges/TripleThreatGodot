@@ -17,6 +17,7 @@ func _physics_process(delta):
 		$Area2D/CollisionShape2D.set_disabled(false)
 	move_and_slide()
 	$AnimatedSprite2D.play("move")
+
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if 	body != lastOwner:
 		isFree = false

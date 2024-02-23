@@ -1,5 +1,5 @@
-Timer
 AnimatedSprite2D
+Timer
 Control
 TextureProgressBar
 Sprite2D
@@ -7,7 +7,6 @@ CollisionShape2D
 Sprite2D
 Label
 CanvasLayer
-AnimatedSprite2D
 Area2D
 CharacterBody2D
 RayCast2D

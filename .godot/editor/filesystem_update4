@@ -1,6 +1,6 @@
-res://Player.tscn
-res://Court.gd
-res://TimeUp.gd
-res://shotClock.gd
-res://Player1.gd
 res://Ball.gd
+res://PlayerMax.tscn
+res://Player1.gd
+res://PlayerMatt.tscn
+res://Player2.gd
+res://Control.gd
