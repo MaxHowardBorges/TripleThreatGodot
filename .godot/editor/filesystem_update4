@@ -1,2 +1,10 @@
 res://PlayerMax.tscn
 res://Paint.gd
+res://Player1.gd
+res://PlayerMatt.tscn
+res://Perimeter zone.gd
+res://Outside zone.gd
+res://Mid range zone.gd
+res://Paint Zone.gd
+res://Control.gd
+res://Ball.gd

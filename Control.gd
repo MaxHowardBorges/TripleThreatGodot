@@ -16,7 +16,7 @@ var clr8 = "#B2F951"
 var clr9 = "#9DFA51"
 var clr10 = "#86FB50"
 
-signal  shootBasket(debut)
+signal  shootBasket(debut, value)
 
 func _ready():
 		ShootBar.hide()
@@ -59,11 +59,21 @@ func _on_player_1_shoot_pressed():
 	print("pressed")
 	ShootBar.show()
 	shoot = true
+	ShootBar.value = 0.0
 	
-func _on_player_1_shoot_released(debut):
+func _on_player_1_shoot_released(debut,zoneIn):
 	print("released")
 	print("shoot value : ", ShootBar.value)
+	print(zoneIn)
+	if(zoneIn=="Outside"):
+		ShootBar.value-=30
+	if(zoneIn=="Perimeter"):
+		ShootBar.value-=20
+	if(zoneIn=="Outside"):
+		ShootBar.value-=10
+	if(ShootBar.value<0):
+		ShootBar.value=0
+	
 	ShootBar.hide()
 	shoot = false
-	ShootBar.value = 0.0
-	shootBasket.emit(debut)
+	shootBasket.emit(debut, ShootBar.value)

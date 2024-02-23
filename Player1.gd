@@ -10,14 +10,15 @@ var screen_size
 var target_clicked = position
 var key_states = {}
 var lastPlayedAnimation = ""
+var zoneIn = ""
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
 @onready var shootBar = $"../Control/ShootBar"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
-signal shootPressed
-signal shootReleased(debut)
+signal shootPressed()
+signal shootReleased(debut,zoneIn)
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -35,7 +36,6 @@ func _physics_process(delta):
 	else:
 		velocity = Vector2.ZERO
 		#stop_moving_and_reset_animation()
-	print(hasBall)
 	update_animation(velocity)
 	if hasBall:
 		if Input.is_action_pressed("espace") && !shooting:
@@ -51,11 +51,12 @@ func _physics_process(delta):
 		elif key_states.has("shoot") and key_states["shoot"]:
 			velocity = Vector2.ZERO
 			key_states["shoot"] = false
-			shootReleased.emit(position)
+			shootReleased.emit(position, zoneIn)
 			shooting = false
 			hasBall = false
 			$AnimatedSprite2D.animation = "shoot_up"
 			lastPlayedAnimation = "shoot_up"
+
 
 func stop_moving_and_reset_animation():
 	velocity = Vector2.ZERO
@@ -115,3 +116,20 @@ func update_animation(velocity):
 func _on_ball_has_ball_player_1():
 	hasBall = true
 	print("Player 1 a la balle")
+
+
+
+func _on_perimeter_zone_zone_perimeter_player_1():
+	zoneIn = "Perimeter"
+
+
+func _on_outside_zone_zone_outside_player_1():
+	zoneIn = "Outside"
+
+
+func _on_mid_range_zone_zone_mid_player_1():
+	zoneIn = "Mid"
+
+
+func _on_paint_zone_zone_paint_player_1():
+	zoneIn = "Paint"

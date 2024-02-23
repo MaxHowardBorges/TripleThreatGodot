@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=3 uid="uid://byn8qinucckxp"]
+[gd_scene load_steps=173 format=3 uid="uid://byn8qinucckxp"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
 [ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
@@ -47,6 +47,10 @@
 [ext_resource type="Script" path="res://Control.gd" id="33_ug8qc"]
 [ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="34_28eu5"]
 [ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="35_b6ma0"]
+[ext_resource type="Script" path="res://Mid range zone.gd" id="48_5xkdq"]
+[ext_resource type="Script" path="res://Perimeter zone.gd" id="48_nrb24"]
+[ext_resource type="Script" path="res://Paint Zone.gd" id="48_tu6dg"]
+[ext_resource type="Script" path="res://Outside zone.gd" id="49_v2wa0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
@@ -1056,7 +1060,7 @@ target_position = Vector2(1390, 1)
 script = ExtResource("3_2ure0")
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
-position = Vector2(590, 289)
+position = Vector2(897, 630)
 script = ExtResource("4_def7q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
@@ -1091,7 +1095,7 @@ animation = &"down"
 
 [node name="Ball" type="CharacterBody2D" parent="."]
 position = Vector2(230, 418)
-scale = Vector2(7, 7)
+scale = Vector2(5, 5)
 script = ExtResource("15_qr1bw")
 
 [node name="Area2D" type="Area2D" parent="Ball"]
@@ -1140,7 +1144,7 @@ script = ExtResource("30_wan4s")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 5.0
+wait_time = 24.0
 
 [node name="TimeUp" type="Sprite2D" parent="."]
 visible = false
@@ -1170,22 +1174,35 @@ tint_under = Color(0, 0, 0, 0.278431)
 script = SubResource("GDScript_js2fs")
 
 [node name="Paint Zone" type="Area2D" parent="."]
+script = ExtResource("48_tu6dg")
 
 [node name="Paint" type="CollisionPolygon2D" parent="Paint Zone"]
 position = Vector2(588, 208)
 polygon = PackedVector2Array(0, 1, -118, 0, -118, 187, 126, 188, 126, 0)
 
 [node name="Mid range zone" type="Area2D" parent="."]
+script = ExtResource("48_5xkdq")
 
 [node name="Mid" type="CollisionPolygon2D" parent="Mid range zone"]
 position = Vector2(399, 210)
 polygon = PackedVector2Array(-11, -1, -75, 0, -74, 121, -50, 205, -26, 249, 16, 285, 96, 310, 290, 310, 382, 280, 412, 248, 436, 209, 460, 120, 461, -2, 315, -1, 315, 186, 71, 185, 71, -2)
 
 [node name="Perimeter zone" type="Area2D" parent="."]
+script = ExtResource("48_nrb24")
 
 [node name="Perimeter" type="CollisionPolygon2D" parent="Perimeter zone"]
 position = Vector2(263, 208)
 polygon = PackedVector2Array(-3, 2, -61, 2, -84, 204, 9, 362, 166, 411, 498, 411, 668, 355, 739, 208, 718, 1, 597, 0, 596, 122, 572, 211, 548, 250, 518, 282, 426, 312, 232, 312, 152, 287, 110, 251, 86, 207, 62, 123, 61, 2)
+
+[node name="Outside zone" type="Area2D" parent="."]
+script = ExtResource("49_v2wa0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside zone"]
+position = Vector2(594, 729)
+polygon = PackedVector2Array(-1, -1, -456, 0, -415, -316, -322, -159, -166, -110, 167, -110, 337, -166, 408, -314, 450, 0)
+
+[node name="Rebound" type="Node2D" parent="."]
+position = Vector2(611, 237)
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
@@ -1196,3 +1213,11 @@ polygon = PackedVector2Array(-3, 2, -61, 2, -84, 204, 9, 362, 166, 411, 498, 411
 [connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="shootBasket" from="Control" to="Ball" method="_on_control_shoot_basket"]
+[connection signal="body_entered" from="Paint Zone" to="Paint Zone" method="_on_body_entered"]
+[connection signal="zonePaintPlayer1" from="Paint Zone" to="Player1" method="_on_paint_zone_zone_paint_player_1"]
+[connection signal="body_entered" from="Mid range zone" to="Mid range zone" method="_on_body_entered"]
+[connection signal="zoneMidPlayer1" from="Mid range zone" to="Player1" method="_on_mid_range_zone_zone_mid_player_1"]
+[connection signal="body_entered" from="Perimeter zone" to="Perimeter zone" method="_on_body_entered"]
+[connection signal="zonePerimeterPlayer1" from="Perimeter zone" to="Player1" method="_on_perimeter_zone_zone_perimeter_player_1"]
+[connection signal="body_entered" from="Outside zone" to="Outside zone" method="_on_body_entered"]
+[connection signal="zoneOutsidePlayer1" from="Outside zone" to="Player1" method="_on_outside_zone_zone_outside_player_1"]

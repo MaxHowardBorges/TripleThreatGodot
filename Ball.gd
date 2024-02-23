@@ -5,6 +5,7 @@ var isFree = true
 var lastOwner
 
 @onready var ray = $"../basketPoint/RayCast2D"
+@onready var rebound = $"../Rebound"
 signal hasBallPlayer1
 signal hasBallPlayer2
 
@@ -33,7 +34,16 @@ func _on_player_1_passe(debut, fin):
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
 
-func _on_control_shoot_basket(debut):
+func _on_control_shoot_basket(debut, value):
 	position = debut
 	isFree = true
 	velocity = position.direction_to(ray.global_position).normalized() * speed
+	var rng = RandomNumberGenerator.new()
+	var shot = rng.randi_range(0,100)
+	if(shot<=value):
+		
+		print("CASH!")
+	else:
+		print("brick")
+		#velocity = position.direction_to(rebound.global_position).normalized() * speed
+	

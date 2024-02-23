@@ -36,9 +36,9 @@
 [ext_resource type="Texture2D" uid="uid://cm3dg3n68malj" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png" id="21_qju8k"]
 [ext_resource type="Texture2D" uid="uid://bogik8uy15fki" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png" id="22_lianw"]
 [ext_resource type="Texture2D" uid="uid://dgmh5fmwnyuen" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png" id="23_qwbx0"]
-[ext_resource type="Texture2D" path="res://art/progress-bar-circle.png" id="26_fg556"]
+[ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="26_fg556"]
 [ext_resource type="Script" path="res://Control.gd" id="26_gwe1c"]
-[ext_resource type="Texture2D" path="res://art/progress-bar-frame.png" id="27_m6e05"]
+[ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="27_m6e05"]
 [ext_resource type="Texture2D" uid="uid://dstgyme06ewi" path="res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png" id="38_pvehm"]
 
 [sub_resource type="CapsuleShape2D" id="1"]

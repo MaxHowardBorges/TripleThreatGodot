@@ -1,3 +1,4 @@
+Node2D
 CollisionPolygon2D
 Area2D
 AnimatedSprite2D
@@ -11,4 +12,3 @@ Label
 CanvasLayer
 CharacterBody2D
 RayCast2D
-Node2D
