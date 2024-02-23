@@ -8,3 +8,8 @@ res://Mid range zone.gd
 res://Paint Zone.gd
 res://Control.gd
 res://Ball.gd
+res://RayCast2DPlayer.gd
+res://RayCast2D.gd
+res://Succes.gd
+res://TimeUp.gd
+res://Enemy.gd

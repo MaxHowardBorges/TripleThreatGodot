@@ -20,5 +20,6 @@ func _process(delta):
 		nbr=nbr+1
 
 func _draw():
-		draw_line(basket, target_position, Color(1, 0, 0), 10)
+	pass
+	#draw_line(basket, target_position, Color(1, 0, 0), 10)
 

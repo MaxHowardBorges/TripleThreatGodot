@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://byn8qinucckxp"]
+[gd_scene load_steps=175 format=3 uid="uid://byn8qinucckxp"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
 [ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
@@ -47,6 +47,8 @@
 [ext_resource type="Script" path="res://Control.gd" id="33_ug8qc"]
 [ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="34_28eu5"]
 [ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="35_b6ma0"]
+[ext_resource type="Texture2D" uid="uid://c7n77rk8gcvfd" path="res://Succes.png" id="45_evydk"]
+[ext_resource type="Script" path="res://Succes.gd" id="46_obgj6"]
 [ext_resource type="Script" path="res://Mid range zone.gd" id="48_5xkdq"]
 [ext_resource type="Script" path="res://Perimeter zone.gd" id="48_nrb24"]
 [ext_resource type="Script" path="res://Paint Zone.gd" id="48_tu6dg"]
@@ -1014,7 +1016,7 @@ func _process(delta):
 [node name="IDK" type="Node2D"]
 script = ExtResource("1_4jdof")
 
-[node name="basketPoint" type="CharacterBody2D" parent="."]
+[node name="basketPoint" type="Node2D" parent="."]
 position = Vector2(586, 11)
 
 [node name="RayCast2D" type="RayCast2D" parent="basketPoint"]
@@ -1060,7 +1062,7 @@ target_position = Vector2(1390, 1)
 script = ExtResource("3_2ure0")
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
-position = Vector2(897, 630)
+position = Vector2(926, 636)
 script = ExtResource("4_def7q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
@@ -1144,14 +1146,18 @@ script = ExtResource("30_wan4s")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 24.0
+wait_time = 200.0
 
 [node name="TimeUp" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(601, 291)
 scale = Vector2(1.13784, 1.13784)
 texture = ExtResource("30_h034e")
 script = ExtResource("31_o7g61")
+
+[node name="Success" type="Sprite2D" parent="."]
+position = Vector2(601, 276)
+texture = ExtResource("45_evydk")
+script = ExtResource("46_obgj6")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
