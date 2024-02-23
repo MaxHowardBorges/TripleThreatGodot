@@ -1,7 +1,7 @@
-[gd_scene load_steps=172 format=3 uid="uid://byn8qinucckxp"]
+[gd_scene load_steps=169 format=3 uid="uid://byn8qinucckxp"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
-[ext_resource type="Texture2D" path="res://HalfCourtSprite.png" id="1_blux1"]
+[ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
 [ext_resource type="Script" path="res://Player1.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://hjdpylr3wx4h" path="res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png" id="2_2s243"]
 [ext_resource type="Texture2D" uid="uid://btxm2kmqckngd" path="res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_South_strip4.png" id="2_5gvre"]
@@ -38,15 +38,15 @@
 [ext_resource type="Texture2D" uid="uid://bogik8uy15fki" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png" id="22_lianw"]
 [ext_resource type="Texture2D" uid="uid://clqqgmyhsbve0" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_North_WITHBALL_strip3.png" id="23_03hrj"]
 [ext_resource type="Texture2D" uid="uid://dgmh5fmwnyuen" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png" id="23_qwbx0"]
-[ext_resource type="Texture2D" path="res://image.jpg" id="26_qvv6e"]
+[ext_resource type="Texture2D" uid="uid://d0cjf2bhnfgk4" path="res://image.jpg" id="26_qvv6e"]
 [ext_resource type="Texture2D" uid="uid://dstgyme06ewi" path="res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png" id="27_8d3ar"]
-[ext_resource type="Texture2D" path="res://Level-5_Inc._logo.svg" id="27_upvr5"]
-[ext_resource type="Texture2D" path="res://Time Up.png" id="30_h034e"]
+[ext_resource type="Texture2D" uid="uid://cvlvm3bb1esal" path="res://Level-5_Inc._logo.svg" id="27_upvr5"]
+[ext_resource type="Texture2D" uid="uid://b4o2i4rusxryb" path="res://Time Up.png" id="30_h034e"]
 [ext_resource type="Script" path="res://shotClock.gd" id="30_wan4s"]
 [ext_resource type="Script" path="res://TimeUp.gd" id="31_o7g61"]
 [ext_resource type="Script" path="res://Control.gd" id="33_ug8qc"]
-[ext_resource type="Texture2D" path="res://art/progress-bar-circle.png" id="34_28eu5"]
-[ext_resource type="Texture2D" path="res://art/progress-bar-frame.png" id="35_b6ma0"]
+[ext_resource type="Texture2D" uid="uid://c2anb67bs0q4f" path="res://art/progress-bar-circle.png" id="34_28eu5"]
+[ext_resource type="Texture2D" uid="uid://5rjo4hip47ua" path="res://art/progress-bar-frame.png" id="35_b6ma0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
@@ -998,17 +998,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eas5"]
-size = Vector2(78.4858, 60.1758)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_to74k"]
-radius = 244.012
-height = 549.976
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hwdi"]
-radius = 98.0826
-height = 267.969
-
 [sub_resource type="GDScript" id="GDScript_js2fs"]
 script/source = "extends TextureProgressBar
 
@@ -1149,27 +1138,12 @@ offset_bottom = 590.0
 text = ":19"
 script = ExtResource("30_wan4s")
 
-[node name="Paint" type="CollisionShape2D" parent="."]
-position = Vector2(592.77, 301.585)
-scale = Vector2(3.03826, 3.03826)
-shape = SubResource("RectangleShape2D_8eas5")
-
-[node name="Inside" type="CollisionShape2D" parent="."]
-position = Vector2(592, 285)
-rotation = 1.56733
-shape = SubResource("CapsuleShape2D_to74k")
-
-[node name="Perimeter" type="CollisionShape2D" parent="."]
-position = Vector2(590, 305)
-rotation = 1.57768
-scale = Vector2(3.03826, 3.03826)
-shape = SubResource("CapsuleShape2D_2hwdi")
-
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 wait_time = 5.0
 
 [node name="TimeUp" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(601, 291)
 scale = Vector2(1.13784, 1.13784)
 texture = ExtResource("30_h034e")
@@ -1194,6 +1168,24 @@ texture_over = ExtResource("35_b6ma0")
 texture_progress = ExtResource("34_28eu5")
 tint_under = Color(0, 0, 0, 0.278431)
 script = SubResource("GDScript_js2fs")
+
+[node name="Paint Zone" type="Area2D" parent="."]
+
+[node name="Paint" type="CollisionPolygon2D" parent="Paint Zone"]
+position = Vector2(588, 208)
+polygon = PackedVector2Array(0, 1, -118, 0, -118, 187, 126, 188, 126, 0)
+
+[node name="Mid range zone" type="Area2D" parent="."]
+
+[node name="Mid" type="CollisionPolygon2D" parent="Mid range zone"]
+position = Vector2(399, 210)
+polygon = PackedVector2Array(-11, -1, -75, 0, -74, 121, -50, 205, -26, 249, 16, 285, 96, 310, 290, 310, 382, 280, 412, 248, 436, 209, 460, 120, 461, -2, 315, -1, 315, 186, 71, 185, 71, -2)
+
+[node name="Perimeter zone" type="Area2D" parent="."]
+
+[node name="Perimeter" type="CollisionPolygon2D" parent="Perimeter zone"]
+position = Vector2(263, 208)
+polygon = PackedVector2Array(-3, 2, -61, 2, -84, 204, 9, 362, 166, 411, 498, 411, 668, 355, 739, 208, 718, 1, 597, 0, 596, 122, 572, 211, 548, 250, 518, 282, 426, 312, 232, 312, 152, 287, 110, 251, 86, 207, 62, 123, 61, 2)
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]

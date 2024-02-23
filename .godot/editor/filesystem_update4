@@ -1,6 +1,2 @@
-res://Ball.gd
 res://PlayerMax.tscn
-res://Player1.gd
-res://PlayerMatt.tscn
-res://Player2.gd
-res://Control.gd
+res://Paint.gd
