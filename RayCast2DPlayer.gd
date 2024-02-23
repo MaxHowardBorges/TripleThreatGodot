@@ -2,7 +2,7 @@ extends RayCast2D
 
 var nbr = 0
 
-@onready var teammate = get_parent().get_parent().get_node("CharacterBody2D")
+@onready var teammate = get_parent().get_parent().get_node("Player2")
 
 var basket = Vector2(0,0)
 

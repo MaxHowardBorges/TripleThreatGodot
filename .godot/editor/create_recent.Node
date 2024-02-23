@@ -1,4 +1,8 @@
 Timer
+AnimatedSprite2D
+Control
+TextureProgressBar
+Sprite2D
 CollisionShape2D
 Sprite2D
 Label
