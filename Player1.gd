@@ -12,6 +12,7 @@ var target_clicked = position
 var key_states = {}
 var lastPlayedAnimation = "idle_down"
 var zoneIn = ""
+var zoneShoot = ""
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
 @onready var shootBar = $"../Control/ShootBar"
@@ -64,8 +65,13 @@ func _physics_process(delta):
 			shootReleased.emit(position, zoneIn)
 			shooting = false
 			hasBall = false
-			$AnimatedSprite2D.animation = "shoot_up"
-			lastPlayedAnimation = "shoot_up"
+			if zoneShoot == "left":
+				$AnimatedSprite2D.animation = "shoot_right"
+			elif zoneShoot == "right":
+				$AnimatedSprite2D.animation = "shoot_left"
+			else:
+				$AnimatedSprite2D.animation = "shoot_up"
+				lastPlayedAnimation = "shoot_up"
 
 
 func stop_moving_and_reset_animation():
@@ -152,3 +158,19 @@ func _on_mid_range_zone_zone_mid_player_1():
 
 func _on_paint_zone_zone_paint_player_1():
 	zoneIn = "Paint"
+
+
+func _on_left_shoot_zone_enter_left_player_1():
+	zoneShoot = "left"
+
+
+func _on_left_shoot_zone_exit_left_player_1():
+	zoneShoot = ""
+
+
+func _on_right_shoot_zone_enter_right_player_1():
+	zoneShoot = "right"
+
+
+func _on_right_shoot_zone_exit_right_player_1():
+	zoneShoot = ""

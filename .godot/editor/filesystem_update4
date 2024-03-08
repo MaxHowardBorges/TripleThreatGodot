@@ -5,3 +5,6 @@ res://Ball.gd
 res://Control.gd
 res://Player1.gd
 res://Enemy.gd
+res://RayCast2Dbis.gd
+res://leftShoot.gd
+res://rightShoot.gd

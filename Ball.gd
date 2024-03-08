@@ -5,7 +5,11 @@ var isFree = true
 var lastOwner
 var shooting = false
 @onready var ray = $"../basketPoint/RayCast2D"
-@onready var rebound = $"../Rebound"
+@onready var rebound1 = $"../Rebound1"
+@onready var rebound2 = $"../Rebound2"
+@onready var rebound3 = $"../Rebound3"
+@onready var rebound4 = $"../Rebound4"
+
 @onready var Success = $"../Success"
 signal hasBallPlayer1
 signal hasBallPlayer2
@@ -54,13 +58,25 @@ func _on_control_shoot_basket(debut, value):
 		get_tree().reload_current_scene()
 	else:
 		print("brick")
-		velocity = position.direction_to(rebound.global_position).normalized() * speed
-		var distance_z = position.distance_to(rebound.global_position)
+		var reb = rng.randi_range(1,4)
+		var distance_z = 0
+		if(reb==1):
+			velocity = position.direction_to(rebound1.global_position).normalized() * speed
+			distance_z = position.distance_to(rebound1.global_position)
+		elif(reb==2):
+			velocity = position.direction_to(rebound2.global_position).normalized() * speed
+			distance_z = position.distance_to(rebound2.global_position)
+		elif(reb==3):
+			velocity = position.direction_to(rebound3.global_position).normalized() * speed
+			distance_z = position.distance_to(rebound3.global_position)
+		elif(reb==4):
+			velocity = position.direction_to(rebound4.global_position).normalized() * speed
+			distance_z = position.distance_to(rebound4.global_position)
 		var time_to_rebound = distance_z / speed
 		await get_tree().create_timer(time_to_rebound).timeout
 		velocity = Vector2.ZERO
 		print("temsp",time_to_destination)
-		print(rebound.position)
+		print(rebound1.position)
 		lastOwner = null
 	shooting = false
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=217 format=3 uid="uid://byn8qinucckxp"]
+[gd_scene load_steps=226 format=3 uid="uid://byn8qinucckxp"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
 [ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
@@ -32,9 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://c1671hfwba8k0" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_WEST_WITH_BALL_strip4.png" id="19_qat1e"]
 [ext_resource type="Texture2D" uid="uid://c7cq8noeggdg1" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_EAST_NO_BALL_strip4.png" id="20_kjus8"]
 [ext_resource type="Texture2D" uid="uid://bnsc2ig3fdbkc" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_South_WITHBALL_strip3.png" id="20_qkurt"]
-[ext_resource type="Texture2D" uid="uid://d2y0ti7lduj2" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_West_WITHBALL_strip3.png" id="21_22neq"]
 [ext_resource type="Texture2D" uid="uid://cm3dg3n68malj" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png" id="21_qju8k"]
-[ext_resource type="Texture2D" uid="uid://cyvori8c7lueu" path="res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_East_WITHBALL_strip3.png" id="22_8jfos"]
+[ext_resource type="Texture2D" uid="uid://cuywedo0oufke" path="res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_West_NOBALL_strip2.png" id="21_u0as5"]
+[ext_resource type="Texture2D" uid="uid://bcy2gafm4ngnb" path="res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_East_NOBALL_strip2.png" id="22_1jp1o"]
 [ext_resource type="Texture2D" uid="uid://bogik8uy15fki" path="res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png" id="22_lianw"]
 [ext_resource type="Texture2D" uid="uid://44qtn3vcf5ov" path="res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_North_NOBALL_strip2.png" id="23_dqali"]
 [ext_resource type="Texture2D" uid="uid://dgmh5fmwnyuen" path="res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png" id="23_qwbx0"]
@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://dstgyme06ewi" path="res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png" id="27_8d3ar"]
 [ext_resource type="Texture2D" uid="uid://cvlvm3bb1esal" path="res://Level-5_Inc._logo.svg" id="27_upvr5"]
 [ext_resource type="Texture2D" uid="uid://b4o2i4rusxryb" path="res://Time Up.png" id="30_h034e"]
+[ext_resource type="Script" path="res://RayCast2Dbis.gd" id="30_mbdba"]
 [ext_resource type="Script" path="res://shotClock.gd" id="30_wan4s"]
 [ext_resource type="Script" path="res://TimeUp.gd" id="31_o7g61"]
 [ext_resource type="Texture2D" uid="uid://6vvpa4bxyv2w" path="res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_South_NOBALL_strip4.png" id="32_ewi7h"]
@@ -57,11 +58,15 @@
 [ext_resource type="Texture2D" uid="uid://cjbpbn8g2v1aj" path="res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_North_NOBALL_strip4.png" id="38_t2073"]
 [ext_resource type="Texture2D" uid="uid://dcyxox1ngmqik" path="res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_North_NOBALL_strip2.png" id="44_d5oxm"]
 [ext_resource type="Texture2D" uid="uid://c7n77rk8gcvfd" path="res://Succes.png" id="45_evydk"]
+[ext_resource type="Texture2D" uid="uid://b060ufgcjpbqh" path="res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_West_NOBALL_strip2.png" id="45_yuxey"]
+[ext_resource type="Texture2D" uid="uid://dv3yj0dsd7rpu" path="res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_East_NOBALL_strip2.png" id="46_llsje"]
 [ext_resource type="Script" path="res://Succes.gd" id="46_obgj6"]
 [ext_resource type="Script" path="res://Mid range zone.gd" id="48_5xkdq"]
 [ext_resource type="Script" path="res://Perimeter zone.gd" id="48_nrb24"]
 [ext_resource type="Script" path="res://Paint Zone.gd" id="48_tu6dg"]
 [ext_resource type="Script" path="res://Outside zone.gd" id="49_v2wa0"]
+[ext_resource type="Script" path="res://leftShoot.gd" id="64_17rku"]
+[ext_resource type="Script" path="res://rightShoot.gd" id="65_2dd56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
@@ -306,29 +311,21 @@ region = Rect2(24, 0, 24, 32)
 atlas = ExtResource("20_qkurt")
 region = Rect2(48, 0, 24, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eju21"]
-atlas = ExtResource("21_22neq")
-region = Rect2(0, 0, 24, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2dpo"]
+atlas = ExtResource("21_u0as5")
+region = Rect2(0, 0, 16, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w3mw6"]
-atlas = ExtResource("21_22neq")
-region = Rect2(24, 0, 24, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwsss"]
+atlas = ExtResource("21_u0as5")
+region = Rect2(16, 0, 16, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t1rkp"]
-atlas = ExtResource("21_22neq")
-region = Rect2(48, 0, 24, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yjdu"]
+atlas = ExtResource("22_1jp1o")
+region = Rect2(0, 0, 16, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ek6vb"]
-atlas = ExtResource("22_8jfos")
-region = Rect2(0, 0, 24, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_81xns"]
-atlas = ExtResource("22_8jfos")
-region = Rect2(24, 0, 24, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b3ve1"]
-atlas = ExtResource("22_8jfos")
-region = Rect2(48, 0, 24, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8snj6"]
+atlas = ExtResource("22_1jp1o")
+region = Rect2(16, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5xya"]
 atlas = ExtResource("23_dqali")
@@ -626,29 +623,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eju21")
+"texture": SubResource("AtlasTexture_m2dpo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w3mw6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t1rkp")
+"texture": SubResource("AtlasTexture_xwsss")
 }],
-"loop": true,
+"loop": false,
 "name": &"shoot_left",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ek6vb")
+"texture": SubResource("AtlasTexture_5yjdu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_81xns")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b3ve1")
+"texture": SubResource("AtlasTexture_8snj6")
 }],
-"loop": true,
+"loop": false,
 "name": &"shoot_right",
 "speed": 5.0
 }, {
@@ -930,6 +921,22 @@ region = Rect2(48, 0, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ks6t7"]
 atlas = ExtResource("21_qju8k")
 region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xe0g"]
+atlas = ExtResource("45_yuxey")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xepr"]
+atlas = ExtResource("45_yuxey")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwgtj"]
+atlas = ExtResource("46_llsje")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36ytb"]
+atlas = ExtResource("46_llsje")
+region = Rect2(16, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iuhuh"]
 atlas = ExtResource("44_d5oxm")
@@ -1213,12 +1220,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2xe0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xepr")
+}],
+"loop": false,
+"name": &"shoot_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwgtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36ytb")
+}],
+"loop": false,
+"name": &"shoot_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_iuhuh")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rfqhp")
 }],
-"loop": true,
+"loop": false,
 "name": &"shoot_up",
 "speed": 5.0
 }, {
@@ -1292,11 +1321,16 @@ animations = [{
 [sub_resource type="GDScript" id="GDScript_js2fs"]
 script/source = "extends TextureProgressBar
 
-@onready var shootBar = $\"Control/ShootBar\"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq1bi"]
+size = Vector2(318, 182)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea3hk"]
+size = Vector2(319.5, 186.75)
 
 [node name="IDK" type="Node2D"]
 script = ExtResource("1_4jdof")
@@ -1334,7 +1368,7 @@ shape = SubResource("1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player1"]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_eihj0")
-animation = &"shoot_up"
+animation = &"shoot_right"
 
 [node name="Area2D" type="Area2D" parent="Player1"]
 
@@ -1367,8 +1401,9 @@ script = ExtResource("15_elbnq")
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_11n4o")
 
-[node name="RayCast2D" type="RayCast2D" parent="Player2"]
+[node name="RayCast2Dbis" type="RayCast2D" parent="Player2"]
 target_position = Vector2(1078, 0)
+script = ExtResource("30_mbdba")
 
 [node name="Area2D" type="Area2D" parent="Player2"]
 position = Vector2(2, 0)
@@ -1378,7 +1413,7 @@ position = Vector2(2, 0)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player2"]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_k1ddh")
-animation = &"shoot_up"
+animation = &"shoot_left"
 
 [node name="Ball" type="CharacterBody2D" parent="."]
 position = Vector2(230, 418)
@@ -1434,12 +1469,14 @@ process_callback = 0
 wait_time = 200.0
 
 [node name="TimeUp" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(601, 291)
 scale = Vector2(1.13784, 1.13784)
 texture = ExtResource("30_h034e")
 script = ExtResource("31_o7g61")
 
 [node name="Success" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(601, 276)
 texture = ExtResource("45_evydk")
 script = ExtResource("46_obgj6")
@@ -1465,6 +1502,7 @@ tint_under = Color(0, 0, 0, 0.278431)
 script = SubResource("GDScript_js2fs")
 
 [node name="Paint Zone" type="Area2D" parent="."]
+visible = false
 script = ExtResource("48_tu6dg")
 
 [node name="Paint" type="CollisionPolygon2D" parent="Paint Zone"]
@@ -1472,6 +1510,7 @@ position = Vector2(588, 208)
 polygon = PackedVector2Array(0, 1, -118, 0, -118, 187, 126, 188, 126, 0)
 
 [node name="Mid range zone" type="Area2D" parent="."]
+visible = false
 script = ExtResource("48_5xkdq")
 
 [node name="Mid" type="CollisionPolygon2D" parent="Mid range zone"]
@@ -1479,6 +1518,7 @@ position = Vector2(399, 210)
 polygon = PackedVector2Array(-11, -1, -75, 0, -74, 121, -50, 205, -26, 249, 16, 285, 96, 310, 290, 310, 382, 280, 412, 248, 436, 209, 460, 120, 461, -2, 315, -1, 315, 186, 71, 185, 71, -2)
 
 [node name="Perimeter zone" type="Area2D" parent="."]
+visible = false
 script = ExtResource("48_nrb24")
 
 [node name="Perimeter" type="CollisionPolygon2D" parent="Perimeter zone"]
@@ -1486,14 +1526,38 @@ position = Vector2(263, 208)
 polygon = PackedVector2Array(-3, 2, -61, 2, -84, 204, 9, 362, 166, 411, 498, 411, 668, 355, 739, 208, 718, 1, 597, 0, 596, 122, 572, 211, 548, 250, 518, 282, 426, 312, 232, 312, 152, 287, 110, 251, 86, 207, 62, 123, 61, 2)
 
 [node name="Outside zone" type="Area2D" parent="."]
+visible = false
 script = ExtResource("49_v2wa0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside zone"]
 position = Vector2(594, 729)
 polygon = PackedVector2Array(-1, -1, -456, 0, -415, -316, -322, -159, -166, -110, 167, -110, 337, -166, 408, -314, 450, 0)
 
-[node name="Rebound" type="Node2D" parent="."]
-position = Vector2(611, 237)
+[node name="Rebound1" type="Node2D" parent="."]
+position = Vector2(622, 252)
+
+[node name="Rebound2" type="Node2D" parent="."]
+position = Vector2(724, 226)
+
+[node name="Rebound3" type="Node2D" parent="."]
+position = Vector2(477, 231)
+
+[node name="Rebound4" type="Node2D" parent="."]
+position = Vector2(540, 254)
+
+[node name="RightZone" type="Area2D" parent="."]
+position = Vector2(841, 297)
+
+[node name="rightShoot" type="CollisionShape2D" parent="RightZone"]
+shape = SubResource("RectangleShape2D_oq1bi")
+script = ExtResource("65_2dd56")
+
+[node name="LeftZone" type="Area2D" parent="."]
+
+[node name="leftShoot" type="CollisionShape2D" parent="LeftZone"]
+position = Vector2(342.25, 297.625)
+shape = SubResource("RectangleShape2D_ea3hk")
+script = ExtResource("64_17rku")
 
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
@@ -1518,3 +1582,15 @@ position = Vector2(611, 237)
 [connection signal="body_entered" from="Outside zone" to="Outside zone" method="_on_body_entered"]
 [connection signal="zoneOutsidePlayer1" from="Outside zone" to="Player1" method="_on_outside_zone_zone_outside_player_1"]
 [connection signal="zoneOutsidePlayer2" from="Outside zone" to="Player2" method="_on_outside_zone_zone_outside_player_2"]
+[connection signal="body_entered" from="RightZone" to="RightZone/rightShoot" method="_on_right_zone_body_entered"]
+[connection signal="body_exited" from="RightZone" to="RightZone/rightShoot" method="_on_right_zone_body_exited"]
+[connection signal="zoneEnterRightPlayer1" from="RightZone/rightShoot" to="Player1" method="_on_right_shoot_zone_enter_right_player_1"]
+[connection signal="zoneEnterRightPlayer2" from="RightZone/rightShoot" to="Player2" method="_on_right_shoot_zone_enter_right_player_2"]
+[connection signal="zoneExitRightPlayer1" from="RightZone/rightShoot" to="Player1" method="_on_right_shoot_zone_exit_right_player_1"]
+[connection signal="zoneExitRightPlayer2" from="RightZone/rightShoot" to="Player2" method="_on_right_shoot_zone_exit_right_player_2"]
+[connection signal="body_entered" from="LeftZone" to="LeftZone/leftShoot" method="_on_left_zone_body_entered"]
+[connection signal="body_exited" from="LeftZone" to="LeftZone/leftShoot" method="_on_left_zone_body_exited"]
+[connection signal="zoneEnterLeftPlayer1" from="LeftZone/leftShoot" to="Player1" method="_on_left_shoot_zone_enter_left_player_1"]
+[connection signal="zoneEnterLeftPlayer2" from="LeftZone/leftShoot" to="Player2" method="_on_left_shoot_zone_enter_left_player_2"]
+[connection signal="zoneExitLeftPlayer1" from="LeftZone/leftShoot" to="Player1" method="_on_left_shoot_zone_exit_left_player_1"]
+[connection signal="zoneExitLeftPlayer2" from="LeftZone/leftShoot" to="Player2" method="_on_left_shoot_zone_exit_left_player_2"]

@@ -1,12 +1,12 @@
-Control
-Node2D
-CollisionPolygon2D
 Area2D
+CollisionShape2D
+Node2D
+Control
+CollisionPolygon2D
 AnimatedSprite2D
 Timer
 TextureProgressBar
 Sprite2D
-CollisionShape2D
 Sprite2D
 Label
 CanvasLayer

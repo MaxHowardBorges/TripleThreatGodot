@@ -12,8 +12,9 @@ var target_clicked = position
 var key_states = {}
 var lastPlayedAnimation = "idle_down"
 var zoneIn = ""
+var zoneShoot = ""
 @onready var target = $"../basketPoint"
-@onready var ray = $"RayCast2D"
+@onready var ray = $"RayCast2Dbis"
 @onready var shootBar = $"../Control/ShootBar"
 @onready var hasLineOfSight	= true;
 
@@ -44,12 +45,16 @@ func _physics_process(delta):
 			hasBall = false
 			Playing = false
 			if lastPlayedAnimation == "up_b" or lastPlayedAnimation == "idle_b_up":
+				print("up")
 				$AnimatedSprite2D.play("idle_up")
 			elif lastPlayedAnimation == "right_b" or lastPlayedAnimation == "idle_b_right":
+				print("right")
 				$AnimatedSprite2D.play("idle_right")
 			elif lastPlayedAnimation == "left_b" or lastPlayedAnimation == "idle_b_left":
+				print("left")
 				$AnimatedSprite2D.play("idle_left")
 			elif lastPlayedAnimation == "down_b" or lastPlayedAnimation == "idle_b_down":
+				print("down")
 				$AnimatedSprite2D.play("idle_down")
 			print("Player 1 n'a plus la balle")
 		if Input.is_action_pressed("shoot"):
@@ -64,8 +69,13 @@ func _physics_process(delta):
 			shootReleased.emit(position, zoneIn)
 			shooting = false
 			hasBall = false
-			$AnimatedSprite2D.animation = "shoot_up"
-			lastPlayedAnimation = "shoot_up"
+			if zoneShoot == "left":
+				$AnimatedSprite2D.animation = "shoot_right"
+			elif zoneShoot == "right":
+				$AnimatedSprite2D.animation = "shoot_left"
+			else:
+				$AnimatedSprite2D.animation = "shoot_up"
+				lastPlayedAnimation = "shoot_up"
 
 
 func stop_moving_and_reset_animation():
@@ -113,6 +123,7 @@ func update_animation(velocity):
 				$AnimatedSprite2D.animation = "idle_b_left"
 			elif lastPlayedAnimation == "down_b":
 				$AnimatedSprite2D.animation = "idle_b_down"
+				lastPlayedAnimation = "idle_b_down"
 		else:
 			if lastPlayedAnimation == "up":
 				$AnimatedSprite2D.animation = "idle_up"
@@ -152,3 +163,19 @@ func _on_mid_range_zone_zone_mid_player_2():
 
 func _on_paint_zone_zone_paint_player_2():
 	zoneIn = "Paint"
+
+
+func _on_left_shoot_zone_enter_left_player_2():
+	zoneShoot = "left"
+
+
+func _on_left_shoot_zone_exit_left_player_2():
+	zoneShoot = ""
+
+
+func _on_right_shoot_zone_enter_right_player_2():
+	zoneShoot = "right"
+
+
+func _on_right_shoot_zone_exit_right_player_2():
+	zoneShoot = ""
