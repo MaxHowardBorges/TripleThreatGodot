@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Player1
 
+var Playing = true
 var hasBall = false
 var attack = true
 var shooting = false
@@ -9,7 +10,7 @@ var shooting = false
 var screen_size
 var target_clicked = position
 var key_states = {}
-var lastPlayedAnimation = ""
+var lastPlayedAnimation = "idle_down"
 var zoneIn = ""
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
@@ -22,25 +23,34 @@ signal shootReleased(debut,zoneIn)
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	$AnimatedSprite2D.animation = "idle_down"
+	$AnimatedSprite2D.play("idle_down")
 	
 func _input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") and Playing:
 		target_clicked = get_global_mouse_position()
 
 func _physics_process(delta):
 	velocity = position.direction_to(target_clicked) * speed
-	if position.distance_to(target_clicked) > 10 and !shooting:
+	if position.distance_to(target_clicked) > 10 and !shooting and Playing:
 		move_and_slide()
 
 	else:
 		velocity = Vector2.ZERO
 		#stop_moving_and_reset_animation()
 	update_animation(velocity)
-	if hasBall:
+	if hasBall and Playing:
 		if Input.is_action_pressed("espace") && !shooting:
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
+			Playing = false
+			if lastPlayedAnimation == "up_b" or lastPlayedAnimation == "idle_b_up":
+				$AnimatedSprite2D.play("idle_up")
+			elif lastPlayedAnimation == "right_b" or lastPlayedAnimation == "idle_b_right":
+				$AnimatedSprite2D.play("idle_right")
+			elif lastPlayedAnimation == "left_b" or lastPlayedAnimation == "idle_b_left":
+				$AnimatedSprite2D.play("idle_left")
+			elif lastPlayedAnimation == "down_b" or lastPlayedAnimation == "idle_b_down":
+				$AnimatedSprite2D.play("idle_down")
 			print("Player 1 n'a plus la balle")
 		if Input.is_action_pressed("shoot"):
 			if not key_states.has("shoot") or not key_states["shoot"]:
@@ -115,6 +125,15 @@ func update_animation(velocity):
 
 func _on_ball_has_ball_player_1():
 	hasBall = true
+	Playing = true
+	if lastPlayedAnimation == "up" or lastPlayedAnimation == "idle_up":
+		$AnimatedSprite2D.play("idle_b_up")
+	elif lastPlayedAnimation == "right" or lastPlayedAnimation == "idle_right":
+		$AnimatedSprite2D.play("idle_b_right")
+	elif lastPlayedAnimation == "left" or lastPlayedAnimation == "idle_left":
+		$AnimatedSprite2D.play("idle_b_left")
+	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
+		$AnimatedSprite2D.play("idle_b_down")
 	print("Player 1 a la balle")
 
 

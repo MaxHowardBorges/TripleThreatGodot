@@ -1,17 +1,7 @@
 res://PlayerMax.tscn
-res://Paint.gd
-res://Player1.gd
-res://PlayerMatt.tscn
-res://Perimeter zone.gd
-res://Outside zone.gd
-res://Mid range zone.gd
-res://Paint Zone.gd
-res://Control.gd
-res://Ball.gd
-res://RayCast2DPlayer.gd
-res://RayCast2D.gd
-res://Succes.gd
-res://TimeUp.gd
-res://Enemy.gd
-res://Player2.gd
 res://MainMenu.tscn
+res://Player2.gd
+res://Ball.gd
+res://Control.gd
+res://Player1.gd
+res://Enemy.gd

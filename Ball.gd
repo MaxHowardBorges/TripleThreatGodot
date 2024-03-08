@@ -63,3 +63,9 @@ func _on_control_shoot_basket(debut, value):
 		print(rebound.position)
 		lastOwner = null
 	shooting = false
+
+
+func _on_player_2_passe(debut, fin):
+	position = debut
+	isFree = true
+	velocity = position.direction_to(fin).normalized() * speed
