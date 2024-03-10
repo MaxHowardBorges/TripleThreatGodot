@@ -1290,7 +1290,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
-radius = 8.63713
+radius = 11.5007
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgfjg"]
 atlas = ExtResource("27_8d3ar")
@@ -1402,6 +1402,15 @@ texture = ExtResource("4")
 position = Vector2(0.25, 0.75)
 shape = SubResource("CircleShape2D_15s8i")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Enemy"]
+position = Vector2(0, 1)
+scale = Vector2(0.609375, 0.609375)
+texture = ExtResource("4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_15s8i")
+
 [node name="RayCast2Denemy1" type="RayCast2D" parent="Enemy"]
 target_position = Vector2(1054, 1)
 script = ExtResource("30_lqdmb")
@@ -1444,7 +1453,7 @@ sprite_frames = SubResource("SpriteFrames_t62pq")
 animation = &"move"
 
 [node name="Enemy2" type="CharacterBody2D" parent="."]
-position = Vector2(815, 369)
+position = Vector2(762, 369)
 script = ExtResource("27_s7in7")
 metadata/_edit_group_ = true
 
@@ -1606,7 +1615,7 @@ position = Vector2(747, 586)
 position = Vector2(415, 369)
 
 [node name="SpawnDefense2" type="Node2D" parent="."]
-position = Vector2(811, 371)
+position = Vector2(761, 370)
 
 [node name="SpawnBall" type="Node2D" parent="."]
 position = Vector2(451, 587)
@@ -1627,8 +1636,6 @@ position = Vector2(302, 502)
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
 [connection signal="shootReleased" from="Player1" to="Control" method="_on_player_1_shoot_released"]
 [connection signal="teamBall" from="Player1" to="." method="_on_player_1_team_ball"]
-[connection signal="passe" from="Enemy" to="Ball" method="_on_enemy_passe"]
-[connection signal="shoot" from="Enemy" to="Control" method="_on_enemy_shoot"]
 [connection signal="teamAttack" from="Enemy" to="Enemy2" method="_on_enemy_team_attack"]
 [connection signal="passe" from="Player2" to="Ball" method="_on_player_2_passe"]
 [connection signal="shootPressed" from="Player2" to="Control" method="_on_player_2_shoot_pressed"]
@@ -1641,7 +1648,6 @@ position = Vector2(302, 502)
 [connection signal="score" from="Ball" to="." method="_on_ball_score"]
 [connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="passe" from="Enemy2" to="Ball" method="_on_enemy_2_passe"]
-[connection signal="shoot" from="Enemy2" to="Control" method="_on_enemy_2_shoot"]
 [connection signal="teamAttack" from="Enemy2" to="Enemy" method="_on_enemy_2_team_attack"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="shootBasket" from="Control" to="Ball" method="_on_control_shoot_basket"]

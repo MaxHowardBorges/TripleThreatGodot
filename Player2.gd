@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 class_name Player2
 
-var Playing = false
-var hasBall = false
+@export var Playing = false
+@export var hasBall = false
 var attack = true
 var shooting = false
 @export var speed = 200
@@ -20,6 +20,7 @@ var team = "home"
 @onready var spawnAttack = $"../SpawnAttack2"
 @onready var spawnDefense = $"../SpawnDefense2"
 @onready var hasLineOfSight	= true;
+@onready var Player1 = $"../Player1"
 
 signal passe(debut,fin)
 signal shootPressed()
@@ -47,7 +48,6 @@ func _physics_process(delta):
 		if Input.is_action_pressed("espace") && !shooting:
 			passe.emit(position,ray.get_collider().position)
 			hasBall = false
-			Playing = false
 			if lastPlayedAnimation == "up_b" or lastPlayedAnimation == "idle_b_up":
 				$AnimatedSprite2D.play("idle_up")
 			elif lastPlayedAnimation == "right_b" or lastPlayedAnimation == "idle_b_right":
@@ -145,6 +145,7 @@ func _on_ball_has_ball_player_2():
 	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
 		$AnimatedSprite2D.play("idle_b_down")
 	teamBall.emit(team)
+	Player1.Playing = false
 
 func _on_perimeter_zone_zone_perimeter_player_2():
 	zoneIn = "Perimeter"

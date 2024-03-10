@@ -18,6 +18,3 @@ func _process(delta):
 		#print("green")
 		#print(nbr)
 		nbr=nbr+1
-
-func _draw():
-	draw_line(basket, target_position, Color(0, 1, 0), 10)

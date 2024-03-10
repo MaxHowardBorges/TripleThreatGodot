@@ -14,6 +14,10 @@ func _ready():
 func _on_timer_timeout():
 	$TimeUp.show()
 	$shotClock.hide()
+	$Player1.hasBall = false
+	$Player2.hasBall = false
+	$Enemy.hasBall = false
+	$Enemy2.hasBall = false
 	await get_tree().create_timer(1.50).timeout
 	#get_tree().reload_current_scene()
 	if teamAttack == "home":
@@ -21,6 +25,7 @@ func _on_timer_timeout():
 		awayGoAttack.emit()
 		teamAttack = "away"
 		resetBall.emit()
+		$Enemy.gameState = "attack"
 	else:
 		homeGoAttack.emit()
 		awayGoDefense.emit()
@@ -29,7 +34,7 @@ func _on_timer_timeout():
 	$Timer.start()
 	$TimeUp.hide()
 	$shotClock.show()
-
+	
 func _process(delta):
 	if $scoreAway.text == "21" or $scoreAway.text == "22" or $scoreAway.text == "23":
 		print("Away win")
@@ -38,7 +43,7 @@ func _process(delta):
 		print("Home win")
 		get_tree().reload_current_scene()
 	$shotClock.text = "%s" % roundf($Timer.time_left)
-
+	
 func _on_ball_score(team, zoneIn):
 	var score
 	var scoreInt
@@ -56,10 +61,14 @@ func _on_ball_score(team, zoneIn):
 		$scoreHome.text = scoreStr
 		homeGoDefense.emit()
 		awayGoAttack.emit()
+		$Enemy.gameState = "attack"
+		$Enemy2.gameState = "attack"
 		$Success.hide()
 		await get_tree().create_timer(0.50).timeout
 		resetBall.emit()
 		$Timer.start()
+		teamAttack = "away"
+		
 	elif team == "away":
 		$Success.show()
 		await get_tree().create_timer(1.50).timeout
@@ -77,13 +86,19 @@ func _on_ball_score(team, zoneIn):
 		await get_tree().create_timer(0.50).timeout
 		resetBall.emit()
 		$Timer.start()
+		teamAttack = "home"
 		
 func _on_player_1_team_ball(team):
 	if team != teamAttack:
 		$Timer.start()
 		teamAttack = team
-
+		$Enemy.gameState = "defense"
+		$Enemy2.gameState = "defense"
+		print("test")
+		
 func _on_player_2_team_ball(team):
 	if team != teamAttack:
 		$Timer.start()
 		teamAttack = team
+		$Enemy.gameState = "defense"
+		$Enemy2.gameState = "defense"

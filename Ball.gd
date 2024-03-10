@@ -28,6 +28,7 @@ func _physics_process(delta):
 		$Area2D/CollisionShape2D.set_disabled(false)
 	move_and_slide()
 	$AnimatedSprite2D.play("move")
+	print()
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if 	body != lastOwner and !shooting:
@@ -38,9 +39,9 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 		elif body.name == "Player2":
 			hasBallPlayer2.emit()
 		elif body.name == "Enemy":
-			hasBallPlayer2.emit()
+			hasBallEnemy.emit()
 		elif body.name == "Enemy2":
-			hasBallPlayer2.emit()
+			hasBallEnemy2.emit()
 
 func _on_control_shoot_basket(debut, value, team, zoneIn):
 	var distance_x = debut.distance_to(ray.global_position)

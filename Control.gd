@@ -91,3 +91,11 @@ func _on_player_2_shoot_released(debut, zoneIn):
 	shoot = false
 	var team = "home"
 	shootBasket.emit(debut, ShootBar.value, team, zoneIn)
+
+
+func _on_enemy_shoot(debut):
+	shootBasket.emit(debut, 40, "away", "Paint")
+
+
+func _on_enemy_2_shoot(debut):
+	shootBasket.emit(debut, 40, "away", "Paint")
