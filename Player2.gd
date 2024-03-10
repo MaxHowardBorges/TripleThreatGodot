@@ -45,18 +45,13 @@ func _physics_process(delta):
 			hasBall = false
 			Playing = false
 			if lastPlayedAnimation == "up_b" or lastPlayedAnimation == "idle_b_up":
-				print("up")
 				$AnimatedSprite2D.play("idle_up")
 			elif lastPlayedAnimation == "right_b" or lastPlayedAnimation == "idle_b_right":
-				print("right")
 				$AnimatedSprite2D.play("idle_right")
 			elif lastPlayedAnimation == "left_b" or lastPlayedAnimation == "idle_b_left":
-				print("left")
 				$AnimatedSprite2D.play("idle_left")
 			elif lastPlayedAnimation == "down_b" or lastPlayedAnimation == "idle_b_down":
-				print("down")
 				$AnimatedSprite2D.play("idle_down")
-			print("Player 1 n'a plus la balle")
 		if Input.is_action_pressed("shoot"):
 			if not key_states.has("shoot") or not key_states["shoot"]:
 				key_states["shoot"] = true
@@ -145,37 +140,27 @@ func _on_ball_has_ball_player_2():
 		$AnimatedSprite2D.play("idle_b_left")
 	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
 		$AnimatedSprite2D.play("idle_b_down")
-	print("Player 2 a la balle")
-
-
 
 func _on_perimeter_zone_zone_perimeter_player_2():
 	zoneIn = "Perimeter"
 
-
 func _on_outside_zone_zone_outside_player_2():
 	zoneIn = "Outside"
-
 
 func _on_mid_range_zone_zone_mid_player_2():
 	zoneIn = "Mid"
 
-
 func _on_paint_zone_zone_paint_player_2():
 	zoneIn = "Paint"
-
 
 func _on_left_shoot_zone_enter_left_player_2():
 	zoneShoot = "left"
 
-
 func _on_left_shoot_zone_exit_left_player_2():
 	zoneShoot = ""
 
-
 func _on_right_shoot_zone_enter_right_player_2():
 	zoneShoot = "right"
-
 
 func _on_right_shoot_zone_exit_right_player_2():
 	zoneShoot = ""

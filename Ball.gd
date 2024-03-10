@@ -4,6 +4,7 @@ var isFree = true
 @export var speed = 500
 var lastOwner
 var shooting = false
+var lastTeamOwner
 @onready var ray = $"../basketPoint/RayCast2D"
 @onready var rebound1 = $"../Rebound1"
 @onready var rebound2 = $"../Rebound2"
@@ -13,6 +14,7 @@ var shooting = false
 @onready var Success = $"../Success"
 signal hasBallPlayer1
 signal hasBallPlayer2
+signal score(team, zoneIn)
 
 func _physics_process(delta): 
 	if !isFree:
@@ -38,12 +40,10 @@ func _on_player_1_passe(debut, fin):
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
 
-func _on_control_shoot_basket(debut, value):
+func _on_control_shoot_basket(debut, value, team, zoneIn):
 	var distance_x = debut.distance_to(ray.global_position)
 	var time_to_destination = distance_x / speed
-	print("temsp",time_to_destination)
 	position = debut
-	
 	shooting = true
 	isFree = true
 	velocity = position.direction_to(ray.global_position).normalized() * speed
@@ -52,12 +52,12 @@ func _on_control_shoot_basket(debut, value):
 	var rng = RandomNumberGenerator.new()
 	var shot = rng.randi_range(0,100)
 	if(shot<=value):
-		print("CASH!")
 		Success.show()
 		await get_tree().create_timer(1.50).timeout
-		get_tree().reload_current_scene()
+		#get_tree().reload_current_scene()
+		##################
+		score.emit(team, zoneIn)
 	else:
-		print("brick")
 		var reb = rng.randi_range(1,4)
 		var distance_z = 0
 		if(reb==1):
@@ -75,11 +75,8 @@ func _on_control_shoot_basket(debut, value):
 		var time_to_rebound = distance_z / speed
 		await get_tree().create_timer(time_to_rebound).timeout
 		velocity = Vector2.ZERO
-		print("temsp",time_to_destination)
-		print(rebound1.position)
 		lastOwner = null
 	shooting = false
-
 
 func _on_player_2_passe(debut, fin):
 	position = debut

@@ -16,6 +16,7 @@ var zoneShoot = ""
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2D"
 @onready var shootBar = $"../Control/ShootBar"
+@onready var spawnAttack = $"../SpawnAttack1"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
@@ -25,6 +26,8 @@ signal shootReleased(debut,zoneIn)
 func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.play("idle_down")
+	global_position = spawnAttack.global_position
+
 	
 func _input(event):
 	if event.is_action_pressed("click") and Playing:
@@ -52,7 +55,6 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("idle_left")
 			elif lastPlayedAnimation == "down_b" or lastPlayedAnimation == "idle_b_down":
 				$AnimatedSprite2D.play("idle_down")
-			print("Player 1 n'a plus la balle")
 		if Input.is_action_pressed("shoot"):
 			if not key_states.has("shoot") or not key_states["shoot"]:
 				key_states["shoot"] = true
@@ -140,7 +142,7 @@ func _on_ball_has_ball_player_1():
 		$AnimatedSprite2D.play("idle_b_left")
 	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
 		$AnimatedSprite2D.play("idle_b_down")
-	print("Player 1 a la balle")
+
 
 
 
