@@ -1,10 +1,7 @@
 res://PlayerMax.tscn
 res://MainMenu.tscn
-res://Player2.gd
-res://Ball.gd
-res://Control.gd
-res://Player1.gd
 res://Enemy.gd
-res://RayCast2Dbis.gd
-res://leftShoot.gd
-res://rightShoot.gd
+res://RayCast2Denemy1.gd
+res://RayCast2Denemy2.gd
+res://Enemy2.gd
+res://Ball.gd

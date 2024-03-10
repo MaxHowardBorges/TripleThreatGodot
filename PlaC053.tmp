@@ -1,4 +1,4 @@
-[gd_scene load_steps=230 format=3 uid="uid://byn8qinucckxp"]
+[gd_scene load_steps=229 format=3 uid="uid://byn8qinucckxp"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
 [ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
@@ -74,41 +74,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
-radius = 11.5007
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgfjg"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(17, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mg10u"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(25, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3bkm4"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(33, 0, 8, 8)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_t62pq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vgfjg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mg10u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3bkm4")
-}],
-"loop": true,
-"name": &"move",
-"speed": 5.0
-}]
-
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 31.0
-height = 74.0
+height = 102.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q82w5"]
 atlas = ExtResource("2_2s243")
@@ -727,11 +695,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbnoh"]
 radius = 42.3792
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3syk1"]
-radius = 47.0956
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_15s8i"]
-radius = 41.1096
+radius = 54.9147
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_11n4o"]
 radius = 41.0122
@@ -1324,6 +1289,38 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
+radius = 11.5007
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgfjg"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(17, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg10u"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(25, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bkm4"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(33, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t62pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgfjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg10u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bkm4")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
 [sub_resource type="GDScript" id="GDScript_js2fs"]
 script/source = "extends TextureProgressBar
 
@@ -1363,20 +1360,6 @@ position = Vector2(581, 367)
 scale = Vector2(3.03826, 3.03826)
 texture = ExtResource("1_blux1")
 
-[node name="Ball" type="CharacterBody2D" parent="."]
-position = Vector2(230, 418)
-scale = Vector2(5, 5)
-script = ExtResource("15_qr1bw")
-
-[node name="Area2D" type="Area2D" parent="Ball"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D"]
-shape = SubResource("CircleShape2D_5xk37")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ball"]
-sprite_frames = SubResource("SpriteFrames_t62pq")
-animation = &"move"
-
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
 position = Vector2(593, 575)
 script = ExtResource("2")
@@ -1402,27 +1385,25 @@ target_position = Vector2(1390, 1)
 script = ExtResource("3_2ure0")
 
 [node name="Enemy2" type="CharacterBody2D" parent="."]
-position = Vector2(914, 332)
 script = ExtResource("27_s7in7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy2"]
 modulate = Color(0.945098, 0.443137, 0.447059, 1)
-position = Vector2(-1, -1)
+position = Vector2(857, 295)
 scale = Vector2(0.71875, 0.71875)
 texture = ExtResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
-position = Vector2(0, 7)
-shape = SubResource("CircleShape2D_3syk1")
 
 [node name="RayCast2Denemy2" type="RayCast2D" parent="Enemy2"]
-position = Vector2(1, 3)
+position = Vector2(859, 299)
 target_position = Vector2(692, -2)
 script = ExtResource("27_4gt2v")
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
-position = Vector2(596, 397)
+position = Vector2(594, 388)
 script = ExtResource("4_def7q")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
 position = Vector2(0, 1)
@@ -1430,11 +1411,11 @@ scale = Vector2(0.609375, 0.609375)
 texture = ExtResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(0, 11)
+position = Vector2(0.25, 0.75)
 shape = SubResource("CircleShape2D_15s8i")
 
 [node name="RayCast2Denemy1" type="RayCast2D" parent="Enemy"]
-target_position = Vector2(1054, 1)
+target_position = Vector2(683, 1)
 script = ExtResource("30_lqdmb")
 
 [node name="Player2" type="CharacterBody2D" parent="."]
@@ -1460,6 +1441,20 @@ position = Vector2(-23, 4)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_k1ddh")
 animation = &"shoot_left"
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(230, 418)
+scale = Vector2(5, 5)
+script = ExtResource("15_qr1bw")
+
+[node name="Area2D" type="Area2D" parent="Ball"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D"]
+shape = SubResource("CircleShape2D_5xk37")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ball"]
+sprite_frames = SubResource("SpriteFrames_t62pq")
+animation = &"move"
 
 [node name="Score" type="Sprite2D" parent="."]
 position = Vector2(1011.36, 575.5)
@@ -1585,26 +1580,21 @@ shape = SubResource("RectangleShape2D_oq1bi")
 script = ExtResource("65_2dd56")
 
 [node name="LeftZone" type="Area2D" parent="."]
-position = Vector2(2, 4)
 
 [node name="leftShoot" type="CollisionShape2D" parent="LeftZone"]
 position = Vector2(342.25, 297.625)
 shape = SubResource("RectangleShape2D_ea3hk")
 script = ExtResource("64_17rku")
 
-[connection signal="hasBallEnemy" from="Ball" to="Enemy" method="_on_ball_has_ball_enemy"]
-[connection signal="hasBallEnemy2" from="Ball" to="Enemy2" method="_on_ball_has_ball_enemy_2"]
-[connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
-[connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
-[connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
 [connection signal="shootReleased" from="Player1" to="Control" method="_on_player_1_shoot_released"]
-[connection signal="passe" from="Enemy2" to="Ball" method="_on_enemy_2_passe"]
-[connection signal="passe" from="Enemy" to="Ball" method="_on_enemy_passe"]
 [connection signal="passe" from="Player2" to="Ball" method="_on_player_2_passe"]
 [connection signal="shootPressed" from="Player2" to="Control" method="_on_player_2_shoot_pressed"]
 [connection signal="shootReleased" from="Player2" to="Control" method="_on_player_2_shoot_released"]
+[connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
+[connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
+[connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="shootBasket" from="Control" to="Ball" method="_on_control_shoot_basket"]
 [connection signal="body_entered" from="Paint Zone" to="Paint Zone" method="_on_body_entered"]
