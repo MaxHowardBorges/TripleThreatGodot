@@ -1,5 +1,7 @@
 res://PlayerMax.tscn
-res://Court.gd
-res://Player1.gd
-res://Player2.gd
+res://MainMenu.tscn
+res://Enemy.gd
+res://RayCast2Denemy1.gd
+res://RayCast2Denemy2.gd
+res://Enemy2.gd
 res://Ball.gd

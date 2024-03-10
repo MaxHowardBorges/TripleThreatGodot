@@ -16,6 +16,8 @@ signal score(team, zoneIn)
 
 func _ready():
 	position = spawn.position
+signal hasBallEnemy
+signal hasBallEnemy2
 
 func _physics_process(delta): 
 	if !isFree:
@@ -35,11 +37,10 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 			hasBallPlayer1.emit()
 		elif body.name == "Player2":
 			hasBallPlayer2.emit()
-
-func _on_player_1_passe(debut, fin):
-	position = debut
-	isFree = true
-	velocity = position.direction_to(fin).normalized() * speed
+		elif body.name == "Enemy":
+			hasBallPlayer2.emit()
+		elif body.name == "Enemy2":
+			hasBallPlayer2.emit()
 
 func _on_control_shoot_basket(debut, value, team, zoneIn):
 	var distance_x = debut.distance_to(ray.global_position)
@@ -78,6 +79,12 @@ func _on_control_shoot_basket(debut, value, team, zoneIn):
 		lastOwner = null
 	shooting = false
 
+func _on_player_1_passe(debut, fin):
+	position = debut
+	isFree = true
+	velocity = position.direction_to(fin).normalized() * speed
+	
+
 func _on_player_2_passe(debut, fin):
 	position = debut
 	isFree = true
@@ -90,3 +97,15 @@ func _on_idk_reset_ball():
 	lastOwner = null
 	shooting = false
 	isFree = true
+	
+
+func _on_enemy_passe(debut, fin):
+	position = debut
+	isFree = true
+	velocity = position.direction_to(fin).normalized() * speed
+
+func _on_enemy_2_passe(debut, fin):
+	position = debut
+	isFree = true
+	velocity = position.direction_to(fin).normalized() * speed
+	
