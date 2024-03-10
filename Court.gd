@@ -6,8 +6,8 @@ signal homeGoAttack
 signal homeGoDefense
 signal awayGoAttack
 signal awayGoDefense
+signal resetBall
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.start()
 
@@ -19,9 +19,16 @@ func _on_timer_timeout():
 	if teamAttack == "home":
 		homeGoDefense.emit()
 		awayGoAttack.emit()
+		teamAttack = "away"
+		resetBall.emit()
 	else:
 		homeGoAttack.emit()
 		awayGoDefense.emit()
+		teamAttack = "home"
+		resetBall.emit()
+	$Timer.start()
+	$TimeUp.hide()
+	$shotClock.show()
 
 func _process(delta):
 	if $scoreAway.text == "21" or $scoreAway.text == "22" or $scoreAway.text == "23":
@@ -37,6 +44,8 @@ func _on_ball_score(team, zoneIn):
 	var scoreInt
 	var scoreStr
 	if team == "home":
+		$Success.show()
+		await get_tree().create_timer(1.50).timeout
 		score = $scoreHome.text
 		scoreInt = int(score)
 		if zoneIn == "Perimiter" or zoneIn == "Outside":
@@ -47,7 +56,13 @@ func _on_ball_score(team, zoneIn):
 		$scoreHome.text = scoreStr
 		homeGoDefense.emit()
 		awayGoAttack.emit()
+		$Success.hide()
+		await get_tree().create_timer(0.50).timeout
+		resetBall.emit()
+		$Timer.start()
 	elif team == "away":
+		$Success.show()
+		await get_tree().create_timer(1.50).timeout
 		score = $scoreAway.text
 		scoreInt = int(score)
 		if zoneIn == "Perimiter" or zoneIn == "Outside":
@@ -58,3 +73,17 @@ func _on_ball_score(team, zoneIn):
 		$scoreAway.text = scoreStr
 		homeGoAttack.emit()
 		awayGoDefense.emit()
+		$Success.hide()
+		await get_tree().create_timer(0.50).timeout
+		resetBall.emit()
+		$Timer.start()
+		
+func _on_player_1_team_ball(team):
+	if team != teamAttack:
+		$Timer.start()
+		teamAttack = team
+
+func _on_player_2_team_ball(team):
+	if team != teamAttack:
+		$Timer.start()
+		teamAttack = team

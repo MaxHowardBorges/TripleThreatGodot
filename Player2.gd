@@ -13,6 +13,7 @@ var key_states = {}
 var lastPlayedAnimation = "idle_down"
 var zoneIn = ""
 var zoneShoot = ""
+var team = "home"
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2Dbis"
 @onready var shootBar = $"../Control/ShootBar"
@@ -23,6 +24,7 @@ var zoneShoot = ""
 signal passe(debut,fin)
 signal shootPressed()
 signal shootReleased(debut,zoneIn)
+signal teamBall(team)
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -142,6 +144,7 @@ func _on_ball_has_ball_player_2():
 		$AnimatedSprite2D.play("idle_b_left")
 	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
 		$AnimatedSprite2D.play("idle_b_down")
+	teamBall.emit(team)
 
 func _on_perimeter_zone_zone_perimeter_player_2():
 	zoneIn = "Perimeter"
@@ -173,4 +176,4 @@ func _on_idk_home_go_attack():
 func _on_idk_home_go_defense():
 	velocity = Vector2.ZERO
 	global_position = spawnDefense.global_position
-	
+	target_clicked = spawnDefense.global_position

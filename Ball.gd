@@ -4,17 +4,18 @@ var isFree = true
 @export var speed = 500
 var lastOwner
 var shooting = false
-var lastTeamOwner
 @onready var ray = $"../basketPoint/RayCast2D"
 @onready var rebound1 = $"../Rebound1"
 @onready var rebound2 = $"../Rebound2"
 @onready var rebound3 = $"../Rebound3"
 @onready var rebound4 = $"../Rebound4"
-
-@onready var Success = $"../Success"
+@onready var spawn = $"../SpawnBall"
 signal hasBallPlayer1
 signal hasBallPlayer2
 signal score(team, zoneIn)
+
+func _ready():
+	position = spawn.position
 
 func _physics_process(delta): 
 	if !isFree:
@@ -52,8 +53,7 @@ func _on_control_shoot_basket(debut, value, team, zoneIn):
 	var rng = RandomNumberGenerator.new()
 	var shot = rng.randi_range(0,100)
 	if(shot<=value):
-		Success.show()
-		await get_tree().create_timer(1.50).timeout
+		#await get_tree().create_timer(1.50).timeout
 		#get_tree().reload_current_scene()
 		##################
 		score.emit(team, zoneIn)
@@ -82,3 +82,11 @@ func _on_player_2_passe(debut, fin):
 	position = debut
 	isFree = true
 	velocity = position.direction_to(fin).normalized() * speed
+
+
+func _on_idk_reset_ball():
+	position = spawn.position
+	velocity = Vector2.ZERO
+	lastOwner = null
+	shooting = false
+	isFree = true
