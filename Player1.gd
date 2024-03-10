@@ -17,6 +17,7 @@ var zoneShoot = ""
 @onready var ray = $"RayCast2D"
 @onready var shootBar = $"../Control/ShootBar"
 @onready var spawnAttack = $"../SpawnAttack1"
+@onready var spawnDefense = $"../SpawnDefense1"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
@@ -26,9 +27,7 @@ signal shootReleased(debut,zoneIn)
 func _ready():
 	screen_size = get_viewport_rect().size
 	$AnimatedSprite2D.play("idle_down")
-	global_position = spawnAttack.global_position
 
-	
 func _input(event):
 	if event.is_action_pressed("click") and Playing:
 		target_clicked = get_global_mouse_position()
@@ -143,9 +142,6 @@ func _on_ball_has_ball_player_1():
 	elif lastPlayedAnimation == "down" or lastPlayedAnimation == "idle_down":
 		$AnimatedSprite2D.play("idle_b_down")
 
-
-
-
 func _on_perimeter_zone_zone_perimeter_player_1():
 	zoneIn = "Perimeter"
 
@@ -176,3 +172,12 @@ func _on_right_shoot_zone_enter_right_player_1():
 
 func _on_right_shoot_zone_exit_right_player_1():
 	zoneShoot = ""
+
+
+func _on_idk_home_go_attack():
+	position = spawnAttack.position
+
+func _on_idk_home_go_defense():
+	print(velocity)
+	velocity = Vector2.ZERO
+	global_position = spawnDefense.global_position

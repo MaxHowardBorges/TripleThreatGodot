@@ -1358,7 +1358,7 @@ scale = Vector2(3.03826, 3.03826)
 texture = ExtResource("1_blux1")
 
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(405, 591)
+position = Vector2(530, 589)
 script = ExtResource("2")
 metadata/_edit_group_ = true
 
@@ -1396,8 +1396,9 @@ position = Vector2(0.25, 0.75)
 shape = SubResource("CircleShape2D_15s8i")
 
 [node name="Player2" type="CharacterBody2D" parent="."]
-position = Vector2(873, 381)
+position = Vector2(861, 503)
 script = ExtResource("15_elbnq")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 position = Vector2(0, -1)
@@ -1573,6 +1574,10 @@ position = Vector2(415, 369)
 [node name="SpawnDefense2" type="Node2D" parent="."]
 position = Vector2(761, 370)
 
+[connection signal="homeGoAttack" from="." to="Player1" method="_on_idk_home_go_attack"]
+[connection signal="homeGoAttack" from="." to="Player2" method="_on_idk_home_go_attack"]
+[connection signal="homeGoDefense" from="." to="Player1" method="_on_idk_home_go_defense"]
+[connection signal="homeGoDefense" from="." to="Player2" method="_on_idk_home_go_defense"]
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
 [connection signal="shootReleased" from="Player1" to="Control" method="_on_player_1_shoot_released"]

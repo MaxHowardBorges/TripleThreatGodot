@@ -1,5 +1,11 @@
 extends Node2D
 
+var teamAttack = "home"
+
+signal homeGoAttack
+signal homeGoDefense
+signal awayGoAttack
+signal awayGoDefense
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,9 +15,14 @@ func _on_timer_timeout():
 	$TimeUp.show()
 	$shotClock.hide()
 	await get_tree().create_timer(1.50).timeout
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
+	if teamAttack == "home":
+		homeGoDefense.emit()
+		awayGoAttack.emit()
+	else:
+		homeGoAttack.emit()
+		awayGoDefense.emit()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $scoreAway.text == "21" or $scoreAway.text == "22" or $scoreAway.text == "23":
 		print("Away win")
@@ -20,7 +31,6 @@ func _process(delta):
 		print("Home win")
 		get_tree().reload_current_scene()
 	$shotClock.text = "%s" % roundf($Timer.time_left)
-
 
 func _on_ball_score(team, zoneIn):
 	var score
@@ -35,6 +45,8 @@ func _on_ball_score(team, zoneIn):
 			scoreInt += 2
 		scoreStr = str(scoreInt)
 		$scoreHome.text = scoreStr
+		homeGoDefense.emit()
+		awayGoAttack.emit()
 	elif team == "away":
 		score = $scoreAway.text
 		scoreInt = int(score)
@@ -44,3 +56,5 @@ func _on_ball_score(team, zoneIn):
 			scoreInt += 2
 		scoreStr = str(scoreInt)
 		$scoreAway.text = scoreStr
+		homeGoAttack.emit()
+		awayGoDefense.emit()

@@ -20,7 +20,7 @@ signal  shootBasket(debut, value, team, zoneIn)
 
 func _ready():
 		ShootBar.hide()
-	
+
 func _process(delta):
 	if shoot == true:
 		if increasing:
@@ -33,7 +33,6 @@ func _process(delta):
 		elif ShootBar.value <= 0.0:
 			ShootBar.value = 0.0
 			increasing = true
-		
 		if ShootBar.value > 90.0 and ShootBar.value <= 100.0:
 			ShootBar.set_tint_progress(clr10)
 		elif ShootBar.value >= 80.0 and ShootBar.value < 90.0:
@@ -59,7 +58,7 @@ func _on_player_1_shoot_pressed():
 	ShootBar.show()
 	shoot = true
 	ShootBar.value = 0.0
-	
+
 func _on_player_1_shoot_released(debut,zoneIn):
 	if(zoneIn=="Outside"):
 		ShootBar.value-=30
@@ -74,12 +73,10 @@ func _on_player_1_shoot_released(debut,zoneIn):
 	var team = "home"
 	shootBasket.emit(debut, ShootBar.value, team, zoneIn)
 
-
 func _on_player_2_shoot_pressed():
 	ShootBar.show()
 	shoot = true
 	ShootBar.value = 0.0
-
 
 func _on_player_2_shoot_released(debut, zoneIn):
 	if(zoneIn=="Outside"):
@@ -92,5 +89,5 @@ func _on_player_2_shoot_released(debut, zoneIn):
 		ShootBar.value=0
 	ShootBar.hide()
 	shoot = false
-	var team = "away"
+	var team = "home"
 	shootBasket.emit(debut, ShootBar.value, team, zoneIn)

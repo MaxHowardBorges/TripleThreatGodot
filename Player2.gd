@@ -16,6 +16,8 @@ var zoneShoot = ""
 @onready var target = $"../basketPoint"
 @onready var ray = $"RayCast2Dbis"
 @onready var shootBar = $"../Control/ShootBar"
+@onready var spawnAttack = $"../SpawnAttack2"
+@onready var spawnDefense = $"../SpawnDefense2"
 @onready var hasLineOfSight	= true;
 
 signal passe(debut,fin)
@@ -164,3 +166,11 @@ func _on_right_shoot_zone_enter_right_player_2():
 
 func _on_right_shoot_zone_exit_right_player_2():
 	zoneShoot = ""
+
+func _on_idk_home_go_attack():
+	position = spawnAttack.position
+
+func _on_idk_home_go_defense():
+	velocity = Vector2.ZERO
+	global_position = spawnDefense.global_position
+	
