@@ -1,288 +1,341 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710064354
-arenaOld.png::CompressedTexture2D::2308691439781459674::1707499384::1707499384::1::::<><>::
-Ball.gd::GDScript::-1::1710007273::0::1::::<>CharacterBody2D<>::
-Capture d'écran 2024-02-23 155939.png::CompressedTexture2D::1626031280663557377::1710007273::1710007273::1::::<><>::
-Capture d'écran 2024-02-23 160001.png::CompressedTexture2D::4540886993093893716::1710007273::1710007273::1::::<><>::
-Capture d'écran 2024-02-23 160018.png::CompressedTexture2D::877073738556272560::1710007273::1710007273::1::::<><>::
-Capture d'écran 2024-02-23 160030.png::CompressedTexture2D::8026737303892715754::1710007273::1710007273::1::::<><>::
-Capture d'écran 2024-02-23 160042.png::CompressedTexture2D::7516164006800475087::1710007273::1710007273::1::::<><>::
-Capture d'écran 2024-02-23 160049.png::CompressedTexture2D::3345421324929971939::1710007273::1710007273::1::::<><>::
-Control.gd::GDScript::-1::1710007273::0::1::::<>Control<>::
-Court.gd::GDScript::-1::1710007273::0::1::::<>Node2D<>::
-Enemy.gd::GDScript::-1::1710007273::0::1::::Enemy<>CharacterBody2D<>::
-Failure.png::CompressedTexture2D::5180319637887320903::1710007273::1710007273::1::::<><>::
-Game.png::CompressedTexture2D::5213840970987748364::1710007273::1710007273::1::::<><>::
-Go.png::CompressedTexture2D::4119779690401705017::1710007273::1710007273::1::::<><>::
-HalfCourtSprite-transformed.png::CompressedTexture2D::7277226639209225826::1710007273::1710007273::1::::<><>::
-HalfCourtSprite.png::CompressedTexture2D::7627495954118466805::1710007273::1710007273::1::::<><>::
-icon.svg::CompressedTexture2D::8515388592080410002::1707336753::1710007273::1::::<><>::
-image.jpg::CompressedTexture2D::8918668699453537441::1710007273::1710007273::1::::<><>::
-leftShoot.gd::GDScript::-1::1710007273::0::1::::<>CollisionShape2D<>::
-Level-5_Inc._logo.svg::CompressedTexture2D::6270813197733460851::1710007273::1710007273::1::::<><>::
-MainMenu.tscn::PackedScene::7618408599884943333::1710020099::0::1::::<><>::
-Mid range zone.gd::GDScript::-1::1710007273::0::1::::<>Area2D<>::
-Outside zone.gd::GDScript::-1::1710007273::0::1::::<>Area2D<>::
-Paint Zone.gd::GDScript::-1::1710007273::0::1::::<>Area2D<>::
-Paint.gd::GDScript::-1::1710007273::0::1::::<>CollisionShape2D<>::
-Perimeter zone.gd::GDScript::-1::1710007273::0::1::::<>Area2D<>::
-Player1.gd::GDScript::-1::1710007273::0::1::::Player1<>CharacterBody2D<>::
-Player2.gd::GDScript::-1::1710007273::0::1::::Player2<>CharacterBody2D<>::
-PlayerMatt.tscn::PackedScene::2634804063475668932::1710007273::0::1::::<><>::res://Player1.gd<>uid://hjdpylr3wx4h
-PlayerMax.tscn::PackedScene::4099822516453157685::1710020099::0::1::::<><>::res://Court.gd<>uid://dgw20kbeg7me4::::res://HalfCourtSprite.png<>res://Player1.gd<>uid://hjdpylr3wx4h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png<>uid://btxm2kmqckngd::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_South_strip4.png<>uid://m2i0mnjlmchw::::res://bballsprite/Basketball Court Tile Sets/png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png<>res://RayCast2DPlayer.gd<>uid://c4fdx5mcn07pe::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_West_strip4.png<>uid://dtk6haesf2a2u::::res://icon.svg<>res://RayCast2D.gd<>res://Enemy.gd<>uid://d30565roounvx::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_East_strip4.png<>uid://f7afufdrdl0h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_West_NOBALL_strip4.png<>uid://bwo10jsuuhiod::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_North_strip4.png<>uid://dpct18fb68srf::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_East_NOBALL_strip4.png<>uid://c8byuppyr07mk::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_South_strip4.png<>uid://47bjiyuns61x::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_North_NOBALL_strip4.png<>uid://b00tg3f04lwnx::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_West_strip4.png<>uid://boycqi1qxlsc5::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_East_strip4.png<>uid://bqlbbuwdfjiqa::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_North_strip4.png<>uid://bgaixn8w8wwna::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_South_NOBALL_strip4.png<>uid://ck4vdh1mkxlo5::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_West_NOBALL_strip4.png<>uid://cekpnwvpgo2rl::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_East_NOBALL_strip4.png<>res://Player2.gd<>res://Ball.gd<>uid://bjurcc3sdi551::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_North_NOBALL_strip4.png<>uid://b2h5qnc7wstds::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_SOUTH_NO_BALL_strip4.png<>uid://llg5btwq0nf5::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_SOUTH_WITH_BALL_strip4.png<>uid://8o6rp0uw6316::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_WEST_NO_BALL_strip4.png<>uid://c1671hfwba8k0::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_WEST_WITH_BALL_strip4.png<>uid://c7cq8noeggdg1::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_EAST_NO_BALL_strip4.png<>uid://bnsc2ig3fdbkc::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_South_WITHBALL_strip3.png<>uid://cm3dg3n68malj::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png<>uid://cuywedo0oufke::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_West_NOBALL_strip2.png<>uid://bcy2gafm4ngnb::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_East_NOBALL_strip2.png<>uid://bogik8uy15fki::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png<>uid://44qtn3vcf5ov::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_North_NOBALL_strip2.png<>uid://dgmh5fmwnyuen::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png<>uid://d0cjf2bhnfgk4::::res://image.jpg<>uid://dstgyme06ewi::::res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png<>uid://cvlvm3bb1esal::::res://Level-5_Inc._logo.svg<>uid://b4o2i4rusxryb::::res://Time Up.png<>res://RayCast2Dbis.gd<>res://shotClock.gd<>res://TimeUp.gd<>uid://6vvpa4bxyv2w::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_South_NOBALL_strip4.png<>uid://clwebv5lt2l1j::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_South_strip4.png<>uid://d2n56reyjugwg::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_West_strip4.png<>res://Control.gd<>uid://dhiakn3myf1hb::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_East_strip4.png<>uid://c2anb67bs0q4f::::res://art/progress-bar-circle.png<>uid://cgls5i40h6et0::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_West_NOBALL_strip4.png<>uid://cd1ebwjghlm35::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_North_strip4.png<>uid://5rjo4hip47ua::::res://art/progress-bar-frame.png<>uid://c7v1nyewij2fs::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_East_NOBALL_strip4.png<>uid://cjbpbn8g2v1aj::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_North_NOBALL_strip4.png<>uid://dcyxox1ngmqik::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_North_NOBALL_strip2.png<>uid://c7n77rk8gcvfd::::res://Succes.png<>uid://b060ufgcjpbqh::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_West_NOBALL_strip2.png<>uid://dv3yj0dsd7rpu::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_East_NOBALL_strip2.png<>res://Succes.gd<>res://Mid range zone.gd<>res://Perimeter zone.gd<>res://Paint Zone.gd<>res://Outside zone.gd<>res://leftShoot.gd<>res://rightShoot.gd
-RayCast2D.gd::GDScript::-1::1710007273::0::1::::<>RayCast2D<>::
-RayCast2Dbis.gd::GDScript::-1::1710007273::0::1::::<>RayCast2D<>::
-RayCast2DPlayer.gd::GDScript::-1::1710007273::0::1::::<>RayCast2D<>::
-Ready.png::CompressedTexture2D::8282309156864231927::1710007273::1710007273::1::::<><>::
-rightShoot.gd::GDScript::-1::1710007273::0::1::::<>CollisionShape2D<>::
-shotClock.gd::GDScript::-1::1710007273::0::1::::<>Label<>::
-Succes.gd::GDScript::-1::1710007273::0::1::::<>Sprite2D<>::
-Succes.png::CompressedTexture2D::7047722273631985681::1710007273::1710007273::1::::<><>::
-Time Up.png::CompressedTexture2D::4452453633281326989::1710007273::1710007273::1::::<><>::
-TimeUp.gd::GDScript::-1::1710007273::0::1::::<>Sprite2D<>::
-::res://art/::1710007273
-enemyFlyingAlt_1.png::CompressedTexture2D::9197185553487505363::1707499384::1707499384::1::::<><>::
-enemyFlyingAlt_2.png::CompressedTexture2D::3152206959890532919::1707499384::1707499384::1::::<><>::
-enemySwimming_1.png::CompressedTexture2D::85349726447878478::1707499384::1707499384::1::::<><>::
-enemySwimming_2.png::CompressedTexture2D::2179560674982136714::1707499384::1707499384::1::::<><>::
-enemyWalking_1.png::CompressedTexture2D::61837744111914879::1707499384::1707499384::1::::<><>::
-enemyWalking_2.png::CompressedTexture2D::1499572921448474460::1707499384::1707499384::1::::<><>::
-gameover.wav::AudioStreamWAV::1402378089188301015::1707499384::1707499384::1::::<><>::
-HalfCourtSprite.png::CompressedTexture2D::7816856435884967508::1710007273::1710007273::1::::<><>::
-House In a Forest Loop.ogg::AudioStreamOggVorbis::6758653350989858869::1707499384::1707499384::1::::<><>::
-playerGrey_up1.png::CompressedTexture2D::7634264396920924719::1707499384::1707499384::1::::<><>::
-playerGrey_up2.png::CompressedTexture2D::5858927289353083851::1707499384::1707499384::1::::<><>::
-playerGrey_walk1.png::CompressedTexture2D::469694990666581022::1707499384::1707499384::1::::<><>::
-playerGrey_walk2.png::CompressedTexture2D::1562489678376934900::1707499384::1707499384::1::::<><>::
-progress-bar-circle.png::CompressedTexture2D::6668732930041032743::1710007273::1710007273::1::::<><>::
-progress-bar-frame.png::CompressedTexture2D::2141332719385045440::1710007273::1710007273::1::::<><>::
-::res://bballsprite/::1710007273
-arenaOld.png::CompressedTexture2D::4789286473763419565::1707499384::1707499384::1::::<><>::
-ballCroped.png::CompressedTexture2D::1134241089961109453::1710007273::1710007273::1::::<><>::
-NES_Basketball_Court_BG.png::CompressedTexture2D::7204021291199149432::1707499384::1707499384::1::::<><>::
-NES_Basketball_TitleScreen.png::CompressedTexture2D::8510274957404595348::1707499384::1707499384::1::::<><>::
-NES_Basket_and_Ball_SpriteSheet.png::CompressedTexture2D::248890947427595660::1707499384::1707499384::1::::<><>::
-NES_Title_Player.png::CompressedTexture2D::2341584272853517600::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Basketball Court Tile Sets/::1707499384
-NES_Basketball_Court_BG.png::CompressedTexture2D::2548875419303551030::1707499384::1707499384::1::::<><>::
-NES_Basketball_Court_TileSet_16x16.png::CompressedTexture2D::481285125423072903::1707499384::1707499384::1::::<><>::
-NES_Basketball_Court_TileSet_128x128_8x8.png::CompressedTexture2D::4746009528709680921::1707499384::1707499384::1::::<><>::
-NES_Basketball_Court_TileSet_128x128_16x16_1.png::CompressedTexture2D::6485143438910577662::1707499384::1707499384::1::::<><>::
-NES_Basketball_Court_TileSet_128x128_16x16_2.png::CompressedTexture2D::6084373477869647233::1707499384::1707499384::1::::<><>::
-png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png::CompressedTexture2D::898535354592508540::1707499384::1707499384::1::::<><>::
-::res://bballsprite/NES Graphic Banks/::1707499384
-Bank 1 Tile Set opaque.png::CompressedTexture2D::7067919098145568119::1707499384::1707499384::1::::<><>::
-Bank 2 Sprites opaque.png::CompressedTexture2D::3721765985428471271::1707499384::1707499384::1::::<><>::
-NES_Sprites_TileSet_128x128_8x8.png::CompressedTexture2D::2173166314369384819::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/::1707499384
-NES_Team_Players_A_SpriteSheet.png::CompressedTexture2D::3181659727160329662::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Dribble/::1707499384
-Player_A_Dribble_East_strip4.png::CompressedTexture2D::9178037588807535893::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_NorthEast_strip4.png::CompressedTexture2D::6661239965227416364::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_NorthWest_RH_strip4.png::CompressedTexture2D::321314403603905555::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_NorthWest_strip4.png::CompressedTexture2D::6836318145536572747::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_North_strip4.png::CompressedTexture2D::3961100320398551671::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_SouthEast_strip4.png::CompressedTexture2D::8945523028048400256::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_SouthWest_strip4.png::CompressedTexture2D::3446376029021279399::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_South_strip4.png::CompressedTexture2D::3768266766008923123::1707499384::1707499384::1::::<><>::
-Player_A_Dribble_West_strip4.png::CompressedTexture2D::6818864540244972762::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Idle (no ball)/::1707499384
-Player_A_Idle_East_NOBALL_strip4.png::CompressedTexture2D::5075175678335917353::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthEast_NOBALL_strip4.png::CompressedTexture2D::6677224492653176182::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthWest_NOBALL_strip4.png::CompressedTexture2D::258153972125325244::1707499384::1707499384::1::::<><>::
-Player_A_Idle_North_NOBALL_strip4.png::CompressedTexture2D::3060443741104848446::1707499384::1707499384::1::::<><>::
-Player_A_Idle_SouthEast_NOBALL_strip4.png::CompressedTexture2D::4555749209025221814::1707499384::1707499384::1::::<><>::
-Player_A_Idle_SouthWest_NOBALL_strip4.png::CompressedTexture2D::1652451283074636679::1707499384::1707499384::1::::<><>::
-Player_A_Idle_South_NOBALL_strip4.png::CompressedTexture2D::2808081289549906258::1707499384::1707499384::1::::<><>::
-Player_A_Idle_West_NOBALL_strip4.png::CompressedTexture2D::5535877581251941374::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Idle (with ball)/::1707499384
-Player_A_Idle_East_strip4.png::CompressedTexture2D::3418760028520872050::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthEast_LH_strip4.png::CompressedTexture2D::3090313283096328108::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthEast_strip4.png::CompressedTexture2D::3156374610727392117::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthWest_RH_strip4.png::CompressedTexture2D::2743950443097913541::1707499384::1707499384::1::::<><>::
-Player_A_Idle_NorthWest_strip4.png::CompressedTexture2D::7046181151248831612::1707499384::1707499384::1::::<><>::
-Player_A_Idle_North_strip4.png::CompressedTexture2D::3532213924578999608::1707499384::1707499384::1::::<><>::
-Player_A_Idle_SouthEast_strip4.png::CompressedTexture2D::4494461625567531438::1707499384::1707499384::1::::<><>::
-Player_A_Idle_SouthWest_strip4.png::CompressedTexture2D::3311117776784152709::1707499384::1707499384::1::::<><>::
-Player_A_Idle_South_strip4.png::CompressedTexture2D::7092631321036329914::1707499384::1707499384::1::::<><>::
-Player_A_Idle_West_strip4.png::CompressedTexture2D::4193917035674320945::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Jump Shoot (no ball)/::1707499384
-Player_A_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::2577993518943243595::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::1850572511809506561::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::5578932067445548281::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::2096349549354252881::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::6991960546342784674::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::2553252033397257330::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::1937656649254892243::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::6227506403613464972::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Jump Shoot (with ball)/::1707499384
-Player_A_J_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::6501606415228784452::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::296900723376936004::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::6274073280111739226::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_North_WITHBALL_strip3.png::CompressedTexture2D::5578931545814881021::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::9181060619983100534::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::1582234077224633909::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::3336204531716183746::1707499384::1707499384::1::::<><>::
-Player_A_J_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::267807594718591333::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Pass receive (no ball)/::1707499384
-Player_A_Pass_Receive_East_NOBALL.png::CompressedTexture2D::5877648035222543787::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_NorthEast_NOBALL.png::CompressedTexture2D::1092866294683228343::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_NorthWest_NOBALL.png::CompressedTexture2D::7322651502951126337::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_North_NOBALL.png::CompressedTexture2D::2179165258572841915::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_SouthEast_NOBALL.png::CompressedTexture2D::5443528434601160391::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_SouthWest_NOBALL.png::CompressedTexture2D::2906042350265975046::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_South_NOBALL.png::CompressedTexture2D::912669911064401715::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_West_NOBALL.png::CompressedTexture2D::6722222488261973085::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Pass receive (with ball)/::1707499384
-Player_A_Pass_Receive_East_WITHBALL.png::CompressedTexture2D::6638752906662839807::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_NorthEast_WITHBALL.png::CompressedTexture2D::7363452617834825904::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_NorthWest_WITHBALL.png::CompressedTexture2D::7435761851093689574::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_North_WITHBALL.png::CompressedTexture2D::1813813264548710169::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_SouthEast_WITHBALL.png::CompressedTexture2D::5587748556845436112::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_SouthWest_WITHBALL.png::CompressedTexture2D::329504579667107092::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_South_WITHBALL.png::CompressedTexture2D::94957434522757395::1707499384::1707499384::1::::<><>::
-Player_A_Pass_Receive_West_WITHBALL.png::CompressedTexture2D::1172775195384687960::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Run (no ball)/::1707499384
-Player_A_Run_East_NOBALL_strip4.png::CompressedTexture2D::8217425255744755687::1707499384::1707499384::1::::<><>::
-Player_A_Run_NorthEast_NOBALL_strip4.png::CompressedTexture2D::7593722995829977310::1707499384::1707499384::1::::<><>::
-Player_A_Run_NorthWest_NOBALL_strip4.png::CompressedTexture2D::3717511976095279613::1707499384::1707499384::1::::<><>::
-Player_A_Run_North_NOBALL_strip4.png::CompressedTexture2D::2101613800959694695::1707499384::1707499384::1::::<><>::
-Player_A_Run_SouthEast_NOBALL_strip4.png::CompressedTexture2D::4117158619423617934::1707499384::1707499384::1::::<><>::
-Player_A_Run_SouthWest_NOBALL_strip4.png::CompressedTexture2D::9045119313012339559::1707499384::1707499384::1::::<><>::
-Player_A_Run_South_NOBALL_strip4.png::CompressedTexture2D::510111521503601421::1707499384::1707499384::1::::<><>::
-Player_A_Run_West_NOBALL_strip4.png::CompressedTexture2D::417014293639779661::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Stand shoot (no ball)/::1707499384
-Player_A_S_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::909807586934428924::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::4361637070270025643::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::4750273071863776319::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::6316046580810881181::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::2878116150916556035::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::878088351719307792::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::5360922762407472597::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::1864976884859479568::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player A/Player A Stand Shoot (with ball)/::1707499384
-Player_A_S_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::6938293319211589599::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::764062844483331796::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::3057514479455410728::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_North_WITHBALL_strip2.png::CompressedTexture2D::7690533252756347571::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::3769118587863872141::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::333824171645868249::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::8835405752030407573::1707499384::1707499384::1::::<><>::
-Player_A_S_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::6453600540147602857::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/::1707499384
-NES_Team_Players_B_SpriteSheet.png::CompressedTexture2D::975094838629948673::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Dribble/::1707499384
-Player_B_Run_EAST_WITH_BALL_strip4.png::CompressedTexture2D::5673104426087323919::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTHEAST_WITH_BALL_strip4.png::CompressedTexture2D::6044105387437714915::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTHWEST_WITH_BALL_strip4.png::CompressedTexture2D::1399544696894195658::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTH_WITH_BALL_strip4.png::CompressedTexture2D::7605646520895048885::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTHEAST_WITH_BALL_strip4.png::CompressedTexture2D::7522884454056780684::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTHWEST_WITH_BALL_strip4.png::CompressedTexture2D::7541773122118267874::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTH_WITH_BALL_strip4.png::CompressedTexture2D::795203393983352004::1707499384::1707499384::1::::<><>::
-Player_B_Run_WEST_WITH_BALL_strip4.png::CompressedTexture2D::6663736763149378561::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Idle (no ball)/::1707499384
-Player_B_Idle_East_NOBALL_strip4.png::CompressedTexture2D::7063839421521461680::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthEast_NOBALL_strip4.png::CompressedTexture2D::1506207805405697001::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthWest_NOBALL_strip4.png::CompressedTexture2D::3205228559903188324::1707499384::1707499384::1::::<><>::
-Player_B_Idle_North_NOBALL_strip4.png::CompressedTexture2D::5407518612659601865::1707499384::1707499384::1::::<><>::
-Player_B_Idle_SouthEast_NOBALL_strip4.png::CompressedTexture2D::8816521563253997363::1707499384::1707499384::1::::<><>::
-Player_B_Idle_SouthWest_NOBALL_strip4.png::CompressedTexture2D::9013459116538107909::1707499384::1707499384::1::::<><>::
-Player_B_Idle_South_NOBALL_strip4.png::CompressedTexture2D::2220507974247396112::1707499384::1707499384::1::::<><>::
-Player_B_Idle_West_NOBALL_strip4.png::CompressedTexture2D::5217829530328590071::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Idle (with ball)/::1707499384
-Player_B_Idle_East_strip4.png::CompressedTexture2D::7667117563152656511::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthEast_LH_strip4.png::CompressedTexture2D::945300136540339799::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthEast_strip4.png::CompressedTexture2D::4442611376825022950::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthWest_RH_strip4.png::CompressedTexture2D::3620203297586034304::1707499384::1707499384::1::::<><>::
-Player_B_Idle_NorthWest_strip4.png::CompressedTexture2D::2137180663434624935::1707499384::1707499384::1::::<><>::
-Player_B_Idle_North_strip4.png::CompressedTexture2D::5037327543370181198::1707499384::1707499384::1::::<><>::
-Player_B_Idle_SouthEast_strip4.png::CompressedTexture2D::6524154203809113024::1707499384::1707499384::1::::<><>::
-Player_B_Idle_SouthWest_strip4.png::CompressedTexture2D::7612412876765147227::1707499384::1707499384::1::::<><>::
-Player_B_Idle_South_strip4.png::CompressedTexture2D::5590580761619584529::1707499384::1707499384::1::::<><>::
-Player_B_Idle_West_strip4.png::CompressedTexture2D::9083075509682441402::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Jump Shoot (no ball)/::1707499384
-Player_B_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::8692504943104487558::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::4122249247022177875::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::7790349992191844546::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::7350607545202236858::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::6217776618978878389::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::2062851756222423859::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::859894065129670011::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::4206691397706089587::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Jump Shoot (with ball)/::1707499384
-Player_B_J_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::4368551751920520381::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::5337239307230720507::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::7416549693265299205::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_North_WITHBALL_strip3.png::CompressedTexture2D::8904470770911124083::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::2667628888555610831::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::8819337282749373636::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::5097735539974226454::1707499384::1707499384::1::::<><>::
-Player_B_J_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::7906750803799469516::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Pass Receive Pass (no ball)/::1707499384
-Player_B_Pass_Receive_East_NOBALL.png::CompressedTexture2D::7885247519079004080::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_NorthEast_NOBALL.png::CompressedTexture2D::5087130296573998293::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_NorthWest_NOBALL.png::CompressedTexture2D::2636634834029259802::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_North_NOBALL.png::CompressedTexture2D::8954207026004785168::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_SouthEast_NOBALL.png::CompressedTexture2D::1682758642033185169::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_SouthWest_NOBALL.png::CompressedTexture2D::2680191199165782349::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_South_NOBALL.png::CompressedTexture2D::6624882329066015750::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_West_NOBALL.png::CompressedTexture2D::9122481208534557445::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Pass Receive Pass (with ball)/::1707499384
-Player_B_Pass_Receive_East_WITHBALL.png::CompressedTexture2D::8117607068285096874::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_NorthEast_WITHBALL.png::CompressedTexture2D::3472403290519258935::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_NorthWest_WITHBALL.png::CompressedTexture2D::8917310757658221603::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_North_WITHBALL.png::CompressedTexture2D::6686556125388058042::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_SouthEast_WITHBALL.png::CompressedTexture2D::2216700500617570283::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_SouthWest_WITHBALL.png::CompressedTexture2D::8086155293857205026::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_South_WITHBALL.png::CompressedTexture2D::7006253465138080983::1707499384::1707499384::1::::<><>::
-Player_B_Pass_Receive_West_WITHBALL.png::CompressedTexture2D::2470283343722295516::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Run (no ball)/::1707499384
-Player_B_Run_EAST_NO_BALL_strip4.png::CompressedTexture2D::7024044227015295874::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTHEAST_NO_BALL_strip4.png::CompressedTexture2D::950740694760419275::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTHWEST_NO_BALL_strip4.png::CompressedTexture2D::7511334658843010093::1707499384::1707499384::1::::<><>::
-Player_B_Run_NORTH_NO_BALL_strip4.png::CompressedTexture2D::3381956120324116992::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTHEAST_NO_BALL_strip4.png::CompressedTexture2D::8322382242727782741::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTHWEST_NO_BALL_strip4.png::CompressedTexture2D::2886640223886314263::1707499384::1707499384::1::::<><>::
-Player_B_Run_SOUTH_NO_BALL_strip4.png::CompressedTexture2D::4297820876061089332::1707499384::1707499384::1::::<><>::
-Player_B_Run_WEST_NO_BALL_strip4.png::CompressedTexture2D::2347046541293771291::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Stand Shoot (no ball)/::1707499384
-Player_B_S_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::6710376749314101643::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::3811863280838121357::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::2085068117011722398::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::2899932788910621450::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::3911873305511366132::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::3939014258373497285::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::6561103358920080949::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::6066645357984579434::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Player B/Player B Stand Shoot (with ball)/::1707499384
-Player_B_S_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::1233213124300008951::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::2280649045587788956::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::6557907660038281224::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_North_WITHBALL_strip2.png::CompressedTexture2D::8305867923773998655::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::3609139634603744571::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::6466186173927967669::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::356496316160630745::1707499384::1707499384::1::::<><>::
-Player_B_S_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::3771288916349667191::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Referee A/::1707499384
-NES_Referee_A_Avatar_Call.png::CompressedTexture2D::4735362999262646864::1707499384::1707499384::1::::<><>::
-NES_Referee_A_North_Call.png::CompressedTexture2D::7147275668772502655::1707499384::1707499384::1::::<><>::
-NES_Referee_A_North_SideStep_Left_strip2.png::CompressedTexture2D::6225241221258631618::1707499384::1707499384::1::::<><>::
-NES_Referee_A_North_SideStep_Right_strip2.png::CompressedTexture2D::1546697352226447939::1707499384::1707499384::1::::<><>::
-NES_Referee_A_South_Call.png::CompressedTexture2D::7682241296482784326::1707499384::1707499384::1::::<><>::
-NES_Referee_A_South_SideStep_Left_strip2.png::CompressedTexture2D::2876397084553430482::1707499384::1707499384::1::::<><>::
-NES_Referee_A_South_SideStep_Right_strip2.png::CompressedTexture2D::7553804928775406991::1707499384::1707499384::1::::<><>::
-NES_Referee_A_SpriteSheet.png::CompressedTexture2D::2327838752608017401::1707499384::1707499384::1::::<><>::
-::res://bballsprite/Referee B/::1707499384
-NES_Referee_B_Avatar_Call.png::CompressedTexture2D::8050529405567493236::1707499384::1707499384::1::::<><>::
-NES_Referee_B_North_Call.png::CompressedTexture2D::3859626071120850490::1707499384::1707499384::1::::<><>::
-NES_Referee_B_North_SideStep_Left_strip2.png::CompressedTexture2D::526601143142845723::1707499384::1707499384::1::::<><>::
-NES_Referee_B_North_SideStep_Right_strip2.png::CompressedTexture2D::7005961241419498325::1707499384::1707499384::1::::<><>::
-NES_Referee_B_South_Call.png::CompressedTexture2D::7888627585744543598::1707499384::1707499384::1::::<><>::
-NES_Referee_B_South_SideStep_Left_strip2.png::CompressedTexture2D::157450565301163951::1707499384::1707499384::1::::<><>::
-NES_Referee_B_South_SideStep_Right_strip2.png::CompressedTexture2D::6551881746694726557::1707499384::1707499384::1::::<><>::
-NES_Referee_B_SpriteSheet.png::CompressedTexture2D::5431955453620786564::1707499384::1707499384::1::::<><>::
-::res://CUTsprite/::1707499384
-tile000.png::CompressedTexture2D::4357637032003918508::1707499384::1707499384::1::::<><>::
-tile001.png::CompressedTexture2D::5786814093196921297::1707499384::1707499384::1::::<><>::
-tile002.png::CompressedTexture2D::7219822071933763812::1707499384::1707499384::1::::<><>::
-tile003.png::CompressedTexture2D::5496080831889449631::1707499384::1707499384::1::::<><>::
+::res://::1710146200
+arenaOld.png::CompressedTexture2D::2308691439781459674::1707482633::1707482633::1::::<><>::
+Ball.gd::GDScript::-1::1710145311::0::1::::<>CharacterBody2D<>::
+Capture d'écran 2024-02-23 155939.png::CompressedTexture2D::1626031280663557377::1708700379::1708700873::1::::<><>::
+Capture d'écran 2024-02-23 160001.png::CompressedTexture2D::4540886993093893716::1708700401::1708700873::1::::<><>::
+Capture d'écran 2024-02-23 160018.png::CompressedTexture2D::877073738556272560::1708700418::1708700873::1::::<><>::
+Capture d'écran 2024-02-23 160030.png::CompressedTexture2D::8026737303892715754::1708700430::1708700873::1::::<><>::
+Capture d'écran 2024-02-23 160042.png::CompressedTexture2D::7516164006800475087::1708700442::1708700873::1::::<><>::
+Capture d'écran 2024-02-23 160049.png::CompressedTexture2D::3345421324929971939::1708700449::1708700873::1::::<><>::
+Control.gd::GDScript::-1::1710145311::0::1::::<>Control<>::
+Court.gd::GDScript::-1::1710146136::0::1::::<>Node2D<>::
+Enemy2.gd::GDScript::-1::1710146136::0::1::::Enemy2<>CharacterBody2D<>::
+Enemy.gd::GDScript::-1::1710146136::0::1::::Enemy<>CharacterBody2D<>::
+Failure.png::CompressedTexture2D::5180319637887320903::1708678723::1708678723::1::::<><>::
+Game.png::CompressedTexture2D::5213840970987748364::1708678723::1708678723::1::::<><>::
+Go.png::CompressedTexture2D::4119779690401705017::1708678723::1708678723::1::::<><>::
+HalfCourtSprite-transformed.png::CompressedTexture2D::7277226639209225826::1708678723::1708678723::1::::<><>::
+HalfCourtSprite.png::CompressedTexture2D::7627495954118466805::1708678723::1708678723::1::::<><>::
+icon.svg::CompressedTexture2D::8515388592080410002::1707482633::1707482633::1::::<><>::
+image.jpg::CompressedTexture2D::8918668699453537441::1708678723::1708678723::1::::<><>::
+leftShoot.gd::GDScript::-1::1709913659::0::1::::<>CollisionShape2D<>::
+Level-5_Inc._logo.svg::CompressedTexture2D::6270813197733460851::1708678723::1708678723::1::::<><>::
+MainMenu.tscn::PackedScene::7618408599884943333::1709914852::0::1::::<><>::
+Mid range zone.gd::GDScript::-1::1710145311::0::1::::<>Area2D<>::
+Outside zone.gd::GDScript::-1::1710145311::0::1::::<>Area2D<>::
+Paint Zone.gd::GDScript::-1::1710145311::0::1::::<>Area2D<>::
+Paint.gd::GDScript::-1::1708690418::0::1::::<>CollisionShape2D<>::
+Perimeter zone.gd::GDScript::-1::1710145311::0::1::::<>Area2D<>::
+Player1.gd::GDScript::-1::1710145311::0::1::::Player1<>CharacterBody2D<>::
+Player2.gd::GDScript::-1::1710145311::0::1::::Player2<>CharacterBody2D<>::
+PlayerMatt.tscn::PackedScene::2634804063475668932::1708691429::0::1::::<><>::res://Player1.gd<>uid://hjdpylr3wx4h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png<>uid://btxm2kmqckngd::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_South_strip4.png<>uid://m2i0mnjlmchw::::res://bballsprite/Basketball Court Tile Sets/png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png<>res://RayCast2DPlayer.gd<>uid://c4fdx5mcn07pe::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_West_strip4.png<>uid://dtk6haesf2a2u::::res://icon.svg<>uid://bgaixn8w8wwna::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_South_NOBALL_strip4.png<>res://RayCast2D.gd<>uid://c8byuppyr07mk::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_South_strip4.png<>res://Enemy.gd<>uid://d30565roounvx::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_East_strip4.png<>uid://f7afufdrdl0h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_West_NOBALL_strip4.png<>uid://b00tg3f04lwnx::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_West_strip4.png<>uid://ck4vdh1mkxlo5::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_West_NOBALL_strip4.png<>uid://bwo10jsuuhiod::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_North_strip4.png<>uid://cekpnwvpgo2rl::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_East_NOBALL_strip4.png<>uid://dpct18fb68srf::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_East_NOBALL_strip4.png<>uid://boycqi1qxlsc5::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_East_strip4.png<>uid://bjurcc3sdi551::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_North_NOBALL_strip4.png<>uid://bqlbbuwdfjiqa::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_North_strip4.png<>uid://47bjiyuns61x::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_North_NOBALL_strip4.png<>res://Player2.gd<>res://Ball.gd<>uid://bnsc2ig3fdbkc::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_South_WITHBALL_strip3.png<>uid://b2h5qnc7wstds::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_SOUTH_NO_BALL_strip4.png<>uid://d2y0ti7lduj2::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_West_WITHBALL_strip3.png<>uid://llg5btwq0nf5::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_SOUTH_WITH_BALL_strip4.png<>uid://8o6rp0uw6316::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_WEST_NO_BALL_strip4.png<>uid://cyvori8c7lueu::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_East_WITHBALL_strip3.png<>uid://c1671hfwba8k0::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_WEST_WITH_BALL_strip4.png<>uid://clqqgmyhsbve0::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_North_WITHBALL_strip3.png<>uid://c7cq8noeggdg1::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_EAST_NO_BALL_strip4.png<>uid://cm3dg3n68malj::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png<>uid://bogik8uy15fki::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png<>uid://dgmh5fmwnyuen::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png<>uid://c2anb67bs0q4f::::res://art/progress-bar-circle.png<>res://Control.gd<>uid://5rjo4hip47ua::::res://art/progress-bar-frame.png<>uid://dstgyme06ewi::::res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png
+PlayerMax.tscn::PackedScene::402768806579286681::1710146161::0::1::::<><>::res://Court.gd<>uid://dgw20kbeg7me4::::res://HalfCourtSprite.png<>res://Player1.gd<>uid://hjdpylr3wx4h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_South_NOBALL_strip4.png<>uid://btxm2kmqckngd::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_South_strip4.png<>uid://m2i0mnjlmchw::::res://bballsprite/Basketball Court Tile Sets/png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png<>res://RayCast2DPlayer.gd<>uid://c4fdx5mcn07pe::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_West_strip4.png<>uid://dtk6haesf2a2u::::res://icon.svg<>res://RayCast2D.gd<>res://Enemy.gd<>uid://d30565roounvx::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_East_strip4.png<>uid://f7afufdrdl0h::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_West_NOBALL_strip4.png<>uid://bwo10jsuuhiod::::res://bballsprite/Player A/Player A Dribble/Player_A_Dribble_North_strip4.png<>uid://dpct18fb68srf::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_East_NOBALL_strip4.png<>uid://c8byuppyr07mk::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_South_strip4.png<>uid://47bjiyuns61x::::res://bballsprite/Player A/Player A Run (no ball)/Player_A_Run_North_NOBALL_strip4.png<>uid://b00tg3f04lwnx::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_West_strip4.png<>uid://boycqi1qxlsc5::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_East_strip4.png<>uid://bqlbbuwdfjiqa::::res://bballsprite/Player A/Player A Idle (with ball)/Player_A_Idle_North_strip4.png<>uid://bgaixn8w8wwna::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_South_NOBALL_strip4.png<>uid://ck4vdh1mkxlo5::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_West_NOBALL_strip4.png<>uid://cekpnwvpgo2rl::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_East_NOBALL_strip4.png<>res://Player2.gd<>res://Ball.gd<>uid://bjurcc3sdi551::::res://bballsprite/Player A/Player A Idle (no ball)/Player_A_Idle_North_NOBALL_strip4.png<>uid://b2h5qnc7wstds::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_SOUTH_NO_BALL_strip4.png<>uid://llg5btwq0nf5::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_SOUTH_WITH_BALL_strip4.png<>uid://8o6rp0uw6316::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_WEST_NO_BALL_strip4.png<>uid://c1671hfwba8k0::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_WEST_WITH_BALL_strip4.png<>uid://c7cq8noeggdg1::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_EAST_NO_BALL_strip4.png<>uid://bnsc2ig3fdbkc::::res://bballsprite/Player A/Player A Jump Shoot (with ball)/Player_A_J_Shoot_South_WITHBALL_strip3.png<>uid://cm3dg3n68malj::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_EAST_WITH_BALL_strip4.png<>uid://cuywedo0oufke::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_West_NOBALL_strip2.png<>uid://bcy2gafm4ngnb::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_East_NOBALL_strip2.png<>uid://bogik8uy15fki::::res://bballsprite/Player B/Player B Run (no ball)/Player_B_Run_NORTH_NO_BALL_strip4.png<>uid://44qtn3vcf5ov::::res://bballsprite/Player A/Player A Jump Shoot (no ball)/Player_A_J_Shoot_North_NOBALL_strip2.png<>uid://dgmh5fmwnyuen::::res://bballsprite/Player B/Player B Dribble/Player_B_Run_NORTH_WITH_BALL_strip4.png<>uid://d0cjf2bhnfgk4::::res://image.jpg<>res://RayCast2Denemy2.gd<>uid://dstgyme06ewi::::res://bballsprite/NES_Basket_and_Ball_SpriteSheet.png<>res://Enemy2.gd<>uid://cvlvm3bb1esal::::res://Level-5_Inc._logo.svg<>uid://b4o2i4rusxryb::::res://Time Up.png<>res://RayCast2Denemy1.gd<>res://RayCast2Dbis.gd<>res://shotClock.gd<>res://TimeUp.gd<>uid://6vvpa4bxyv2w::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_South_NOBALL_strip4.png<>uid://clwebv5lt2l1j::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_South_strip4.png<>uid://d2n56reyjugwg::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_West_strip4.png<>res://Control.gd<>uid://dhiakn3myf1hb::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_East_strip4.png<>uid://c2anb67bs0q4f::::res://art/progress-bar-circle.png<>uid://cgls5i40h6et0::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_West_NOBALL_strip4.png<>uid://cd1ebwjghlm35::::res://bballsprite/Player B/Player B Idle (with ball)/Player_B_Idle_North_strip4.png<>uid://5rjo4hip47ua::::res://art/progress-bar-frame.png<>uid://c7v1nyewij2fs::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_East_NOBALL_strip4.png<>uid://cjbpbn8g2v1aj::::res://bballsprite/Player B/Player B Idle (no ball)/Player_B_Idle_North_NOBALL_strip4.png<>uid://dcyxox1ngmqik::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_North_NOBALL_strip2.png<>uid://c7n77rk8gcvfd::::res://Succes.png<>uid://b060ufgcjpbqh::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_West_NOBALL_strip2.png<>uid://dv3yj0dsd7rpu::::res://bballsprite/Player B/Player B Jump Shoot (no ball)/Player_B_J_Shoot_East_NOBALL_strip2.png<>res://Succes.gd<>res://Mid range zone.gd<>res://Perimeter zone.gd<>res://Paint Zone.gd<>res://Outside zone.gd<>res://leftShoot.gd<>res://rightShoot.gd
+RayCast2D.gd::GDScript::-1::1708694476::0::1::::<>RayCast2D<>::
+RayCast2Dbis.gd::GDScript::-1::1709911905::0::1::::<>RayCast2D<>::
+RayCast2Denemy1.gd::GDScript::-1::1710145311::0::1::::<>RayCast2D<>::
+RayCast2Denemy2.gd::GDScript::-1::1710140728::0::1::::<>RayCast2D<>::
+RayCast2DPlayer.gd::GDScript::-1::1708694433::0::1::::<>RayCast2D<>::
+Ready.png::CompressedTexture2D::8282309156864231927::1708678723::1708678723::1::::<><>::
+rightShoot.gd::GDScript::-1::1709914018::0::1::::<>CollisionShape2D<>::
+shotClock.gd::GDScript::-1::1708678723::0::1::::<>Label<>::
+Succes.gd::GDScript::-1::1708696265::0::1::::<>Sprite2D<>::
+Succes.png::CompressedTexture2D::7047722273631985681::1708678723::1708678723::1::::<><>::
+Time Up.png::CompressedTexture2D::4452453633281326989::1708678723::1708678723::1::::<><>::
+TimeUp.gd::GDScript::-1::1708696390::0::1::::<>Sprite2D<>::
+::res://art/::1708678723
+enemyFlyingAlt_1.png::CompressedTexture2D::9197185553487505363::1707482627::1707482627::1::::<><>::
+enemyFlyingAlt_2.png::CompressedTexture2D::3152206959890532919::1707482627::1707482627::1::::<><>::
+enemySwimming_1.png::CompressedTexture2D::85349726447878478::1707482627::1707482627::1::::<><>::
+enemySwimming_2.png::CompressedTexture2D::2179560674982136714::1707482627::1707482627::1::::<><>::
+enemyWalking_1.png::CompressedTexture2D::61837744111914879::1707482627::1707482627::1::::<><>::
+enemyWalking_2.png::CompressedTexture2D::1499572921448474460::1707482627::1707482627::1::::<><>::
+gameover.wav::AudioStreamWAV::1402378089188301015::1707482627::1707482627::1::::<><>::
+HalfCourtSprite.png::CompressedTexture2D::7816856435884967508::1708678723::1708678723::1::::<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis::6758653350989858869::1707482627::1707482627::1::::<><>::
+playerGrey_up1.png::CompressedTexture2D::7634264396920924719::1707482627::1707482627::1::::<><>::
+playerGrey_up2.png::CompressedTexture2D::5858927289353083851::1707482627::1707482627::1::::<><>::
+playerGrey_walk1.png::CompressedTexture2D::469694990666581022::1707482627::1707482627::1::::<><>::
+playerGrey_walk2.png::CompressedTexture2D::1562489678376934900::1707482627::1707482627::1::::<><>::
+progress-bar-circle.png::CompressedTexture2D::6668732930041032743::1708678700::1708678700::1::::<><>::
+progress-bar-frame.png::CompressedTexture2D::2141332719385045440::1708678700::1708678700::1::::<><>::
+::res://bballsprite/::1710146808
+arenaOld.png::CompressedTexture2D::4789286473763419565::1707482627::1707482627::1::::<><>::
+ballCroped.png::CompressedTexture2D::1134241089961109453::1707903036::1707903036::1::::<><>::
+NES_Basketball_Court_BG.png::CompressedTexture2D::7204021291199149432::1707482627::1707482627::1::::<><>::
+NES_Basketball_TitleScreen.png::CompressedTexture2D::8510274957404595348::1707482627::1707482628::1::::<><>::
+NES_Basket_and_Ball_SpriteSheet.png::CompressedTexture2D::248890947427595660::1707482627::1707482627::1::::<><>::
+NES_Title_Player.png::CompressedTexture2D::2341584272853517600::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Basketball Court Tile Sets/::1707482628
+NES_Basketball_Court_BG.png::CompressedTexture2D::2548875419303551030::1707482628::1707482628::1::::<><>::
+NES_Basketball_Court_TileSet_16x16.png::CompressedTexture2D::481285125423072903::1707482628::1707482628::1::::<><>::
+NES_Basketball_Court_TileSet_128x128_8x8.png::CompressedTexture2D::4746009528709680921::1707482628::1707482628::1::::<><>::
+NES_Basketball_Court_TileSet_128x128_16x16_1.png::CompressedTexture2D::6485143438910577662::1707482628::1707482628::1::::<><>::
+NES_Basketball_Court_TileSet_128x128_16x16_2.png::CompressedTexture2D::6084373477869647233::1707482628::1707482628::1::::<><>::
+png-transparent-red-x-illustration-x-mark-check-mark-wrong-sign-angle-symmetry-cross-thumbnail.png::CompressedTexture2D::898535354592508540::1707482628::1707482628::1::::<><>::
+::res://bballsprite/NES Graphic Banks/::1707482628
+Bank 1 Tile Set opaque.png::CompressedTexture2D::7067919098145568119::1707482628::1707482628::1::::<><>::
+Bank 2 Sprites opaque.png::CompressedTexture2D::3721765985428471271::1707482628::1707482628::1::::<><>::
+NES_Sprites_TileSet_128x128_8x8.png::CompressedTexture2D::2173166314369384819::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Player A/::1707482630
+NES_Team_Players_A_SpriteSheet.png::CompressedTexture2D::3181659727160329662::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Player A/Player A Dribble/::1707482628
+Player_A_Dribble_East_strip4.png::CompressedTexture2D::9178037588807535893::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_NorthEast_strip4.png::CompressedTexture2D::6661239965227416364::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_NorthWest_RH_strip4.png::CompressedTexture2D::321314403603905555::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_NorthWest_strip4.png::CompressedTexture2D::6836318145536572747::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_North_strip4.png::CompressedTexture2D::3961100320398551671::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_SouthEast_strip4.png::CompressedTexture2D::8945523028048400256::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_SouthWest_strip4.png::CompressedTexture2D::3446376029021279399::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_South_strip4.png::CompressedTexture2D::3768266766008923123::1707482628::1707482628::1::::<><>::
+Player_A_Dribble_West_strip4.png::CompressedTexture2D::6818864540244972762::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Player A/Player A Idle (no ball)/::1707482628
+Player_A_Idle_East_NOBALL_strip4.png::CompressedTexture2D::5075175678335917353::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthEast_NOBALL_strip4.png::CompressedTexture2D::6677224492653176182::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthWest_NOBALL_strip4.png::CompressedTexture2D::258153972125325244::1707482628::1707482628::1::::<><>::
+Player_A_Idle_North_NOBALL_strip4.png::CompressedTexture2D::3060443741104848446::1707482628::1707482628::1::::<><>::
+Player_A_Idle_SouthEast_NOBALL_strip4.png::CompressedTexture2D::4555749209025221814::1707482628::1707482628::1::::<><>::
+Player_A_Idle_SouthWest_NOBALL_strip4.png::CompressedTexture2D::1652451283074636679::1707482628::1707482628::1::::<><>::
+Player_A_Idle_South_NOBALL_strip4.png::CompressedTexture2D::2808081289549906258::1707482628::1707482628::1::::<><>::
+Player_A_Idle_West_NOBALL_strip4.png::CompressedTexture2D::5535877581251941374::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Player A/Player A Idle (with ball)/::1707482628
+Player_A_Idle_East_strip4.png::CompressedTexture2D::3418760028520872050::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthEast_LH_strip4.png::CompressedTexture2D::3090313283096328108::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthEast_strip4.png::CompressedTexture2D::3156374610727392117::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthWest_RH_strip4.png::CompressedTexture2D::2743950443097913541::1707482628::1707482628::1::::<><>::
+Player_A_Idle_NorthWest_strip4.png::CompressedTexture2D::7046181151248831612::1707482628::1707482628::1::::<><>::
+Player_A_Idle_North_strip4.png::CompressedTexture2D::3532213924578999608::1707482628::1707482628::1::::<><>::
+Player_A_Idle_SouthEast_strip4.png::CompressedTexture2D::4494461625567531438::1707482628::1707482628::1::::<><>::
+Player_A_Idle_SouthWest_strip4.png::CompressedTexture2D::3311117776784152709::1707482628::1707482628::1::::<><>::
+Player_A_Idle_South_strip4.png::CompressedTexture2D::7092631321036329914::1707482628::1707482628::1::::<><>::
+Player_A_Idle_West_strip4.png::CompressedTexture2D::4193917035674320945::1707482628::1707482628::1::::<><>::
+::res://bballsprite/Player A/Player A Jump Shoot (no ball)/::1707482629
+Player_A_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::2577993518943243595::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::1850572511809506561::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::5578932067445548281::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::2096349549354252881::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::6991960546342784674::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::2553252033397257330::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::1937656649254892243::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::6227506403613464972::1707482629::1707482629::1::::<><>::
+::res://bballsprite/Player A/Player A Jump Shoot (with ball)/::1707482629
+Player_A_J_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::6501606415228784452::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::296900723376936004::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::6274073280111739226::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_North_WITHBALL_strip3.png::CompressedTexture2D::5578931545814881021::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::9181060619983100534::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::1582234077224633909::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::3336204531716183746::1707482629::1707482629::1::::<><>::
+Player_A_J_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::267807594718591333::1707482629::1707482629::1::::<><>::
+::res://bballsprite/Player A/Player A Pass receive (no ball)/::1707482629
+Player_A_Pass_Receive_East_NOBALL.png::CompressedTexture2D::5877648035222543787::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_NorthEast_NOBALL.png::CompressedTexture2D::1092866294683228343::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_NorthWest_NOBALL.png::CompressedTexture2D::7322651502951126337::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_North_NOBALL.png::CompressedTexture2D::2179165258572841915::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_SouthEast_NOBALL.png::CompressedTexture2D::5443528434601160391::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_SouthWest_NOBALL.png::CompressedTexture2D::2906042350265975046::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_South_NOBALL.png::CompressedTexture2D::912669911064401715::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_West_NOBALL.png::CompressedTexture2D::6722222488261973085::1707482629::1707482629::1::::<><>::
+::res://bballsprite/Player A/Player A Pass receive (with ball)/::1707482629
+Player_A_Pass_Receive_East_WITHBALL.png::CompressedTexture2D::6638752906662839807::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_NorthEast_WITHBALL.png::CompressedTexture2D::7363452617834825904::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_NorthWest_WITHBALL.png::CompressedTexture2D::7435761851093689574::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_North_WITHBALL.png::CompressedTexture2D::1813813264548710169::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_SouthEast_WITHBALL.png::CompressedTexture2D::5587748556845436112::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_SouthWest_WITHBALL.png::CompressedTexture2D::329504579667107092::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_South_WITHBALL.png::CompressedTexture2D::94957434522757395::1707482629::1707482629::1::::<><>::
+Player_A_Pass_Receive_West_WITHBALL.png::CompressedTexture2D::1172775195384687960::1707482629::1707482629::1::::<><>::
+::res://bballsprite/Player A/Player A Run (no ball)/::1707482629
+Player_A_Run_East_NOBALL_strip4.png::CompressedTexture2D::8217425255744755687::1707482629::1707482629::1::::<><>::
+Player_A_Run_NorthEast_NOBALL_strip4.png::CompressedTexture2D::7593722995829977310::1707482629::1707482629::1::::<><>::
+Player_A_Run_NorthWest_NOBALL_strip4.png::CompressedTexture2D::3717511976095279613::1707482629::1707482629::1::::<><>::
+Player_A_Run_North_NOBALL_strip4.png::CompressedTexture2D::2101613800959694695::1707482629::1707482629::1::::<><>::
+Player_A_Run_SouthEast_NOBALL_strip4.png::CompressedTexture2D::4117158619423617934::1707482629::1707482629::1::::<><>::
+Player_A_Run_SouthWest_NOBALL_strip4.png::CompressedTexture2D::9045119313012339559::1707482629::1707482629::1::::<><>::
+Player_A_Run_South_NOBALL_strip4.png::CompressedTexture2D::510111521503601421::1707482629::1707482629::1::::<><>::
+Player_A_Run_West_NOBALL_strip4.png::CompressedTexture2D::417014293639779661::1707482629::1707482629::1::::<><>::
+::res://bballsprite/Player A/Player A Stand shoot (no ball)/::1707482630
+Player_A_S_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::909807586934428924::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::4361637070270025643::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::4750273071863776319::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::6316046580810881181::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::2878116150916556035::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::878088351719307792::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::5360922762407472597::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::1864976884859479568::1707482630::1707482630::1::::<><>::
+::res://bballsprite/Player A/Player A Stand Shoot (with ball)/::1707482630
+Player_A_S_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::6938293319211589599::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::764062844483331796::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::3057514479455410728::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_North_WITHBALL_strip2.png::CompressedTexture2D::7690533252756347571::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::3769118587863872141::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::333824171645868249::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::8835405752030407573::1707482630::1707482630::1::::<><>::
+Player_A_S_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::6453600540147602857::1707482630::1707482630::1::::<><>::
+::res://bballsprite/Player B/::1707482632
+NES_Team_Players_B_SpriteSheet.png::CompressedTexture2D::975094838629948673::1707482630::1707482630::1::::<><>::
+::res://bballsprite/Player B/Player B Dribble/::1707482630
+Player_B_Run_EAST_WITH_BALL_strip4.png::CompressedTexture2D::5673104426087323919::1707482630::1707482630::1::::<><>::
+Player_B_Run_NORTHEAST_WITH_BALL_strip4.png::CompressedTexture2D::6044105387437714915::1707482630::1707482630::1::::<><>::
+Player_B_Run_NORTHWEST_WITH_BALL_strip4.png::CompressedTexture2D::1399544696894195658::1707482630::1707482630::1::::<><>::
+Player_B_Run_NORTH_WITH_BALL_strip4.png::CompressedTexture2D::7605646520895048885::1707482630::1707482630::1::::<><>::
+Player_B_Run_SOUTHEAST_WITH_BALL_strip4.png::CompressedTexture2D::7522884454056780684::1707482630::1707482630::1::::<><>::
+Player_B_Run_SOUTHWEST_WITH_BALL_strip4.png::CompressedTexture2D::7541773122118267874::1707482630::1707482630::1::::<><>::
+Player_B_Run_SOUTH_WITH_BALL_strip4.png::CompressedTexture2D::795203393983352004::1707482630::1707482630::1::::<><>::
+Player_B_Run_WEST_WITH_BALL_strip4.png::CompressedTexture2D::6663736763149378561::1707482630::1707482630::1::::<><>::
+::res://bballsprite/Player B/Player B Idle (no ball)/::1707482630
+Player_B_Idle_East_NOBALL_strip4.png::CompressedTexture2D::7063839421521461680::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthEast_NOBALL_strip4.png::CompressedTexture2D::1506207805405697001::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthWest_NOBALL_strip4.png::CompressedTexture2D::3205228559903188324::1707482630::1707482630::1::::<><>::
+Player_B_Idle_North_NOBALL_strip4.png::CompressedTexture2D::5407518612659601865::1707482630::1707482630::1::::<><>::
+Player_B_Idle_SouthEast_NOBALL_strip4.png::CompressedTexture2D::8816521563253997363::1707482630::1707482630::1::::<><>::
+Player_B_Idle_SouthWest_NOBALL_strip4.png::CompressedTexture2D::9013459116538107909::1707482630::1707482630::1::::<><>::
+Player_B_Idle_South_NOBALL_strip4.png::CompressedTexture2D::2220507974247396112::1707482630::1707482630::1::::<><>::
+Player_B_Idle_West_NOBALL_strip4.png::CompressedTexture2D::5217829530328590071::1707482630::1707482630::1::::<><>::
+::res://bballsprite/Player B/Player B Idle (with ball)/::1707482631
+Player_B_Idle_East_strip4.png::CompressedTexture2D::7667117563152656511::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthEast_LH_strip4.png::CompressedTexture2D::945300136540339799::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthEast_strip4.png::CompressedTexture2D::4442611376825022950::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthWest_RH_strip4.png::CompressedTexture2D::3620203297586034304::1707482630::1707482630::1::::<><>::
+Player_B_Idle_NorthWest_strip4.png::CompressedTexture2D::2137180663434624935::1707482630::1707482630::1::::<><>::
+Player_B_Idle_North_strip4.png::CompressedTexture2D::5037327543370181198::1707482630::1707482630::1::::<><>::
+Player_B_Idle_SouthEast_strip4.png::CompressedTexture2D::6524154203809113024::1707482631::1707482631::1::::<><>::
+Player_B_Idle_SouthWest_strip4.png::CompressedTexture2D::7612412876765147227::1707482631::1707482631::1::::<><>::
+Player_B_Idle_South_strip4.png::CompressedTexture2D::5590580761619584529::1707482630::1707482631::1::::<><>::
+Player_B_Idle_West_strip4.png::CompressedTexture2D::9083075509682441402::1707482631::1707482631::1::::<><>::
+::res://bballsprite/Player B/Player B Jump Shoot (no ball)/::1707482631
+Player_B_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::8692504943104487558::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::4122249247022177875::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::7790349992191844546::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::7350607545202236858::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::6217776618978878389::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::2062851756222423859::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::859894065129670011::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::4206691397706089587::1707482631::1707482631::1::::<><>::
+::res://bballsprite/Player B/Player B Jump Shoot (with ball)/::1707482631
+Player_B_J_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::4368551751920520381::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::5337239307230720507::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::7416549693265299205::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_North_WITHBALL_strip3.png::CompressedTexture2D::8904470770911124083::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::2667628888555610831::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::8819337282749373636::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::5097735539974226454::1707482631::1707482631::1::::<><>::
+Player_B_J_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::7906750803799469516::1707482631::1707482631::1::::<><>::
+::res://bballsprite/Player B/Player B Pass Receive Pass (no ball)/::1707482631
+Player_B_Pass_Receive_East_NOBALL.png::CompressedTexture2D::7885247519079004080::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_NorthEast_NOBALL.png::CompressedTexture2D::5087130296573998293::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_NorthWest_NOBALL.png::CompressedTexture2D::2636634834029259802::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_North_NOBALL.png::CompressedTexture2D::8954207026004785168::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_SouthEast_NOBALL.png::CompressedTexture2D::1682758642033185169::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_SouthWest_NOBALL.png::CompressedTexture2D::2680191199165782349::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_South_NOBALL.png::CompressedTexture2D::6624882329066015750::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_West_NOBALL.png::CompressedTexture2D::9122481208534557445::1707482631::1707482631::1::::<><>::
+::res://bballsprite/Player B/Player B Pass Receive Pass (with ball)/::1707482631
+Player_B_Pass_Receive_East_WITHBALL.png::CompressedTexture2D::8117607068285096874::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_NorthEast_WITHBALL.png::CompressedTexture2D::3472403290519258935::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_NorthWest_WITHBALL.png::CompressedTexture2D::8917310757658221603::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_North_WITHBALL.png::CompressedTexture2D::6686556125388058042::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_SouthEast_WITHBALL.png::CompressedTexture2D::2216700500617570283::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_SouthWest_WITHBALL.png::CompressedTexture2D::8086155293857205026::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_South_WITHBALL.png::CompressedTexture2D::7006253465138080983::1707482631::1707482631::1::::<><>::
+Player_B_Pass_Receive_West_WITHBALL.png::CompressedTexture2D::2470283343722295516::1707482631::1707482631::1::::<><>::
+::res://bballsprite/Player B/Player B Run (no ball)/::1707482632
+Player_B_Run_EAST_NO_BALL_strip4.png::CompressedTexture2D::7024044227015295874::1707482631::1707482631::1::::<><>::
+Player_B_Run_NORTHEAST_NO_BALL_strip4.png::CompressedTexture2D::950740694760419275::1707482631::1707482631::1::::<><>::
+Player_B_Run_NORTHWEST_NO_BALL_strip4.png::CompressedTexture2D::7511334658843010093::1707482631::1707482632::1::::<><>::
+Player_B_Run_NORTH_NO_BALL_strip4.png::CompressedTexture2D::3381956120324116992::1707482631::1707482631::1::::<><>::
+Player_B_Run_SOUTHEAST_NO_BALL_strip4.png::CompressedTexture2D::8322382242727782741::1707482632::1707482632::1::::<><>::
+Player_B_Run_SOUTHWEST_NO_BALL_strip4.png::CompressedTexture2D::2886640223886314263::1707482632::1707482632::1::::<><>::
+Player_B_Run_SOUTH_NO_BALL_strip4.png::CompressedTexture2D::4297820876061089332::1707482632::1707482632::1::::<><>::
+Player_B_Run_WEST_NO_BALL_strip4.png::CompressedTexture2D::2347046541293771291::1707482632::1707482632::1::::<><>::
+::res://bballsprite/Player B/Player B Stand Shoot (no ball)/::1707482632
+Player_B_S_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::6710376749314101643::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_NorthEast_NOBALL_strip2.png::CompressedTexture2D::3811863280838121357::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_NorthWest_NOBALL_strip2.png::CompressedTexture2D::2085068117011722398::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::2899932788910621450::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_SouthEast_NOBALL_strip2.png::CompressedTexture2D::3911873305511366132::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_SouthWest_NOBALL_strip2.png::CompressedTexture2D::3939014258373497285::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_South_NOBALL_strip2.png::CompressedTexture2D::6561103358920080949::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::6066645357984579434::1707482632::1707482632::1::::<><>::
+::res://bballsprite/Player B/Player B Stand Shoot (with ball)/::1707482632
+Player_B_S_Shoot_East_WITHBALL_strip3.png::CompressedTexture2D::1233213124300008951::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_NorthEast_WITHBALL_strip3.png::CompressedTexture2D::2280649045587788956::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_NorthWest_WITHBALL_strip3.png::CompressedTexture2D::6557907660038281224::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_North_WITHBALL_strip2.png::CompressedTexture2D::8305867923773998655::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_SouthEast_WITHBALL_strip3.png::CompressedTexture2D::3609139634603744571::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_SouthWest_WITHBALL_strip3.png::CompressedTexture2D::6466186173927967669::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_South_WITHBALL_strip3.png::CompressedTexture2D::356496316160630745::1707482632::1707482632::1::::<><>::
+Player_B_S_Shoot_West_WITHBALL_strip3.png::CompressedTexture2D::3771288916349667191::1707482632::1707482632::1::::<><>::
+::res://bballsprite/Player C/::1710146804
+::res://bballsprite/Player C/Player C Dribble/::1710146804
+Player_C_Dribble_East_strip4.png::CompressedTexture2D::571141439558627560::1710141793::1710146815::1::::<><>::
+Player_C_Dribble_North_strip4.png::CompressedTexture2D::3519459882073613430::1710141845::1710146815::1::::<><>::
+Player_C_Dribble_South_strip4.png::CompressedTexture2D::4473255551948580732::1710141878::1710146815::1::::<><>::
+Player_C_Dribble_West_strip4.png::CompressedTexture2D::6337991133500715150::1710141997::1710146815::1::::<><>::
+::res://bballsprite/Player C/Player C Idle (no ball)/::1710146804
+Player_C_Idle_East_NOBALL_strip4.png::CompressedTexture2D::2077176701265463640::1710142276::1710146815::1::::<><>::
+Player_C_Idle_North_NOBALL_strip4.png::CompressedTexture2D::2633960053796205380::1710142331::1710146815::1::::<><>::
+Player_C_Idle_South_NOBALL_strip4.png::CompressedTexture2D::5512550658507989309::1710142362::1710146815::1::::<><>::
+Player_C_Idle_West_NOBALL_strip4.png::CompressedTexture2D::8859786381336544058::1710142387::1710146815::1::::<><>::
+::res://bballsprite/Player C/Player C Idle (with ball)/::1710146804
+Player_C_Idle_East_strip4.png::CompressedTexture2D::7537426194572807979::1710142459::1710146815::1::::<><>::
+Player_C_Idle_North_strip4.png::CompressedTexture2D::5549515489850114232::1710142488::1710146815::1::::<><>::
+Player_C_Idle_South_strip4.png::CompressedTexture2D::843071282128050717::1710142510::1710146815::1::::<><>::
+Player_C_Idle_West_strip4.png::CompressedTexture2D::4444763161658401950::1710142530::1710146815::1::::<><>::
+::res://bballsprite/Player C/Player C Jump Shoot (no ball)/::1710146804
+Player_C_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::7936825497827574067::1710142562::1710146815::1::::<><>::
+Player_C_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::6165093352564092219::1710142580::1710146815::1::::<><>::
+Player_C_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::5649595244147848513::1710142632::1710146815::1::::<><>::
+::res://bballsprite/Player C/Player C Run (no ball)/::1710146804
+Player_C_Run_East_NOBALL_strip4.png::CompressedTexture2D::2775156186374472064::1710143726::1710146815::1::::<><>::
+Player_C_Run_North_NOBALL_strip4.png::CompressedTexture2D::3825882692657752816::1710143744::1710146815::1::::<><>::
+Player_C_Run_South_NOBALL_strip4.png::CompressedTexture2D::505396840759432803::1710143770::1710146815::1::::<><>::
+Player_C_Run_West_NOBALL_strip4.png::CompressedTexture2D::5369461524880314889::1710143787::1710146815::1::::<><>::
+::res://bballsprite/Player D/::1710146808
+::res://bballsprite/Player D/Player D Dribble/::1710146808
+Player_D_Run_EAST_WITH_BALL_strip4.png::CompressedTexture2D::4186187165213244756::1710142698::1710146815::1::::<><>::
+Player_D_Run_NORTH_WITH_BALL_strip4.png::CompressedTexture2D::8051974377422088649::1710142720::1710146815::1::::<><>::
+Player_D_Run_SOUTH_WITH_BALL_strip4.png::CompressedTexture2D::7230439694273347820::1710142741::1710146815::1::::<><>::
+Player_D_Run_WEST_WITH_BALL_strip4.png::CompressedTexture2D::1011857287948705355::1710142760::1710146815::1::::<><>::
+::res://bballsprite/Player D/Player D Idle (no ball)/::1710146808
+Player_D_Idle_East_NOBALL_strip4.png::CompressedTexture2D::8204821398696187610::1710142787::1710146815::1::::<><>::
+Player_D_Idle_North_NOBALL_strip4.png::CompressedTexture2D::3836439035959747534::1710142805::1710146815::1::::<><>::
+Player_D_Idle_South_NOBALL_strip4.png::CompressedTexture2D::5659174616315684300::1710142830::1710146815::1::::<><>::
+Player_D_Idle_West_NOBALL_strip4.png::CompressedTexture2D::626459319319900601::1710142844::1710146815::1::::<><>::
+::res://bballsprite/Player D/Player D Idle (with ball)/::1710146808
+Player_D_Idle_East_strip4.png::CompressedTexture2D::8934888694966037361::1710142869::1710146815::1::::<><>::
+Player_D_Idle_North_strip4.png::CompressedTexture2D::5319516643175095741::1710142888::1710146815::1::::<><>::
+Player_D_Idle_South_strip4.png::CompressedTexture2D::324480485892181771::1710142906::1710146815::1::::<><>::
+Player_D_Idle_West_strip4.png::CompressedTexture2D::8977369116383546334::1710142920::1710146815::1::::<><>::
+::res://bballsprite/Player D/Player D Jump Shoot (no ball)/::1710146808
+Player_D_J_Shoot_East_NOBALL_strip2.png::CompressedTexture2D::2811536114734196002::1710142954::1710146815::1::::<><>::
+Player_D_J_Shoot_North_NOBALL_strip2.png::CompressedTexture2D::255015531748232666::1710142967::1710146815::1::::<><>::
+Player_D_J_Shoot_West_NOBALL_strip2.png::CompressedTexture2D::8713728051790181926::1710142981::1710146815::1::::<><>::
+::res://bballsprite/Player D/Player D Run (no ball)/::1710146808
+Player_D_Run_EAST_NO_BALL_strip4.png::CompressedTexture2D::1757007516792634618::1710143847::1710146815::1::::<><>::
+Player_D_Run_NORTH_NO_BALL_strip4.png::CompressedTexture2D::8925827828666391829::1710144011::1710146815::1::::<><>::
+Player_D_Run_SOUTH_NO_BALL_strip4.png::CompressedTexture2D::7403339556116803638::1710143939::1710146815::1::::<><>::
+Player_D_Run_WEST_NO_BALL_strip4.png::CompressedTexture2D::3274804250299007972::1710143965::1710146815::1::::<><>::
+::res://bballsprite/Referee A/::1707482632
+NES_Referee_A_Avatar_Call.png::CompressedTexture2D::4735362999262646864::1707482632::1707482632::1::::<><>::
+NES_Referee_A_North_Call.png::CompressedTexture2D::7147275668772502655::1707482632::1707482632::1::::<><>::
+NES_Referee_A_North_SideStep_Left_strip2.png::CompressedTexture2D::6225241221258631618::1707482632::1707482632::1::::<><>::
+NES_Referee_A_North_SideStep_Right_strip2.png::CompressedTexture2D::1546697352226447939::1707482632::1707482632::1::::<><>::
+NES_Referee_A_South_Call.png::CompressedTexture2D::7682241296482784326::1707482632::1707482632::1::::<><>::
+NES_Referee_A_South_SideStep_Left_strip2.png::CompressedTexture2D::2876397084553430482::1707482632::1707482632::1::::<><>::
+NES_Referee_A_South_SideStep_Right_strip2.png::CompressedTexture2D::7553804928775406991::1707482632::1707482632::1::::<><>::
+NES_Referee_A_SpriteSheet.png::CompressedTexture2D::2327838752608017401::1707482632::1707482632::1::::<><>::
+::res://bballsprite/Referee B/::1707482632
+NES_Referee_B_Avatar_Call.png::CompressedTexture2D::8050529405567493236::1707482632::1707482632::1::::<><>::
+NES_Referee_B_North_Call.png::CompressedTexture2D::3859626071120850490::1707482632::1707482632::1::::<><>::
+NES_Referee_B_North_SideStep_Left_strip2.png::CompressedTexture2D::526601143142845723::1707482632::1707482632::1::::<><>::
+NES_Referee_B_North_SideStep_Right_strip2.png::CompressedTexture2D::7005961241419498325::1707482632::1707482632::1::::<><>::
+NES_Referee_B_South_Call.png::CompressedTexture2D::7888627585744543598::1707482632::1707482632::1::::<><>::
+NES_Referee_B_South_SideStep_Left_strip2.png::CompressedTexture2D::157450565301163951::1707482632::1707482632::1::::<><>::
+NES_Referee_B_South_SideStep_Right_strip2.png::CompressedTexture2D::6551881746694726557::1707482632::1707482632::1::::<><>::
+NES_Referee_B_SpriteSheet.png::CompressedTexture2D::5431955453620786564::1707482632::1707482632::1::::<><>::
+::res://CUTsprite/::1707482633
+tile000.png::CompressedTexture2D::4357637032003918508::1707482632::1707482632::1::::<><>::
+tile001.png::CompressedTexture2D::5786814093196921297::1707482632::1707482632::1::::<><>::
+tile002.png::CompressedTexture2D::7219822071933763812::1707482632::1707482632::1::::<><>::
+tile003.png::CompressedTexture2D::5496080831889449631::1707482633::1707482633::1::::<><>::

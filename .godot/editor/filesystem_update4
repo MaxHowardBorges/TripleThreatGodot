@@ -1,13 +1,1 @@
 res://PlayerMax.tscn
-res://Court.gd
-res://Player1.gd
-res://Player2.gd
-res://Ball.gd
-res://Enemy.gd
-res://Enemy2.gd
-res://Paint Zone.gd
-res://Mid range zone.gd
-res://Perimeter zone.gd
-res://Outside zone.gd
-res://Control.gd
-res://RayCast2Denemy1.gd
