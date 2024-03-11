@@ -82,6 +82,8 @@ func _on_ball_score(team, zoneIn):
 		$scoreAway.text = scoreStr
 		homeGoAttack.emit()
 		awayGoDefense.emit()
+		$Enemy.gameState = "defense"
+		$Enemy2.gameState = "defense"
 		$Success.hide()
 		await get_tree().create_timer(0.50).timeout
 		resetBall.emit()
