@@ -1,4 +1,3 @@
-AnimatedSprite2D
 Node2D
 RayCast2D
 CollisionShape2D
@@ -7,6 +6,7 @@ CharacterBody2D
 Area2D
 Control
 CollisionPolygon2D
+AnimatedSprite2D
 Timer
 TextureProgressBar
 Label
