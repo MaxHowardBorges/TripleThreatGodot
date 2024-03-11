@@ -31,7 +31,7 @@ func _physics_process(	delta):
 	#1st scenario
 	if gameState == "attack" && hasBall:
 			velocity = position.direction_to(checkpoint1.global_position)*speed
-			#move_and_slide()
+			move_and_slide()
 			velocity = Vector2.ZERO
 			await get_tree().create_timer(0.75).timeout
 			passe.emit(position,ray.get_collider().position)

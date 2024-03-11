@@ -34,11 +34,10 @@ func _physics_process(delta):
 		shoot.emit(global_position)
 		hasBall = false
 	elif gameState == "attack" && !hasBall:
-			velocity = position.direction_to(checkpoint1.global_position)*speed
-			move_and_slide()
-			#passe.emit(position,ray.get_collider().position)
-			#hasBall = false
-
+		velocity = Vector2.ZERO
+		velocity = position.direction_to(checkpoint1.global_position)*speed
+		move_and_slide()
+	
 
 func _on_ball_has_ball_enemy_2():
 	hasBall = true

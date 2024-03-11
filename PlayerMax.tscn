@@ -74,6 +74,38 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
+radius = 8.63713
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgfjg"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(17, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg10u"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(25, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bkm4"]
+atlas = ExtResource("27_8d3ar")
+region = Rect2(33, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t62pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgfjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg10u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bkm4")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 31.0
 height = 74.0
@@ -1289,38 +1321,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5xk37"]
-radius = 8.63713
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgfjg"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(17, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mg10u"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(25, 0, 8, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3bkm4"]
-atlas = ExtResource("27_8d3ar")
-region = Rect2(33, 0, 8, 8)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_t62pq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vgfjg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mg10u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3bkm4")
-}],
-"loop": true,
-"name": &"move",
-"speed": 5.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_3syk1"]
 radius = 47.0956
 
@@ -1362,6 +1362,20 @@ shape = SubResource("RectangleShape2D_7jgqe")
 position = Vector2(581, 367)
 scale = Vector2(3.03826, 3.03826)
 texture = ExtResource("1_blux1")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(230, 418)
+scale = Vector2(5, 5)
+script = ExtResource("15_qr1bw")
+
+[node name="Area2D" type="Area2D" parent="Ball"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D"]
+shape = SubResource("CircleShape2D_5xk37")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ball"]
+sprite_frames = SubResource("SpriteFrames_t62pq")
+animation = &"move"
 
 [node name="Player1" type="CharacterBody2D" parent="." groups=["Player"]]
 position = Vector2(405, 589)
@@ -1428,20 +1442,6 @@ position = Vector2(2, 0)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_k1ddh")
 animation = &"shoot_left"
-
-[node name="Ball" type="CharacterBody2D" parent="."]
-position = Vector2(230, 418)
-scale = Vector2(5, 5)
-script = ExtResource("15_qr1bw")
-
-[node name="Area2D" type="Area2D" parent="Ball"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball/Area2D"]
-shape = SubResource("CircleShape2D_5xk37")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Ball"]
-sprite_frames = SubResource("SpriteFrames_t62pq")
-animation = &"move"
 
 [node name="Enemy2" type="CharacterBody2D" parent="."]
 position = Vector2(815, 369)
@@ -1623,6 +1623,12 @@ position = Vector2(302, 502)
 [connection signal="homeGoDefense" from="." to="Player1" method="_on_idk_home_go_defense"]
 [connection signal="homeGoDefense" from="." to="Player2" method="_on_idk_home_go_defense"]
 [connection signal="resetBall" from="." to="Ball" method="_on_idk_reset_ball"]
+[connection signal="hasBallEnemy" from="Ball" to="Enemy" method="_on_ball_has_ball_enemy"]
+[connection signal="hasBallEnemy2" from="Ball" to="Enemy2" method="_on_ball_has_ball_enemy_2"]
+[connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
+[connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
+[connection signal="score" from="Ball" to="." method="_on_ball_score"]
+[connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
 [connection signal="shootReleased" from="Player1" to="Control" method="_on_player_1_shoot_released"]
@@ -1634,12 +1640,6 @@ position = Vector2(302, 502)
 [connection signal="shootPressed" from="Player2" to="Control" method="_on_player_2_shoot_pressed"]
 [connection signal="shootReleased" from="Player2" to="Control" method="_on_player_2_shoot_released"]
 [connection signal="teamBall" from="Player2" to="." method="_on_player_2_team_ball"]
-[connection signal="hasBallEnemy" from="Ball" to="Enemy" method="_on_ball_has_ball_enemy"]
-[connection signal="hasBallEnemy2" from="Ball" to="Enemy2" method="_on_ball_has_ball_enemy_2"]
-[connection signal="hasBallPlayer1" from="Ball" to="Player1" method="_on_ball_has_ball_player_1"]
-[connection signal="hasBallPlayer2" from="Ball" to="Player2" method="_on_ball_has_ball_player_2"]
-[connection signal="score" from="Ball" to="." method="_on_ball_score"]
-[connection signal="body_shape_entered" from="Ball/Area2D" to="Ball" method="_on_area_2d_body_shape_entered"]
 [connection signal="passe" from="Enemy2" to="Ball" method="_on_enemy_2_passe"]
 [connection signal="shoot" from="Enemy2" to="Control" method="_on_enemy_2_shoot"]
 [connection signal="teamAttack" from="Enemy2" to="Enemy" method="_on_enemy_2_team_attack"]
