@@ -7,11 +7,13 @@ signal homeGoDefense
 signal awayGoAttack
 signal awayGoDefense
 signal resetBall
+signal refereeWhistle
 
 func _ready():
 	$Timer.start()
 
 func _on_timer_timeout():
+	refereeWhistle.emit()
 	$TimeUp.show()
 	$shotClock.hide()
 	$Player1.hasBall = false
@@ -48,6 +50,7 @@ func _on_ball_score(team, zoneIn):
 	var score
 	var scoreInt
 	var scoreStr
+	refereeWhistle.emit()
 	if team == "home":
 		$Success.show()
 		await get_tree().create_timer(1.50).timeout

@@ -1,4 +1,4 @@
-[gd_scene load_steps=409 format=3 uid="uid://f0dsqf01ub1b"]
+[gd_scene load_steps=416 format=3 uid="uid://f0dsqf01ub1b"]
 
 [ext_resource type="Script" path="res://Court.gd" id="1_4jdof"]
 [ext_resource type="Texture2D" uid="uid://dgw20kbeg7me4" path="res://HalfCourtSprite.png" id="1_blux1"]
@@ -107,6 +107,9 @@
 [ext_resource type="Texture2D" uid="uid://dvsclijm1jag" path="res://bballsprite/Player D/Player D Jump Shoot (no ball)/Player_D_J_Shoot_North_NOBALL_strip2.png" id="90_7rc14"]
 [ext_resource type="Texture2D" uid="uid://d0f0cy1qfbcm4" path="res://bballsprite/Player D/Player D Run (no ball)/Player_D_Run_NORTH_NO_BALL_strip4.png" id="91_3g57f"]
 [ext_resource type="Texture2D" uid="uid://dmyo3u41j56vd" path="res://bballsprite/Player D/Player D Dribble/Player_D_Run_NORTH_WITH_BALL_strip4.png" id="92_tmr51"]
+[ext_resource type="Script" path="res://Referee.gd" id="108_ge164"]
+[ext_resource type="Texture2D" uid="uid://bg8l3sy8cs6w1" path="res://bballsprite/Referee A/NES_Referee_A_South_SideStep_Left_strip2.png" id="109_wtjnk"]
+[ext_resource type="Texture2D" uid="uid://dhplnk4408ay5" path="res://bballsprite/Referee A/NES_Referee_A_South_Call.png" id="110_ahew5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgqe"]
 size = Vector2(116.5, 89)
@@ -2551,6 +2554,40 @@ size = Vector2(318, 182)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ea3hk"]
 size = Vector2(319.5, 186.75)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm6og"]
+atlas = ExtResource("109_wtjnk")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7vw1"]
+atlas = ExtResource("109_wtjnk")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4dnr"]
+atlas = ExtResource("110_ahew5")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_skwm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm6og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7vw1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4dnr")
+}],
+"loop": true,
+"name": &"whistle",
+"speed": 5.0
+}]
+
 [node name="IDK" type="Node2D"]
 script = ExtResource("1_4jdof")
 
@@ -2826,6 +2863,16 @@ position = Vector2(451, 587)
 [node name="Checkpoint1" type="Node2D" parent="."]
 position = Vector2(302, 502)
 
+[node name="Referee" type="CharacterBody2D" parent="."]
+position = Vector2(854, 106)
+script = ExtResource("108_ge164")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Referee"]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_skwm4")
+animation = &"whistle"
+
 [connection signal="awayGoAttack" from="." to="Enemy" method="_on_idk_away_go_attack"]
 [connection signal="awayGoAttack" from="." to="Enemy2" method="_on_idk_away_go_attack"]
 [connection signal="awayGoDefense" from="." to="Enemy" method="_on_idk_away_go_defense"]
@@ -2834,6 +2881,7 @@ position = Vector2(302, 502)
 [connection signal="homeGoAttack" from="." to="Player2" method="_on_idk_home_go_attack"]
 [connection signal="homeGoDefense" from="." to="Player1" method="_on_idk_home_go_defense"]
 [connection signal="homeGoDefense" from="." to="Player2" method="_on_idk_home_go_defense"]
+[connection signal="refereeWhistle" from="." to="Referee" method="_on_idk_referee_whistle"]
 [connection signal="resetBall" from="." to="Ball" method="_on_idk_reset_ball"]
 [connection signal="passe" from="Player1" to="Ball" method="_on_player_1_passe"]
 [connection signal="shootPressed" from="Player1" to="Control" method="_on_player_1_shoot_pressed"]
