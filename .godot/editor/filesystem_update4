@@ -1,3 +1,3 @@
 res://PlayerMax.tscn
-res://Enemy.gd
-res://Court.gd
+res://Control.gd
+res://Enemy2.gd

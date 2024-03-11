@@ -98,4 +98,4 @@ func _on_enemy_shoot(debut):
 
 
 func _on_enemy_2_shoot(debut):
-	shootBasket.emit(debut, 40, "away", "Paint")
+	shootBasket.emit(debut, 100, "away", "Paint")
